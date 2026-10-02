@@ -1,10 +1,13 @@
-import { Link, useParams, Navigate } from "react-router-dom";
-import Art from "../components/Art";
+import type { ReactNode } from "react";
+import { Link, Navigate } from "react-router-dom";
+import Art from "./Art";
 import { articles, getArticle } from "../data/articles";
 import { SITE } from "../data/site";
 
-export default function Article() {
-  const { slug } = useParams();
+// Header, overview strip, key takeaways and footer CTA for every article.
+// Title, dek, hero art, meta and takeaways come from src/data/articles.ts.
+// The article body is whatever you put inside the page file.
+export default function ArticleShell({ slug, children }: { slug: string; children: ReactNode }) {
   const a = getArticle(slug);
   if (!a) return <Navigate to="/" replace />;
   const next = articles[(articles.indexOf(a) + 1) % articles.length];
@@ -14,8 +17,8 @@ export default function Article() {
       <section className="bg-gradient-to-br from-forest via-ink to-ink pt-32">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 md:px-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="hero-in">
-            <Link to="/" className="text-sm text-sage hover:text-mint">← Back to portfolio</Link>
-            <p className="mt-8 inline-block rounded-full border border-mint/40 px-4 py-1.5 text-xs font-semibold text-mint">{a.category}</p>
+            <Link to="/" className="block w-fit text-sm text-sage hover:text-mint">← Back to portfolio</Link>
+            <p className="mt-8 w-fit rounded-full border border-mint/40 px-4 py-1.5 text-xs font-semibold text-mint">{a.category}</p>
             <h1 className="mt-6 text-4xl leading-[1.08] md:text-6xl">{a.title}</h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-sage">{a.dek}</p>
           </div>
@@ -42,34 +45,7 @@ export default function Article() {
               ))}
             </ul>
           </div>
-
-          <div className="mt-20 space-y-24">
-            {a.sections.map((s) => (
-              <article key={s.heading} className="grid gap-8 md:grid-cols-[0.8fr_1.6fr] md:gap-14">
-                <h2 className="text-3xl leading-tight md:sticky md:top-8 md:self-start md:text-4xl">{s.heading}</h2>
-                <div className="space-y-6">
-                  {s.body.map((p) => <p key={p.slice(0, 24)} className="font-serif text-xl leading-[1.75] text-ink/85">{p}</p>)}
-                  {s.list && (
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      {s.list.map((l) => (
-                        <div key={l.title} className="rounded-2xl border border-ink/10 bg-white p-6">
-                          <h3 className="text-xl">{l.title}</h3>
-                          <p className="mt-2 text-[15px] leading-relaxed text-ink/70">{l.text}</p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  {s.quote && <blockquote className="border-l-4 border-mint pl-6 font-serif text-2xl leading-snug text-pine">{s.quote}</blockquote>}
-                  {s.art && (
-                    <figure>
-                      <div className="overflow-hidden rounded-3xl"><Art kind={s.art.kind} className="block aspect-[4/3] w-full" /></div>
-                      <figcaption className="mt-3 text-sm text-ink/60">{s.art.caption}</figcaption>
-                    </figure>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
+          <div className="mt-20 space-y-24">{children}</div>
         </div>
       </section>
 
