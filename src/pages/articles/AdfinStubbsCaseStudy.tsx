@@ -175,14 +175,7 @@ export default function AdfinStubbsParkinCaseStudy({
       </a>
 
       <header className="asp-hero">
-        <div className="asp-container asp-topbar">
-          <a href={portfolioHref} className="asp-back">
-            <Arrow back /> Writing portfolio
-          </a>
-          <span className="asp-top-label">
-            CUSTOMER STORY <i /> ADFIN × STUBBS PARKIN
-          </span>
-        </div>
+
         <div className="asp-container asp-hero-grid">
           <div className="asp-hero-copy">
             <p className="asp-eyebrow asp-light-label">
@@ -257,21 +250,6 @@ export default function AdfinStubbsParkinCaseStudy({
         </div>
       </header>
 
-      <nav className="asp-story-nav" aria-label="On this page">
-        <div className="asp-container">
-          <span>
-            STUBBS PARKIN <i>/</i> THE STORY
-          </span>
-          <div>
-            <a href="#asp-practice">The practice</a>
-            <a href="#asp-change">The change</a>
-            <a href="#asp-results">The results</a>
-          </div>
-          <a href={demoHref} className="asp-nav-cta">
-            Explore Adfin <Arrow />
-          </a>
-        </div>
-      </nav>
 
       <div id="asp-story" className="asp-container">
         <section className="asp-metrics" aria-label="Results at a glance">
@@ -987,7 +965,7 @@ const styles = `
   gap: 60px;
   align-items: center;
   min-height: 650px;
-  padding-block: 68px 78px;
+  padding-block: 120px 78px;
 }
 .asp-hero-copy {
   position: relative;
@@ -1158,51 +1136,7 @@ const styles = `
   color: var(--green);
   letter-spacing: -0.07em;
 }
-/* Reading navigation and proof */
-.asp-story-nav {
-  position: sticky;
-  top: 0;
-  background: #fafaf6f5;
-  backdrop-filter: blur(12px);
-  z-index: 20;
-  border-bottom: 1px solid var(--line);
-}
-.asp-story-nav > .asp-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 62px;
-  gap: 20px;
-}
-.asp-story-nav > .asp-container > span {
-  font-size: 8px;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-}
-.asp-story-nav i {
-  font-style: normal;
-  padding: 0 12px;
-  color: #a2afa5;
-}
-.asp-story-nav .asp-container > div {
-  display: flex;
-  gap: 28px;
-  font-size: 11px;
-  color: #68756d;
-}
-.asp-story-nav a:hover {
-  color: #1a5134;
-}
-.asp-nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 650;
-}
-.asp-nav-cta svg {
-  width: 15px;
-}
+
 .asp-metrics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2399,6 +2333,7 @@ const styles = `
   .asp-hero-grid {
     gap: 40px;
     min-height: 610px;
+    padding-block: 100px 70px;
   }
   .asp-hero-visual {
     margin-right: 0;
@@ -2501,7 +2436,7 @@ const styles = `
   .asp-hero-grid {
     grid-template-columns: 1fr;
     gap: 38px;
-    padding-block: 45px;
+    padding-block: 90px 45px;
   }
   .asp-hero h1 {
     font-size: clamp(44px, 7vw, 64px);
@@ -2525,12 +2460,7 @@ const styles = `
     left: -24px;
     bottom: 24px;
   }
-  .asp-story-nav .asp-container > span {
-    display: none;
-  }
-  .asp-story-nav .asp-container > div {
-    gap: 23px;
-  }
+
   .asp-metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-block: 12px;
@@ -2737,7 +2667,7 @@ const styles = `
     display: none;
   }
   .asp-hero-grid {
-    padding-top: 36px;
+    padding-top: 72px;
     gap: 30px;
   }
   .asp-hero .asp-eyebrow {
