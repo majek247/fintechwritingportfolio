@@ -49,61 +49,64 @@ const vendors = [
     "id": "aveni",
     "name": "Aveni",
     "tag": "Notes, documents and adviser review",
-    "best": "Automating post-meeting output: turns raw meeting transcripts directly into suitability reports and CRM updates.",
+    "best": "Advice firms that want the meeting note to feed directly into suitability reports, CRM updates and the rest of the admin that follows.",
     "summary": "Meeting capture, CRM updates and document drafts.",
     "priceShort": "Request a quote",
     "watch": "Scope of Assist vs. wider Aveni products.",
     "intro": [
-      "What interests me about Aveni is how far the meeting record can travel. Assist covers recording, summaries, CRM updates and document generation. That gives it a place on this shortlist for firms where the note is only the first of several jobs waiting after a client call.",
-      "Take an annual review. The useful output is more than a recap: the administrator needs the new address, the paraplanner needs the reason for a proposed withdrawal, and the adviser needs a follow-up the client can understand. That is the handover I would use to assess Aveni. Can everyone work from the approved record, or does the adviser still have to explain the meeting three times?"
+      "I can already hear the objection: “Of course Aveni put Aveni first.”",
+      "Fair enough. This is our blog, and Aveni is our product.",
+      "So rather than pretending otherwise, I’m going to judge it the way I judged every other tool on this list: what’s genuinely useful, what needs a closer look in the demo, and when you’d be better off buying something else.",
+      "The big difference with Aveni Assist is that it doesn’t really stop at note-taking.",
+      "A client meeting can become a summary, CRM update and draft document without the adviser having to copy the same information from one system into the next. For larger firms, that matters because the transcript is rarely the bit creating the workload. It’s everything that happens afterwards."
     ],
     "features": [
       [
         "Firm-specific summaries",
-        "Assist supports summary templates tailored to a firm’s terminology and workflow."
+        "You can configure summaries around your own terminology and processes rather than forcing advisers to work from a generic meeting template."
       ],
       [
         "CRM updates",
-        "The current page lists Xplan, iO and Plannr, alongside bespoke integrations."
+        "Aveni currently lists integrations with Xplan, iO and Plannr, as well as bespoke integrations."
       ],
       [
         "Source-linked documents",
-        "Document generation uses meeting transcripts and supporting material, with citations."
+        "Draft documents can pull from meeting transcripts and supporting material, with citations back to the underlying source."
       ],
       [
         "Adviser self-review",
-        "Protect surfaces meeting findings and links them to the transcript."
+        "Aveni Protect can surface findings from a meeting and take the adviser back to the relevant part of the transcript."
       ]
     ],
     "pros": [
       [
-        "Useful beyond transcription",
-        "Worth shortlisting when follow-up documents and back-office updates are part of the same purchasing decision."
+        "It handles more of the admin after the meeting",
+        "If your advisers are still moving information manually between notes, CRM fields and documents, this is where Aveni becomes more interesting than a straightforward transcription tool."
       ],
       [
-        "Evidence alongside drafting",
-        "Source links give a reviewer somewhere to start when a sentence needs checking."
+        "Reviewers can trace statements to the source",
+        "That is particularly useful when someone needs to check where a recommendation, figure or client statement came from rather than simply trusting the generated draft."
       ]
     ],
     "cons": [
       [
-        "Product scope needs separating",
-        "File Check and Detect sit in the wider range. Ask what your Assist quote actually includes."
+        "Be clear which Aveni product you’re buying",
+        "Assist is only part of the wider Aveni platform. File Check, Detect and other capabilities may sit outside the package you are being quoted for, so get the scope written down."
       ],
       [
-        "A connector name is only the start",
-        "Have Aveni demonstrate your fields, approval steps and failed-update handling."
+        "An integration logo does not tell you much",
+        "If CRM integration matters, ask to see your actual workflow. Which fields get populated? What needs adviser approval? What happens when data is missing or an update fails? We would expect another vendor to answer those questions, and you should expect the same from us."
       ]
     ],
-    "pricing": "No public rate was listed on the Assist page reviewed. Request a quote covering users, templates, integrations, onboarding and any additional products. A price for meeting capture alone is not comparable with a broader rollout.",
+    "pricing": "We don’t publish a standard Assist price. Quotes are based on users, templates, integrations, onboarding and any additional Aveni products included.",
     "review": {
       "quote": "Tasks that previously took hours now take minutes.",
       "person": "Hollie Henson",
       "role": "Director of Operations, Prosser Knowles",
       "source": 1,
-      "body": "In Aveni’s published testimonial, Henson describes quicker work and more consistent outputs. It is a named customer account, selected by the vendor. I would use it to ask a more specific pilot question: which tasks became quicker, and how much checking remained?"
+      "body": "Prosser Knowles is a named Aveni customer, but this is also a testimonial we chose to publish. Use it as something to test rather than something to take on faith. During your pilot, measure where time actually comes out of the process and how much human checking is still needed."
     },
-    "verdict": "Shortlist Aveni if the bottleneck extends into documents and CRM administration. In the demo, follow one corrected fact all the way from the meeting to the final output.",
+    "verdict": "If advisers are spending time turning the same conversation into notes, CRM entries, follow-ups and suitability documents, Aveni Assist has a much stronger case. If you mainly want accurate notes after a meeting, however, I wouldn’t buy the broader workflow just because it exists. Some of the other tools in this guide are deliberately narrower, and that may be exactly what you need.",
     "refs": [
       1,
       2
@@ -116,61 +119,61 @@ const vendors = [
     "id": "saturn",
     "name": "Saturn",
     "tag": "Meeting context and team handover",
-    "best": "Protecting client context: keeps conversational nuances intact when data moves into cashflow and portfolio tools.",
+    "best": " Advice firms that want to keep the full client conversation intact as information moves into documents, cashflow tools and the wider advice process.",
     "summary": "Meeting notes within a broader advice platform.",
     "priceShort": "Request a quote",
     "watch": "Corrections, nuance, and exact integration needs.",
     "intro": [
-      "Saturn’s most useful distinction is its emphasis on the whole conversation. In its Meeting Notes 2.0 release, it explains that the earlier approach split conversations into stages, sometimes losing context. The newer approach is designed to hold that context together. That is more specific than simply promising “better notes”.",
-      "Here is the kind of detail I would test. A client initially says they want to retire at 60, then explains that they might work longer if their daughter needs help buying a home. A short summary could flatten that into a fixed retirement date. A useful note preserves the condition, the family priority and what still needs deciding."
+      "Saturn’s strongest differentiator is its focus on preserving the context of the entire conversation. In its Meeting Notes 2.0 release, it says its previous approach separated conversations into stages, which sometimes meant context was lost. The new approach is designed to keep those details connected from start to finish.",
+      "For example, a client may first say they plan to retire at 60, then explain they may keep working if their daughter needs support buying a home. A short summary might turn that into a retirement target. A useful note captures the trade-off: the retirement goal, the family consideration, and the fact that the final decision is still open."
     ],
     "features": [
       [
         "Whole-meeting context",
-        "Meeting Notes 2.0 is designed to retain relationships between topics and changes in intent."
+        "Meeting Notes 2.0 is designed to retain changes in intent and the relationship between different parts of the conversation."
       ],
       [
         "Advice documents",
-        "Saturn’s wider platform supports suitability letters and annual reviews."
+        "Saturn can also support suitability letters, annual reviews and other advice documents."
       ],
       [
         "Connected systems",
-        "The vendor describes two-way integrations across advice-firm systems."
+        "Two-way integrations help move client information between Saturn and the wider advice tech stack."
       ],
       [
         "Oversight",
-        "Guardian provides file-check and meeting-observation capabilities."
+        "Guardian adds file-checking and meeting-observation capabilities for compliance and supervision teams."
       ]
     ],
     "pros": [
       [
-        "A relevant approach to soft facts",
-        "The focus on nuance is worth testing with longer, less linear conversations."
+        "Good at preserving soft facts",
+        "The focus on the full conversation is useful when client decisions are conditional, nuanced or change during the meeting."
       ],
       [
-        "A wider team proposition",
-        "Documents, data connections and oversight make it relevant to operations as well as advisers."
+        "Useful beyond the adviser",
+        "Documents, integrations and oversight make Saturn relevant to paraplanners, operations and compliance teams too."
       ]
     ],
     "cons": [
       [
-        "The release evidence is vendor-run",
-        "Published improvements compare Saturn’s own versions, not all five tools in this guide."
+        "Most of the evidence comes from Saturn",
+        "Its published improvements compare newer versions of Saturn with older ones, rather than Saturn directly with other tools."
       ],
       [
-        "Roadmap is not delivered scope",
-        "The 2025 release described some features as future work. Confirm today’s functionality in your demo."
+        "Check what is live today:",
+        "Some capabilities have appeared first as roadmap items, so confirm exactly what is available in the version you are buying."
       ]
     ],
-    "pricing": "No public rate was listed on the homepage reviewed. Ask for the meeting-notes cost and the wider platform scope separately, including integration work, support and any minimum commitment.",
+    "pricing": "Saturn does not publish standard pricing. Ask for the meeting-notes cost separately from integrations, support, Guardian and any wider platform commitment.",
     "review": {
       "quote": "I’m doing a lot fewer corrections now. Numbers especially are far more accurate.",
       "person": "John Timoney",
       "role": "ThinqViser",
       "source": 4,
-      "body": "Saturn publishes this feedback alongside its Meeting Notes 2.0 release. It is useful because it addresses correction effort, not just generation speed. The claim concerns an improvement within Saturn; it does not establish how Saturn compares with other vendors."
+      "body": "That feedback is published by Saturn, so I would treat it as a useful signal rather than an independent comparison. The important point is that it speaks to less clean-up after the meeting, not just faster note generation."
     },
-    "verdict": "Shortlist Saturn when the next person needs to understand why the client said something. Give it a conversation where a figure or intention changes, then inspect the handover.",
+    "verdict": "Saturn makes most sense when preserving the reasoning behind a client decision matters as much as capturing the decision itself. If your team regularly has to go back to the recording because a summary lost an important condition, change of mind or piece of family context, that is where I would test it first.",
     "refs": [
       3,
       4
@@ -183,61 +186,63 @@ const vendors = [
     "id": "advisoryai",
     "name": "AdvisoryAI",
     "tag": "Notes, reports and checks by role",
-    "best": "Role-specific AI: lets you buy separate, specialised AI modules for your advisers vs. your paraplanners.",
+    "best": "Firms that want separate AI tools for advisers, paraplanners and compliance rather than one broad platform.",
     "summary": "Evie for notes; Emma for reports; Colin for checks.",
     "priceShort": "Evie: £89 + VAT/user/month",
     "watch": "Combined pricing for report/checking modules.",
     "intro": [
-      "AdvisoryAI makes the buying conversation easier to unpack. Evie handles meeting notes, Emma handles suitability reports and Colin handles compliance checks. I like that separation because “we need AI” can otherwise turn into buying a broad licence before the firm has agreed whose work it wants to improve.",
-      "The distinction matters in a practical handover. An adviser might need a structured note and a follow-up email. A paraplanner may need a draft built from several source documents and the firm’s template. Those are different tasks, with different checking requirements. I would evaluate them separately before deciding which people need which capability."
+      "AdvisoryAI splits its products by job.",
+      "Evie handles meeting notes, Emma drafts suitability reports and Colin checks files and reports. That makes the platform easier to evaluate because each team can test the part that actually affects their day-to-day work.",
+      "An adviser may only need a structured meeting note, actions and a follow-up email. A paraplanner needs a draft built from several documents, client information and the firm’s own templates.",
+      "AdvisoryAI keeps those workflows separate rather than bundling everything into one product."
     ],
     "features": [
       [
         "Evie meeting capture",
-        "Supports Teams, Zoom, Google Meet and mobile recording for in-person meetings."
+        "Records meetings across Teams, Zoom, Google Meet and mobile for face-to-face conversations."
       ],
       [
         "Actions and follow-up",
-        "Generates notes, action items and a draft client email."
+        "Generates structured notes, action points and draft client emails after the meeting.."
       ],
       [
         "Meeting preparation",
-        "Surfaces client history and outstanding actions from connected systems."
+        "Pulls together client history and outstanding actions before the adviser joins the call."
       ],
       [
-        "Separate report and check products",
-        "Emma drafts reports; Colin provides file and report checks."
+        "Separate report and checking products",
+        "Emma handles suitability report drafting, while Colin focuses on file and report checks."
       ]
     ],
     "pros": [
       [
         "Clearer cost planning",
-        "Published product prices give a firm a starting point before the sales call."
+        "Advisers, paraplanners and compliance teams can use different tools rather than paying for the same capability across every role."
       ],
       [
-        "A defined handover",
-        "The notes, report-writing and checking tasks are distinct enough to assess with different team members."
+        "Easy to trial by workflow",
+        "Firms can test meeting notes, report writing and checking separately instead of evaluating the whole platform at once."
       ]
     ],
     "cons": [
       [
-        "The entry price is not the whole workflow",
-        "Evie’s price does not include every separately priced product."
+        "Costs add up across products",
+        "Evie’s monthly price only covers Evie. Adding Emma, Colin and more users can change the total quickly.."
       ],
       [
-        "Templates and source quality still matter",
-        "Use your own document pack in the pilot; a polished sample report will not expose missing source facts."
+        "Good outputs still depend on good inputs:",
+        "Your templates, source documents and client data will have a big effect on the quality of the final report."
       ]
     ],
-    "pricing": "The pricing page reviewed lists Evie at £89, Emma at £269 and Colin at £89, each plus VAT per user per month. It also advertises a 14-day trial. Confirm billing terms, seat allocation and any bundle offer before calculating the firm-wide total.",
+    "pricing": "Evie is listed at £89, Emma at £269 and Colin at £89 per user per month, plus VAT. AdvisoryAI also offers a 14-day trial.",
     "review": {
       "quote": "",
       "person": "Lee McGuinness",
       "role": "Associate Planner, Satis UK",
       "source": 7,
-      "body": "In AdvisoryAI’s published testimonial, McGuinness says the firm initially wanted report writing and found meeting notes useful for preserving evidence of client discussions. That is a more helpful detail than a generic time-saving claim: the note can support the file even when a particular discussion does not belong in the final report."
+      "body": "In AdvisoryAI’s published testimonial, Lee McGuinness, Associate Planner at Satis UK, says the firm originally came for report writing but also found value in meeting notes as a record of the wider client discussion."
     },
-    "verdict": "Shortlist AdvisoryAI if you want to price and trial the adviser and paraplanner workloads separately. Ask the person who reviews the reports to evaluate the output too.",
+    "verdict": "AdvisoryAI is a strong fit for firms that want to introduce AI one workflow at a time. You can start with adviser meeting notes, add report drafting for paraplanners and bring in compliance checking separately, rather than committing the whole firm to one large platform from day one.",
     "refs": [
       5,
       6,
@@ -251,61 +256,63 @@ const vendors = [
     "id": "plannerpal",
     "name": "PlannerPal",
     "tag": "The work around the meeting",
-    "best": "Killing manual data entry: eliminates copy-pasting between your prep documents and back-office systems.",
+    "best": "Advice firms that want to cut down the copy-pasting between meeting notes, client documents and back-office systems.",
     "summary": "Preparation, meeting notes, documents and CRM updates.",
     "priceShort": "Confirm current price",
     "watch": "Field-level write-back and conflict handling.",
     "intro": [
-      "PlannerPal is worth a look if the most frustrating part of the day is entering the same information in several places. Its public proposition connects preparation, meeting capture, documents and CRM updates. My interest here is the connection between those steps, rather than how quickly a transcript appears.",
-      "Imagine that the CRM still holds a client’s old salary, but they mention a promotion during the meeting. What happens next? Does the note preserve both the previous value and the new statement? Who approves the change? Where does the approved figure appear? That is the demonstration I would want before accepting “two-way sync” as a meaningful advantage."
+      "PlannerPal is built around the admin that happens before and after the meeting.",
+      "It brings together meeting preparation, recording, notes, documents and CRM updates, with the aim of stopping advisers and support teams from entering the same client information more than once.",
+      "For example, if a client mentions a new salary, address or objective during the meeting, the useful question is not whether PlannerPal captured it. It is whether that change can move into the right system without someone copying it across manually.",
+      "For firms already using Xplan, intelliflo, Plannr or Curo, that connection is a big part of the proposition."
     ],
     "features": [
       [
-        "Preparation and context",
-        "The published workflow brings existing client information into meeting preparation."
+        "Meeting preparation",
+        "Pulls existing client information into the workflow before the meeting starts."
       ],
       [
         "Meeting capture",
-        "PlannerPal describes Teams, Zoom and mobile recording, including offline mobile capture."
+        "Supports Teams, Zoom and mobile recording, including offline capture on mobile."
       ],
       [
         "Connected outputs",
-        "Notes, emails, reports and CRM updates sit within the advertised workflow."
+        "Meeting notes, emails, reports and CRM updates sit within the same workflow."
       ],
       [
         "Back-office connections",
-        "Public material describes Xplan access and two-way sync with intelliflo, Plannr and Curo."
+        "PlannerPal lists Xplan access and two-way connections with intelliflo, Plannr and Curo.."
       ]
     ],
     "pros": [
       [
-        "Addresses a recognisable admin problem",
-        "Relevant where the same client change is retyped into notes, emails and records."
+        "Cuts down repetitive admin",
+        " Useful when the same client information is being copied into notes, emails, reports and the CRM."
       ],
       [
-        "Fits an existing-system evaluation",
-        "The proposition starts with connecting the firm’s systems, making the handover a useful buying criterion."
+        "Built around existing systems",
+        "The integrations make it easier to fit PlannerPal into an established advice tech stack rather than replacing everything around it."
       ]
     ],
     "cons": [
       [
-        "“Sync” needs a field-level demonstration",
-        "Confirm what each connector reads, writes and leaves for manual approval."
+        "Integration depth matters",
+        "A two-way connection sounds good, but the useful detail is which fields it can read and update, and what still needs manual approval."
       ],
       [
-        "Public evidence was incomplete",
-        "I could not verify a current price or a named note-taking testimonial from the accessible material reviewed."
+        "Less public detail on pricing and customer results",
+        "There is less available information to judge the full cost and the day-to-day experience compared with some of the other tools here."
       ]
     ],
-    "pricing": "Confirm the current price directly. The public sign-up page advertises a 14-day trial, but the sources reviewed did not establish a current per-user rate. Ask whether your required CRM connection and report templates are included.",
+    "pricing": "PlannerPal advertises a 14-day trial but does not publish a standard per-user price. Ask whether your CRM connection, templates and onboarding are included in the quote.",
     "review": {
-      "quote": "",
-      "person": "",
-      "role": "",
+      "quote": "What took me two or three days in client admin is done in half a day. It’s incredible.",
+      "person": "Ian Dempsey DipPFS",
+      "role": "The Wealth Strategist",
       "source": 8,
-      "body": "I could not verify a named customer account about the meeting-note workflow in the accessible sources reviewed. That is a gap in this comparison, not proof of unhappy customers. Ask PlannerPal for a reference from a firm using your back-office system, and ask that firm what still requires manual entry."
+      "body": "That’s the more useful proof point for PlannerPal. The value here is in the admin that follows the meeting, which Dempsey says now takes a fraction of the time."
     },
-    "verdict": "Shortlist PlannerPal if duplicate entry is the main problem. Test an update that conflicts with the existing record, not just a new blank client file.",
+    "verdict": "PlannerPal is a better fit for teams that lose time moving client information between systems. If meeting updates are being copied from prep materials into notes, emails and back-office tools, this is the workflow I’d test first.",
     "refs": [
       8,
       9
@@ -318,61 +325,62 @@ const vendors = [
     "id": "recordsure",
     "name": "Recordsure",
     "tag": "Checking the evidence behind a note",
-    "best": "Bulletproof compliance: cross-checks meeting summaries against actual audio evidence to prove what was said.",
+    "best": "Firms that want reviewers to trace meeting summaries back to the conversation and spot evidence that may contradict them.",
     "summary": "Meeting summaries with supporting and conflicting evidence.",
     "priceShort": "Request a quote",
     "watch": "Onward reporting and back-office workflow.",
     "intro": [
-      "Recordsure puts the review step at the centre of its meeting-notes proposition. Its published workflow pairs a generated summary with transcript excerpts that support it and evidence that may conflict with it. Of the approaches here, that is the one I would explore first when the main question is: “How do we check this sentence?”",
-      "Consider an illustrative summary that says a client is comfortable taking more risk. Earlier in the same meeting, the client says a loss would affect their ability to pay essential bills. Those statements need attention together. A tidy summary is less useful if the reviewer has to hunt through the entire recording to find the tension."
+      "Recordsure puts more emphasis on checking the note than most of the tools in this list.",
+      "It records the conversation, produces a transcript and draft summary, then gives reviewers the evidence behind what has been written. That includes excerpts that support a point as well as parts of the conversation that may conflict with it."
     ],
-    "features": [
+       "features": [
       [
         "Conversation capture",
-        "Recordsure describes recording in-person and video meetings."
+        "Records in-person and video meetings for later transcription and review."
       ],
       [
         "AI-assisted summaries",
-        "The recorded conversation becomes a transcript and draft meeting note."
+        "Turns the recorded conversation into a transcript and draft meeting note."
       ],
       [
         "Evidence review",
-        "Reviewers can check supporting excerpts and conflicting evidence."
+        "Shows the excerpts supporting a summary alongside evidence that may contradict it."
       ],
       [
         "Human validation",
-        "Its published approach calls for a person to validate key summary elements before advice use."
+        "Key parts of the generated note are designed to be checked by a person before being relied on in the advice process."
       ]
     ],
-    "pros": [
+       "pros": [
       [
-        "A specific review mechanism",
-        "Supporting and conflicting evidence makes the validation step more concrete."
+        "Stronger review trail",
+        "Reviewers can see where a statement came from instead of searching through the entire recording themselves."
       ],
       [
-        "A good fit for reviewer-led pilots",
-        "Compliance and quality teams have a clear workflow to assess alongside advisers."
+        "Useful for compliance teams",
+        "The evidence-led workflow gives compliance and quality teams something specific to test, not just the quality of the generated summary."
       ]
     ],
     "cons": [
       [
-        "Review remains part of the job",
-        "Include validation time when assessing any claimed efficiency gain."
+        "Human review is still part of the workflow",
+        "The evidence makes checking easier, but it does not remove the need for someone to validate important points."
       ],
       [
-        "The wider workflow needs checking",
-        "The reviewed material does not establish a complete suitability-report drafting workflow or connector-by-connector scope."
+        "The wider workflow is less clear",
+        "Recordsure is strong on conversation review, but firms should confirm how far it extends into report drafting, CRM updates and other post-meeting work."
       ]
     ],
-    "pricing": "No public price was listed on the meeting-notes page reviewed. Request a quote specifying capture, summaries, validation, storage and integration requirements. Ask which components are required for the workflow demonstrated.",
+    "pricing": "Recordsure does not publish standard pricing for its meeting-notes product. Ask for a quote covering recording, summaries, validation, storage and any integrations you need.",
     "review": {
       "quote": "",
       "person": "",
       "role": "",
       "source": 10,
-      "body": "The meeting-notes page reviewed describes the product and its claimed efficiency benefits, but does not provide a named customer account substantiating that particular workflow. I would not present its headline saving as independent user feedback. Ask for a reference who can describe the checking process and the work left after generation."
+          "cta": "Learn more ↗",
+      "body": "Recordsure publishes customer stories across its wider conversation-review platform, but there is less named feedback specifically about its AI meeting-notes workflow. For this product, I’d pay more attention to the review process itself: how quickly can your compliance team get from a questionable sentence back to the evidence?"
     },
-    "verdict": "Shortlist Recordsure when tracing a conclusion back to evidence is the priority. Ask a reviewer to check a deliberately ambiguous conversation and record the steps required.",
+    "verdict": "Recordsure makes most sense when checking the meeting note is as important as generating it. If your compliance team regularly needs to understand exactly what a client said, what supports a conclusion and where the conversation becomes less clear-cut, that is where its evidence-led approach stands out.",
     "refs": [
       10
     ],
@@ -420,7 +428,7 @@ const intro = [
 ];
 
 
-const choices = [["The meeting creates several follow-up jobs", "Aveni", "How one approved record feeds documents and CRM updates."], ["Context gets lost between team members", "Saturn", "How changing intentions and soft facts survive the summary."], ["Advisers and paraplanners need different capabilities", "AdvisoryAI", "What each role gets, what it costs and who reviews the output."], ["The same facts are entered in several systems", "PlannerPal", "What gets written back and how conflicting values are handled."], ["Reviewers need evidence behind each conclusion", "Recordsure", "How supporting and conflicting excerpts are presented."]];
+const choices = [["The note is fine, but advisers still spend too long on CRM updates, follow-ups and documents", "Aveni", "Take one client change and follow it from the meeting note into the CRM, follow-up and final document."], ["Important context disappears when the meeting gets summarised or passed to someone else", "Saturn", "Use a conversation where the client changes their mind or adds a condition. Check whether that nuance survives the summary."], ["Advisers, paraplanners and compliance each need something different", "AdvisoryAI", "Test Evie, Emma and Colin separately with the people who would actually use them. Do not judge all three from one demo."], ["Client information is still being copied between notes, emails and back-office systems", "PlannerPal", "Change an existing client fact and see exactly where it updates, what needs approval and what still has to be entered manually."], ["Compliance needs to see the evidence behind what the note says", "Recordsure", "Pick an ambiguous part of a meeting and see how quickly the reviewer can get from the summary back to supporting or conflicting evidence."]];
 
 const checks = [
   ["01", "Meeting record", "Can it capture what was actually said in client meetings?", "mic"],
@@ -568,11 +576,11 @@ export default function BestAINoteTaking({portfolioHref='https://www.seo-growup.
  <main><header className="an-hero">
   <div className="an-hero-main an-container">
     <div className="an-hero-copy">
-      <div className="an-eyebrow">Fintech writing· 2026</div>
+      <div className="an-eyebrow">Fintech writing sample· 2026</div>
       <h1>5 Best AI Note-Taking Tools for UK Financial Advisers <span>in 2026</span></h1>
       <p className="an-deck">Better notes are only the start. Here’s how five tools approach the checking, follow-up and handover that come next.</p>
       <div className="an-meta">
-        <span>By GrowUp</span>
+        <span>By GrowUp | For Aveni</span>
         <time dateTime="2026-10-02">Reviewed 2 October 2026</time>
         <span>14 min read</span>
       </div>
@@ -608,12 +616,24 @@ export default function BestAINoteTaking({portfolioHref='https://www.seo-growup.
  <h3 id={`${v.id}-features`}>Key features</h3><ul className="an-feature-list">{v.features.map(([title,body])=><li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ul>
  <div className="an-balance"><div><h3 id={`${v.id}-pros`}>+ Pros</h3><ul>{v.pros.map(([t,b])=><li key={t}><strong>{t}</strong>{b}</li>)}</ul></div><div><h3 id={`${v.id}-cons`}>− Cons & limitations</h3><ul>{v.cons.map(([t,b])=><li key={t}><strong>{t}</strong>{b}</li>)}</ul></div></div>
  <div className="an-price"><h3 id={`${v.id}-pricing`}>Pricing</h3><p>{v.pricing}</p></div>
- <h3 id={`${v.id}-reviews`}>What do real users say about {v.name}?</h3><div className="an-review"><div className="an-eyebrow">{v.review.person?'Vendor-published customer feedback':'Customer evidence: what we could verify'}</div>{v.review.quote&&<blockquote>“{v.review.quote}”</blockquote>}{v.review.person&&<p className="an-review-person">{v.review.person}<br/><span>{v.review.role}</span></p>}<p>{v.review.body}</p><a href={sourceLink(v.review.source)} target="_blank" rel="noreferrer">Read the source ↗</a></div>
+ <h3 id={`${v.id}-reviews`}>What do real users say about {v.name}?</h3><div className="an-review"><div className="an-eyebrow">{v.review.person?'Vendor-published customer feedback':'Customer evidence: what we could verify'}</div>{v.review.quote&&<blockquote>“{v.review.quote}”</blockquote>}{v.review.person&&<p className="an-review-person">{v.review.person}<br/><span>{v.review.role}</span></p>}<p>{v.review.body}</p><a href={sourceLink(v.review.source)} target="_blank" rel="noreferrer">{(v.review as { cta?: string }).cta || "Read the source ↗"}</a></div>
  <div className="an-verdict"><div className="an-eyebrow">Our take</div><p>{v.verdict}</p></div><div className="an-sources-inline">{v.refs.map(n=><a href={`#source-${n}`} key={n}>[{n}] {sources[n-1][0]}</a>)}</div></section>)}
- <section id="choose"><h2>Which AI note-taking tool should you choose?</h2><p>I would narrow this down by the job that keeps getting pushed into the evening. A larger feature list is not much help if it leaves that job untouched.</p><div className="an-table-shell"><div className="an-table-scroll" role="region" aria-label="Shortlist by business need" tabIndex={0}><table className="an-table an-choose-table"><thead><tr><th scope="col">If the main problem is…</th><th scope="col">Start by evaluating…</th><th scope="col">Ask the demo to prove…</th></tr></thead><tbody>{choices.map(([problem,tool,test])=><tr key={problem}><td><strong>{problem}</strong></td><td>{tool}</td><td>{test}</td></tr>)}</tbody></table></div></div><div className="an-ending"><h3>Time the finished job.</h3><p>Use the same authorised sample in each pilot. Start the clock when the meeting ends. Stop it when the note is checked, the record is updated and the next person can act. Keep a log of corrections and manual steps. That gives you something much more useful than the speed of the first draft.</p></div></section>
+ <section id="choose"><h2>Which AI note-taking tool should you choose?</h2><p>The easiest way to narrow this list is to look at where the work starts piling up after a client meeting.</p><div className="an-table-shell an-clean-shell"><div className="an-table-scroll" role="region" aria-label="Shortlist by business need" tabIndex={0}><table className="an-table an-clean an-choose-table"><thead><tr><th scope="col">Where the friction shows up</th><th scope="col">Start with</th><th scope="col">What I’d make them show you</th></tr></thead><tbody>{choices.map(([problem,tool,test])=><tr key={problem}><td><strong>{problem}</strong></td><td>{tool}</td><td>{test}</td></tr>)}</tbody></table></div></div><div className="an-author">
+  <div className="an-author-mark" aria-hidden="true">
+    <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+      <path d="M22.4 6.6c-.4-.3-.9-.3-1.3-.1-3.6 2-6.2 4.4-7.9 6.7-1.3 1.8-2 3.4-2.3 4.6-1.1.4-2.1 1-2.9 1.8-.9.9-1.5 1.9-1.9 2.8-.2.5-.3.9-.3 1.2 0 .3.1.5.2.6.2.2.4.2.6.2.5 0 1.1-.2 1.8-.5.9-.4 1.9-1 2.8-1.9.7-.7 1.3-1.6 1.7-2.6 1.2-.3 2.7-1 4.4-2.3 2.3-1.7 4.6-4.3 6.6-7.8.2-.5.2-1-.2-1.3z"/>
+      <path d="M14.2 21.7c-.4.9-.9 1.6-1.5 2.2-.6.6-1.3 1.1-2 1.4-1.5.8-3.2.9-4.1 1 0-.9.1-2.6 1-4.1.3-.7.8-1.4 1.4-2 .5-.5 1.1-.9 1.8-1.2-.1.9-.1 1.9.2 2.7.1.3.4.5.7.5.3 0 .6-.2.7-.5.2-.6.3-1.2.3-1.8.4.3.8.6 1.5.8z"/>
+    </svg>
+  </div>
+  <div className="an-author-body">
+    <div className="an-author-eyebrow">Written by</div>
+    <div className="an-author-name">GrowUp</div>
+    <p className="an-author-bio">GrowUp writes about fintech and financial services. This article is a portfolio sample, written as an example of the kind of content GrowUp would produce for Aveni. It is not published by or affiliated with Aveni.</p>
+  </div>
+</div></section>
  <section id="sources"><h2>Sources & research</h2><p style={{fontSize:14,color:'#55645e'}}>Product facts and feedback below come from vendor sources. They establish what is published, not independently measured performance. Public information was reviewed on 2 October 2026; pricing, integrations and product scope may change.</p><ol className="an-source-list">{sources.map(([title,url],i)=><li key={url} id={`source-${i+1}`}><a href={url} target="_blank" rel="noreferrer">{title} ↗</a></li>)}</ol></section>
  </article></div>
- <section className="an-cta"><div><div className="an-eyebrow">GrowUp · Fintech copywriting</div><h2>Give buyers more to go on.</h2><p>We turn product research, customer interviews and technical detail into articles that help fintech buyers compare, question and decide.</p></div><div><a href={contactHref}>Talk about your next article <span>↗</span></a><p className="an-cta-note">Comparison pages · Product content · Customer stories</p></div></section>
+ <section className="an-cta"><div><div className="an-eyebrow">GrowUp · Fintech content writing services</div><h2>Content for complex fintech products.</h2><p>Articles, comparison pages and customer stories that explain the product properly, answer buyer questions and support search, sales and pipeline.</p></div><div><a href={contactHref}>Commission an article like this <span>↗</span></a><p className="an-cta-note">Comparison pages · Product content · Customer stories</p></div></section>
  </main><footer className="an-footer"><a href={portfolioHref}>← Back to writing portfolio</a><a href="#an-top">Back to top ↑</a></footer></div></div>;
 }
 
@@ -634,5 +654,5 @@ const styles = `.an-page{--ink:#112c25;--muted:#55645e;--green:#144c38;--line:#d
 .an-hero .an-jump{color:#9cf2a3;border-color:#66897a}
 .an-hero-art{min-width:0;display:block;width:100%}
 .an-hero-art img{width:100%;max-width:none;filter:drop-shadow(0 36px 70px rgba(0,0,0,.16))}.an-hero .an-eyebrow{color:#477045}.an-hero h1{font-size:clamp(38px,4vw,61px);line-height:1.08;font-weight:650;letter-spacing:-.052em;margin:20px 0 24px}.an-hero h1 span{color:#4d725b}.an-deck{font-size:18px;line-height:1.65;max-width:540px;color:var(--muted)}.an-meta{display:flex;gap:15px;flex-wrap:wrap;margin-top:27px;font-size:12px;color:var(--muted)}.an-hero-art{border-radius:5px;overflow:visible}.an-hero-art img{width:100%;height:auto;display:block}.an-hero-art figcaption{text-align:left;padding:12px 0;color:#c6dacb;font-size:10px;letter-spacing:.09em;text-transform:uppercase}.an-jump{display:inline-flex;gap:26px;align-items:center;text-decoration:none;margin-top:25px;font-size:14px;font-weight:700;border-bottom:1px solid #71916d;padding:4px 0}.an-strip{display:flex;align-items:center;gap:26px;padding:23px 0;border-block:1px solid var(--line);font-size:15px;flex-wrap:wrap}.an-strip .an-eyebrow{color:#708075;margin-right:auto}.an-strip a{font-weight:700;text-decoration:none}.an-layout{display:grid;grid-template-columns:235px minmax(0,850px);gap:75px;justify-content:space-between;padding-top:60px;align-items:start}.an-toc{position:sticky;top:26px;max-height:calc(100vh - 52px);overflow-y:auto;padding-right:16px}.an-toc>.an-eyebrow{color:var(--muted);margin-bottom:17px}.an-toc nav>a,.an-toc summary{display:block;text-decoration:none;font-size:13px;padding:9px 0;line-height:1.5}.an-toc details{border-bottom:1px solid var(--line)}.an-toc summary{font-weight:650;list-style:none;display:flex;justify-content:space-between;gap:10px}.an-toc summary::after{content:'+';font-weight:400;color:#688265}.an-toc details[open] summary::after{content:'\u2212'}.an-toc details a{display:block;font-size:12px;color:var(--muted);padding:5px 0 5px 14px;text-decoration:none}.an-toc a[aria-current='location']{color:#155c36;font-weight:800}.an-toc-foot{font-size:12px;border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:var(--muted)}.an-copy-button{display:block;background:transparent;border:0;color:var(--green);padding:12px 0 0;font-size:12px;font-weight:700}.an-mobile-toc{display:none}.an-article{min-width:0}.an-article p{margin-bottom:21px}.an-intro p:first-child{font-size:29px;line-height:1.3;font-weight:650;letter-spacing:-.035em}.an-article section{scroll-margin-top:35px;padding-top:60px}
-.an-article section#method{padding-top:36px}.an-article h2{font-size:36px;line-height:1.2;letter-spacing:-.045em;font-weight:650;margin-bottom:24px;text-wrap:balance}.an-article h3{font-size:22px;line-height:1.3;letter-spacing:-.025em;margin:35px 0 18px;scroll-margin-top:35px}.an-method{border-left:3px solid #71926b;padding:3px 0 3px 20px;margin:30px 0;color:var(--muted);font-size:13px;line-height:1.7}.an-method strong{color:var(--ink)}.an-method p{margin:0}.an-criteria{padding:0;list-style:none;counter-reset:criteria}.an-criteria li{counter-increment:criteria;position:relative;padding:22px 0 22px 53px;border-top:1px solid var(--line)}.an-criteria li:before{content:'0' counter(criteria);position:absolute;left:0;top:24px;font-size:12px;font-weight:700;color:#638156}.an-criteria strong{display:block;font-size:18px;margin-bottom:5px}.an-criteria p{color:var(--muted);margin:0;font-size:16px}.an-table-shell{border:1px solid #c6d3c5;border-radius:6px;overflow:hidden;margin:28px 0}.an-table-label{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px;background:#eaf1e5}.an-table-label strong{font-size:20px;letter-spacing:-.03em}.an-table-label span{font-size:11px;color:#536953}.an-table-scroll{overflow-x:auto}.an-table-scroll:focus{outline-offset:-3px}.an-table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px;line-height:1.55}.an-table th{text-align:left;padding:17px 18px;background:#123c2d;color:#fff;font-size:12px;letter-spacing:.02em;vertical-align:top}.an-table th:first-child{width:17%}.an-table td{padding:24px 18px;border-bottom:1px solid var(--line);vertical-align:top}.an-table tbody tr:nth-child(even){background:#f0f4ec}.an-table td strong{display:block;font-size:15px;color:var(--ink);margin-bottom:5px}.an-table td small{display:block;color:var(--muted);font-size:12px;margin-top:6px}.an-table td a{font-weight:750;text-decoration:none}.an-table tr:last-child td{border:0}.an-table-footer{font-size:12px;line-height:1.6;padding:16px 22px;color:var(--muted);background:#fff;margin:0!important}.an-tool{border-top:1px solid #b9c9b7;margin-top:60px;padding-top:36px!important}.an-tool-heading{display:flex;gap:20px;align-items:flex-start;margin-bottom:20px}.an-rank{display:flex;align-items:center;justify-content:center;flex:none;height:54px;width:54px;border:1px solid #bdceb8;background:#edf3e7;font-size:18px;font-weight:650;border-radius:50%}.an-tool-heading h2{font-size:44px;margin:1px 0 5px;line-height:1.1}.an-tool-heading .an-eyebrow{font-size:10px;color:#64805b}.an-best{padding:18px 22px;background:#eaf0e4;border-radius:4px;font-size:16px;margin:25px 0!important}.an-product-figure{margin:30px 0!important;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#f0f3ee}.an-product-figure img{width:100%;max-height:530px;object-fit:contain;padding:20px}.an-product-figure figcaption{font-size:12px;color:var(--muted);background:#fff;padding:12px 18px;border-top:1px solid var(--line)}.an-product-figure figcaption a{text-decoration:none}.an-feature-list{list-style:none;margin:0;padding:0}.an-feature-list li{padding:17px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:190px 1fr;gap:25px;font-size:16px}.an-feature-list strong{font-size:15px}.an-feature-list span{color:var(--muted)}.an-balance{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:30px 0}.an-balance>div{padding:23px 25px;background:#edf3e8;border-top:3px solid #619053}.an-balance>div+div{background:#f3f0e8;border-color:#a99673}.an-balance h3{font-size:18px;margin:0 0 20px}.an-balance ul{list-style:none;padding:0;margin:0}.an-balance li{font-size:14px;line-height:1.7;margin-top:17px;color:#4f5b50}.an-balance li strong{display:block;font-size:15px;color:var(--ink);margin-bottom:4px}.an-price{border-block:1px solid var(--line);padding:22px 0;margin-top:30px}.an-price h3{margin:0 0 10px}.an-price p{margin:0;font-size:16px}.an-review{margin:28px 0;padding:26px 30px;border:1px solid #d6dfd0;border-radius:5px;background:#fff}.an-review .an-eyebrow{font-size:10px;color:#627359;margin-bottom:13px}.an-review blockquote{font-size:25px;line-height:1.42;letter-spacing:-.028em;margin:14px 0 18px}.an-review .an-review-person{font-size:13px;font-weight:700;margin:0 0 17px}.an-review .an-review-person span{font-weight:400;color:var(--muted)}.an-review p{font-size:15px;color:var(--muted);margin:0}.an-review a{font-size:12px;display:inline-block;margin-top:15px}.an-verdict{padding:22px 25px;background:#173f30;color:#fff;border-radius:4px;margin-top:30px}.an-verdict .an-eyebrow{color:#c0e5a9;margin-bottom:10px}.an-verdict p{font-size:16px;line-height:1.7;margin:0}.an-sources-inline{display:flex;flex-wrap:wrap;gap:16px;margin-top:17px}.an-sources-inline a{font-size:12px;color:#5b7156}.an-choose-table{font-size:15px}.an-choose-table th{width:auto!important}.an-ending{padding:32px;background:#e9f0e2;margin-top:35px}.an-ending h3{margin:0 0 14px}.an-ending p{margin:0;font-size:16px}.an-source-list{padding-left:22px;font-size:13px;color:var(--muted)}.an-source-list li{padding:9px 0;border-bottom:1px solid var(--line);scroll-margin-top:30px}.an-source-list a{overflow-wrap:anywhere}.an-cta{margin-top:75px;margin-bottom:35px;padding:50px;background:#12382b;color:#fff;display:grid;grid-template-columns:1.5fr 1fr;gap:65px;align-items:center;border-radius:5px}.an-cta .an-eyebrow{color:#bddfa8}.an-cta h2{font-size:39px;line-height:1.13;letter-spacing:-.04em;margin:16px 0}.an-cta p{color:#cad7c9;font-size:15px;max-width:630px}.an-cta a{display:flex;align-items:center;justify-content:space-between;background:var(--lime);color:#173522;padding:18px 23px;font-size:14px;font-weight:700;text-decoration:none}.an-cta-note{font-size:12px!important;color:#b5c8b3!important;margin-top:12px!important}.an-footer{display:flex;justify-content:space-between;padding:0 0 35px;font-size:12px;color:var(--muted)}.an-progress{height:3px;position:fixed;top:0;left:0;background:#729754;z-index:10;pointer-events:none}.an-skip{position:fixed;top:-100px;left:15px;background:#fff;padding:10px;z-index:30}.an-skip:focus{top:10px}\n@media(min-width:1500px){.an-hero h1{font-size:66px}}\n@media(max-width:1100px){.an-wrap{width:calc(100% - 56px)}.an-layout{grid-template-columns:190px minmax(0,1fr);gap:38px}.an-hero{gap:30px}.an-hero h1{font-size:46px}.an-feature-list li{grid-template-columns:155px 1fr}.an-balance{gap:14px}.an-balance>div{padding:20px}.an-cta{gap:35px;padding:35px}}\n@media(max-width:850px){.an-wrap{width:calc(100% - 40px)}.an-top nav{display:none}.an-hero-main{grid-template-columns:1fr;padding-top:30px;padding-inline:24px}.an-hero-copy{max-width:650px}.an-hero-art{height:auto;padding:20px 0;width:100%;overflow:visible}.an-hero-art img{width:100%;height:auto;object-fit:contain}.an-hero h1{font-size:53px}.an-strip{gap:17px;font-size:13px}.an-strip .an-eyebrow{width:100%}.an-layout{display:block;padding-top:32px}.an-toc{display:none}.an-mobile-toc{display:block;border-bottom:1px solid var(--line);margin-bottom:32px;padding-bottom:15px}.an-mobile-toc summary{font-size:14px;font-weight:700}.an-mobile-toc nav{display:grid;grid-template-columns:1fr 1fr;padding-top:12px;gap:9px}.an-mobile-toc a{font-size:13px;text-decoration:none}.an-article h2{font-size:32px}.an-cta{grid-template-columns:1fr;gap:28px}.an-cta h2{max-width:600px}.an-cta a{max-width:330px}}\n@media(max-width:520px){.an-page{font-size:16px}.an-wrap{width:calc(100% - 32px)}.an-top{padding:18px 0}.an-hero h1{font-size:39px;letter-spacing:-.048em}.an-deck{font-size:13px}.an-hero-art{height:330px}.an-strip{gap:14px}.an-intro p:first-child{font-size:26px}.an-article section{padding-top:42px}.an-article h2{font-size:29px}.an-tool-heading h2{font-size:37px}.an-tool-heading{gap:14px}.an-rank{width:46px;height:46px}.an-tool-heading .an-eyebrow{font-size:9px}.an-balance{grid-template-columns:1fr}.an-feature-list li{display:block}.an-feature-list strong{display:block;margin-bottom:5px}.an-review{padding:22px}.an-review blockquote{font-size:23px}.an-table-label{padding:17px;display:block}.an-table-label span{display:block;margin-top:5px}.an-table td{padding:20px 15px}.an-product-figure img{padding:10px}.an-product-figure figcaption{font-size:11px}.an-cta{padding:28px}.an-cta h2{font-size:32px}.an-footer{gap:20px}.an-criteria li{padding-left:39px}}\n .an-article .an-built-lede{color:var(--muted);font-size:16px;line-height:1.7}.an-note{display:flex;gap:18px;align-items:flex-start;padding:22px 24px;background:#e6f1ea;border:1px solid #cfe2d6;border-radius:10px;margin:26px 0 8px}.an-note strong{display:block;font-size:15px;margin-bottom:6px}.an-article .an-note p{font-size:14px;line-height:1.65;color:var(--muted);margin:0 0 6px}.an-article .an-note p:last-child{margin:0}.an-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border-radius:50%;background:#dcece3;color:#1f6b4f}.an-article .an-built h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:22px;margin:34px 0 16px}.an-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.an-check{position:relative;display:flex;flex-direction:column;gap:6px;padding:18px 18px 20px;background:transparent;border:1px solid #dbe5dd;border-radius:10px}.an-check-num{font-size:11px;color:#7a8a80;font-weight:600}.an-check .an-icon{position:absolute;top:14px;right:14px}.an-check-text strong{display:block;font-size:15px;margin:14px 0 6px;color:#0f2a24}.an-article .an-check-text p{font-size:14px;line-height:1.55;color:var(--muted);margin:0;max-width:210px}.an-check:last-child{grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;padding:20px 22px}.an-check:last-child .an-check-num{position:absolute;top:14px;left:22px}.an-check:last-child .an-icon{position:static;width:48px;height:48px}.an-check:last-child .an-check-text{margin-top:14px}.an-check:last-child .an-check-text strong{margin-top:0}.an-article .an-check:last-child .an-check-text p{max-width:none}@media(max-width:850px){.an-checks{grid-template-columns:1fr 1fr}}@media(max-width:520px){.an-checks{grid-template-columns:1fr}.an-article .an-check-text p{max-width:none}}.an-hour{margin:34px 0 38px!important;padding:22px 24px 18px;border:1px solid #dbe5dd;border-radius:12px;background:transparent}.an-hour-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.an-hour-top .an-eyebrow{color:#64805b;font-size:10px}.an-hour-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8a6d2f;border:1px dashed #cdb27a;border-radius:999px;padding:3px 10px}.an-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.an-step{display:flex;flex-direction:column;gap:12px;padding:14px 14px 16px;border:1px solid #dbe5dd;border-radius:10px}.an-step-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.an-step-head>div span{display:block;font-size:11px;font-weight:600;color:#7a8a80}.an-step-head strong{display:block;font-size:14px;line-height:1.3;color:#0f2a24;margin-top:2px}.an-step-min{font-size:12px;font-weight:700;color:#144c38;white-space:nowrap;border:1px solid #cfe2d6;border-radius:999px;padding:2px 9px}.an-step-vis{min-height:84px;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:10px 12px;border:1px dashed #d3ddd5;border-radius:8px;font-size:12px}.an-wave2{display:flex;align-items:center;gap:2px;height:36px}.an-wave2 i{flex:1;min-width:2px;border-radius:2px;background:#c9d8ce}.an-wave2 i.on{background:#1f6b4f}.an-wave-meta{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:#144c38}.an-v-row{display:grid;grid-template-columns:68px 1fr;gap:6px;align-items:baseline;line-height:1.4}.an-v-row em{font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a8a80}.an-v-row b{font-weight:650;background:linear-gradient(transparent 62%,#d8f4ad 62%);width:fit-content;padding:0 3px}.an-v-row span{color:var(--muted)}.an-caret{display:inline-block;width:1px;height:13px;background:#144c38;margin-left:3px;vertical-align:-2px;animation:an-blink 1.1s steps(1) infinite}@keyframes an-blink{50%{opacity:0}}.an-bub{max-width:90%;padding:6px 10px;border-radius:12px;font-size:12px;line-height:1.35}.an-bub.in{align-self:flex-start;background:#eef3ec;color:#4f5b50;border-bottom-left-radius:3px}.an-bub.out{align-self:flex-end;border:1px solid #cfe2d6;color:#144c38;border-bottom-right-radius:3px}.an-me{display:flex;align-items:center;gap:12px;margin-top:auto}.an-face{flex:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#dcece3;color:#1f6b4f}.an-face.ugh{background:#f1e3bd;color:#8a6d2f}.an-face.flat{background:#e7e5df;color:#5f625c}.an-article .an-thought{position:relative;margin:0;padding:7px 11px;background:#f6efd6;color:#5f5330;font-size:12px;line-height:1.35;font-style:italic;border-radius:10px}.an-thought:before{content:'';position:absolute;left:-4px;top:50%;width:8px;height:8px;margin-top:-4px;background:#f6efd6;transform:rotate(45deg)}.an-compare{display:grid;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid #dbe5dd}.an-cmp-row{display:grid;grid-template-columns:200px 1fr 56px;gap:14px;align-items:center;font-size:13px;color:var(--muted)}.an-cmp-row b{text-align:right;font-weight:650;font-variant-numeric:tabular-nums;color:#0f2a24}.an-cmp-bar{display:block;height:8px;border-radius:4px;background:#e3ebe5;overflow:hidden}.an-cmp-bar i{display:block;height:100%;border-radius:4px;background:#1f6b4f}.an-cmp-row.after{color:#0f2a24;font-weight:650}.an-cmp-row.after .an-cmp-bar i{background:#c9a24d}.an-cmp-row.after b{font-size:18px;letter-spacing:-.03em}.an-hour figcaption{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-top:18px}.an-hour figcaption strong{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:500;font-size:19px;color:#0f2a24}.an-hour figcaption span{font-size:11px;color:#7a8a80}@media(max-width:800px){.an-steps{grid-template-columns:1fr}.an-cmp-row{grid-template-columns:1fr 56px}.an-cmp-bar{grid-column:1/-1;order:3}}@media(prefers-reduced-motion:reduce){.an-caret{animation:none}} @media(prefers-reduced-motion:reduce){.an-page *{scroll-behavior:auto!important}}.an-crit{display:flex;flex-direction:column;gap:24px;margin-top:30px}.an-crit-row{position:relative;display:flex;gap:20px;align-items:flex-start;padding:22px 24px;background:transparent;border:1px solid #dbe5dd;border-radius:10px}.an-crit-row .an-icon{width:48px;height:48px}.an-crit-row:not(:last-child):after{content:'';position:absolute;left:47px;bottom:-22px;height:16px;border-left:1px dashed #b9cdbf}.an-crit-text{min-width:0}.an-crit-text .an-check-num{display:block;margin-bottom:4px}.an-crit-text strong{display:block;font-size:18px;color:#0f2a24;margin-bottom:6px}.an-article .an-crit-text p{font-size:15px;line-height:1.65;color:var(--ink);margin:0}
+.an-article section#method{padding-top:36px}.an-article h2{font-size:36px;line-height:1.2;letter-spacing:-.045em;font-weight:650;margin-bottom:24px;text-wrap:balance}.an-article h3{font-size:22px;line-height:1.3;letter-spacing:-.025em;margin:35px 0 18px;scroll-margin-top:35px}.an-method{border-left:3px solid #71926b;padding:3px 0 3px 20px;margin:30px 0;color:var(--muted);font-size:13px;line-height:1.7}.an-method strong{color:var(--ink)}.an-method p{margin:0}.an-criteria{padding:0;list-style:none;counter-reset:criteria}.an-criteria li{counter-increment:criteria;position:relative;padding:22px 0 22px 53px;border-top:1px solid var(--line)}.an-criteria li:before{content:'0' counter(criteria);position:absolute;left:0;top:24px;font-size:12px;font-weight:700;color:#638156}.an-criteria strong{display:block;font-size:18px;margin-bottom:5px}.an-criteria p{color:var(--muted);margin:0;font-size:16px}.an-table-shell{border:1px solid #c6d3c5;border-radius:6px;overflow:hidden;margin:28px 0}.an-table-label{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px;background:#eaf1e5}.an-table-label strong{font-size:20px;letter-spacing:-.03em}.an-table-label span{font-size:11px;color:#536953}.an-table-scroll{overflow-x:auto}.an-table-scroll:focus{outline-offset:-3px}.an-table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px;line-height:1.55}.an-table th{text-align:left;padding:17px 18px;background:#123c2d;color:#fff;font-size:12px;letter-spacing:.02em;vertical-align:top}.an-table th:first-child{width:17%}.an-table td{padding:24px 18px;border-bottom:1px solid var(--line);vertical-align:top}.an-table tbody tr:nth-child(even){background:#f0f4ec}.an-table td strong{display:block;font-size:15px;color:var(--ink);margin-bottom:5px}.an-table td small{display:block;color:var(--muted);font-size:12px;margin-top:6px}.an-table td a{font-weight:750;text-decoration:none}.an-table tr:last-child td{border:0}.an-table-footer{font-size:12px;line-height:1.6;padding:16px 22px;color:var(--muted);background:#fff;margin:0!important}.an-tool{border-top:1px solid #b9c9b7;margin-top:60px;padding-top:36px!important}.an-tool-heading{display:flex;gap:20px;align-items:flex-start;margin-bottom:20px}.an-rank{display:flex;align-items:center;justify-content:center;flex:none;height:54px;width:54px;border:1px solid #bdceb8;background:#edf3e7;font-size:18px;font-weight:650;border-radius:50%}.an-tool-heading h2{font-size:44px;margin:1px 0 5px;line-height:1.1}.an-tool-heading .an-eyebrow{font-size:10px;color:#64805b}.an-best{padding:18px 22px;background:#eaf0e4;border-radius:4px;font-size:16px;margin:25px 0!important}.an-product-figure{margin:30px 0!important;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#f0f3ee}.an-product-figure img{width:100%;max-height:530px;object-fit:contain;padding:20px}.an-product-figure figcaption{font-size:12px;color:var(--muted);background:#fff;padding:12px 18px;border-top:1px solid var(--line)}.an-product-figure figcaption a{text-decoration:none}.an-feature-list{list-style:none;margin:0;padding:0}.an-feature-list li{padding:17px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:190px 1fr;gap:25px;font-size:16px}.an-feature-list strong{font-size:15px}.an-feature-list span{color:var(--ink)}.an-balance{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:30px 0}.an-balance>div{padding:23px 25px;background:#edf3e8;border-top:3px solid #619053}.an-balance>div+div{background:#f3f0e8;border-color:#a99673}.an-balance h3{font-size:18px;margin:0 0 20px}.an-balance ul{list-style:none;padding:0;margin:0}.an-balance li{font-size:14px;line-height:1.7;margin-top:17px;color:var(--ink)}.an-balance li strong{display:block;font-size:15px;color:var(--ink);margin-bottom:4px}.an-price{border-block:1px solid var(--line);padding:22px 0;margin-top:30px}.an-price h3{margin:0 0 10px}.an-price p{margin:0;font-size:16px}.an-review{margin:28px 0;padding:26px 30px;border:1px solid #d6dfd0;border-radius:5px;background:#fff}.an-review .an-eyebrow{font-size:10px;color:#627359;margin-bottom:13px}.an-review blockquote{font-size:25px;line-height:1.42;letter-spacing:-.028em;margin:14px 0 18px}.an-review .an-review-person{font-size:13px;font-weight:700;margin:0 0 17px}.an-review .an-review-person span{font-weight:400;color:var(--muted)}.an-review p{font-size:15px;color:var(--muted);margin:0}.an-review a{font-size:12px;display:inline-block;margin-top:15px}.an-verdict{padding:22px 25px;background:#173f30;color:#fff;border-radius:4px;margin-top:30px}.an-verdict .an-eyebrow{color:#c0e5a9;margin-bottom:10px}.an-verdict p{font-size:16px;line-height:1.7;margin:0}.an-sources-inline{display:flex;flex-wrap:wrap;gap:16px;margin-top:17px}.an-sources-inline a{font-size:12px;color:#5b7156}.an-choose-table{font-size:15px}.an-choose-table th{width:auto!important}.an-ending{padding:32px;background:#e9f0e2;margin-top:35px}.an-ending h3{margin:0 0 14px}.an-ending p{margin:0;font-size:16px}.an-author{margin-top:48px;padding:28px 30px;background:transparent;border:1px solid #e6ece6;border-radius:14px;display:flex;gap:28px;align-items:center}.an-author-mark{flex:none;width:64px;height:64px;border-radius:50%;background:#e8efe6;color:#123c2d;display:flex;align-items:center;justify-content:center;border-right:1px solid transparent}.an-author-body{position:relative;min-width:0;padding-left:28px;border-left:1px solid #e6ece6}.an-author-eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#8b9a90;margin-bottom:10px}.an-author-name{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:500;letter-spacing:-.015em;color:var(--ink);margin-bottom:10px}.an-article .an-author-bio{font-size:15px;line-height:1.65;color:#5a6a60;margin:0;max-width:660px}@media(max-width:520px){.an-author{padding:22px;gap:18px;align-items:flex-start}.an-author-mark{width:48px;height:48px}.an-author-body{padding-left:18px}.an-author-name{font-size:19px}.an-article .an-author-bio{font-size:14px}}.an-source-list{padding-left:22px;font-size:13px;color:var(--muted)}.an-source-list li{padding:9px 0;border-bottom:1px solid var(--line);scroll-margin-top:30px}.an-source-list a{overflow-wrap:anywhere}.an-cta{margin-top:75px;margin-bottom:35px;padding:50px;background:#12382b;color:#fff;display:grid;grid-template-columns:1.5fr 1fr;gap:65px;align-items:center;border-radius:5px}.an-cta .an-eyebrow{color:#bddfa8}.an-cta h2{font-size:39px;line-height:1.13;letter-spacing:-.04em;margin:16px 0}.an-cta p{color:#cad7c9;font-size:15px;max-width:630px}.an-cta a{display:flex;align-items:center;justify-content:space-between;background:var(--lime);color:#173522;padding:18px 23px;font-size:14px;font-weight:700;text-decoration:none}.an-cta-note{font-size:12px!important;color:#b5c8b3!important;margin-top:12px!important}.an-footer{display:flex;justify-content:space-between;padding:0 0 35px;font-size:12px;color:var(--muted)}.an-progress{height:3px;position:fixed;top:0;left:0;background:#729754;z-index:10;pointer-events:none}.an-skip{position:fixed;top:-100px;left:15px;background:#fff;padding:10px;z-index:30}.an-skip:focus{top:10px}\n@media(min-width:1500px){.an-hero h1{font-size:66px}}\n@media(max-width:1100px){.an-wrap{width:calc(100% - 56px)}.an-layout{grid-template-columns:190px minmax(0,1fr);gap:38px}.an-hero{gap:30px}.an-hero h1{font-size:46px}.an-feature-list li{grid-template-columns:155px 1fr}.an-balance{gap:14px}.an-balance>div{padding:20px}.an-cta{gap:35px;padding:35px}}\n@media(max-width:850px){.an-wrap{width:calc(100% - 40px)}.an-top nav{display:none}.an-hero-main{grid-template-columns:1fr;padding-top:30px;padding-inline:24px}.an-hero-copy{max-width:650px}.an-hero-art{height:auto;padding:20px 0;width:100%;overflow:visible}.an-hero-art img{width:100%;height:auto;object-fit:contain}.an-hero h1{font-size:53px}.an-strip{gap:17px;font-size:13px}.an-strip .an-eyebrow{width:100%}.an-layout{display:block;padding-top:32px}.an-toc{display:none}.an-mobile-toc{display:block;border-bottom:1px solid var(--line);margin-bottom:32px;padding-bottom:15px}.an-mobile-toc summary{font-size:14px;font-weight:700}.an-mobile-toc nav{display:grid;grid-template-columns:1fr 1fr;padding-top:12px;gap:9px}.an-mobile-toc a{font-size:13px;text-decoration:none}.an-article h2{font-size:32px}.an-cta{grid-template-columns:1fr;gap:28px}.an-cta h2{max-width:600px}.an-cta a{max-width:330px}}\n@media(max-width:520px){.an-page{font-size:16px}.an-wrap{width:calc(100% - 32px)}.an-top{padding:18px 0}.an-hero h1{font-size:39px;letter-spacing:-.048em}.an-deck{font-size:13px}.an-hero-art{height:330px}.an-strip{gap:14px}.an-intro p:first-child{font-size:26px}.an-article section{padding-top:42px}.an-article h2{font-size:29px}.an-tool-heading h2{font-size:37px}.an-tool-heading{gap:14px}.an-rank{width:46px;height:46px}.an-tool-heading .an-eyebrow{font-size:9px}.an-balance{grid-template-columns:1fr}.an-feature-list li{display:block}.an-feature-list strong{display:block;margin-bottom:5px}.an-review{padding:22px}.an-review blockquote{font-size:23px}.an-table-label{padding:17px;display:block}.an-table-label span{display:block;margin-top:5px}.an-table td{padding:20px 15px}.an-product-figure img{padding:10px}.an-product-figure figcaption{font-size:11px}.an-cta{padding:28px}.an-cta h2{font-size:32px}.an-footer{gap:20px}.an-criteria li{padding-left:39px}}\n .an-article .an-built-lede{color:var(--muted);font-size:16px;line-height:1.7}.an-note{display:flex;gap:18px;align-items:flex-start;padding:22px 24px;background:#e6f1ea;border:1px solid #cfe2d6;border-radius:10px;margin:26px 0 8px}.an-note strong{display:block;font-size:15px;margin-bottom:6px}.an-article .an-note p{font-size:14px;line-height:1.65;color:var(--muted);margin:0 0 6px}.an-article .an-note p:last-child{margin:0}.an-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border-radius:50%;background:#dcece3;color:#1f6b4f}.an-article .an-built h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:22px;margin:34px 0 16px}.an-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.an-check{position:relative;display:flex;flex-direction:column;gap:6px;padding:18px 18px 20px;background:transparent;border:1px solid #dbe5dd;border-radius:10px}.an-check-num{font-size:11px;color:#7a8a80;font-weight:600}.an-check .an-icon{position:absolute;top:14px;right:14px}.an-check-text strong{display:block;font-size:15px;margin:14px 0 6px;color:#0f2a24}.an-article .an-check-text p{font-size:14px;line-height:1.55;color:var(--muted);margin:0;max-width:210px}.an-check:last-child{grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;padding:20px 22px}.an-check:last-child .an-check-num{position:absolute;top:14px;left:22px}.an-check:last-child .an-icon{position:static;width:48px;height:48px}.an-check:last-child .an-check-text{margin-top:14px}.an-check:last-child .an-check-text strong{margin-top:0}.an-article .an-check:last-child .an-check-text p{max-width:none}@media(max-width:850px){.an-checks{grid-template-columns:1fr 1fr}}@media(max-width:520px){.an-checks{grid-template-columns:1fr}.an-article .an-check-text p{max-width:none}}.an-hour{margin:34px 0 38px!important;padding:22px 24px 18px;border:1px solid #dbe5dd;border-radius:12px;background:transparent}.an-hour-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.an-hour-top .an-eyebrow{color:#64805b;font-size:10px}.an-hour-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8a6d2f;border:1px dashed #cdb27a;border-radius:999px;padding:3px 10px}.an-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.an-step{display:flex;flex-direction:column;gap:12px;padding:14px 14px 16px;border:1px solid #dbe5dd;border-radius:10px}.an-step-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.an-step-head>div span{display:block;font-size:11px;font-weight:600;color:#7a8a80}.an-step-head strong{display:block;font-size:14px;line-height:1.3;color:#0f2a24;margin-top:2px}.an-step-min{font-size:12px;font-weight:700;color:#144c38;white-space:nowrap;border:1px solid #cfe2d6;border-radius:999px;padding:2px 9px}.an-step-vis{min-height:84px;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:10px 12px;border:1px dashed #d3ddd5;border-radius:8px;font-size:12px}.an-wave2{display:flex;align-items:center;gap:2px;height:36px}.an-wave2 i{flex:1;min-width:2px;border-radius:2px;background:#c9d8ce}.an-wave2 i.on{background:#1f6b4f}.an-wave-meta{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:#144c38}.an-v-row{display:grid;grid-template-columns:68px 1fr;gap:6px;align-items:baseline;line-height:1.4}.an-v-row em{font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a8a80}.an-v-row b{font-weight:650;background:linear-gradient(transparent 62%,#d8f4ad 62%);width:fit-content;padding:0 3px}.an-v-row span{color:var(--muted)}.an-caret{display:inline-block;width:1px;height:13px;background:#144c38;margin-left:3px;vertical-align:-2px;animation:an-blink 1.1s steps(1) infinite}@keyframes an-blink{50%{opacity:0}}.an-bub{max-width:90%;padding:6px 10px;border-radius:12px;font-size:12px;line-height:1.35}.an-bub.in{align-self:flex-start;background:#eef3ec;color:#4f5b50;border-bottom-left-radius:3px}.an-bub.out{align-self:flex-end;border:1px solid #cfe2d6;color:#144c38;border-bottom-right-radius:3px}.an-me{display:flex;align-items:center;gap:12px;margin-top:auto}.an-face{flex:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#dcece3;color:#1f6b4f}.an-face.ugh{background:#f1e3bd;color:#8a6d2f}.an-face.flat{background:#e7e5df;color:#5f625c}.an-article .an-thought{position:relative;margin:0;padding:7px 11px;background:#f6efd6;color:#5f5330;font-size:12px;line-height:1.35;font-style:italic;border-radius:10px}.an-thought:before{content:'';position:absolute;left:-4px;top:50%;width:8px;height:8px;margin-top:-4px;background:#f6efd6;transform:rotate(45deg)}.an-compare{display:grid;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid #dbe5dd}.an-cmp-row{display:grid;grid-template-columns:200px 1fr 56px;gap:14px;align-items:center;font-size:13px;color:var(--muted)}.an-cmp-row b{text-align:right;font-weight:650;font-variant-numeric:tabular-nums;color:#0f2a24}.an-cmp-bar{display:block;height:8px;border-radius:4px;background:#e3ebe5;overflow:hidden}.an-cmp-bar i{display:block;height:100%;border-radius:4px;background:#1f6b4f}.an-cmp-row.after{color:#0f2a24;font-weight:650}.an-cmp-row.after .an-cmp-bar i{background:#c9a24d}.an-cmp-row.after b{font-size:18px;letter-spacing:-.03em}.an-hour figcaption{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-top:18px}.an-hour figcaption strong{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:500;font-size:19px;color:#0f2a24}.an-hour figcaption span{font-size:11px;color:#7a8a80}@media(max-width:800px){.an-steps{grid-template-columns:1fr}.an-cmp-row{grid-template-columns:1fr 56px}.an-cmp-bar{grid-column:1/-1;order:3}}@media(prefers-reduced-motion:reduce){.an-caret{animation:none}} @media(prefers-reduced-motion:reduce){.an-page *{scroll-behavior:auto!important}}.an-crit{display:flex;flex-direction:column;gap:24px;margin-top:30px}.an-crit-row{position:relative;display:flex;gap:20px;align-items:flex-start;padding:22px 24px;background:transparent;border:1px solid #dbe5dd;border-radius:10px}.an-crit-row .an-icon{width:48px;height:48px}.an-crit-row:not(:last-child):after{content:'';position:absolute;left:47px;bottom:-22px;height:16px;border-left:1px dashed #b9cdbf}.an-crit-text{min-width:0}.an-crit-text .an-check-num{display:block;margin-bottom:4px}.an-crit-text strong{display:block;font-size:18px;color:#0f2a24;margin-bottom:6px}.an-article .an-crit-text p{font-size:15px;line-height:1.65;color:var(--ink);margin:0}
 .an-article .an-crit-text p + p{margin-top:10px}@media(max-width:520px){.an-crit-row{padding:18px;gap:14px}.an-crit-row:not(:last-child):after{left:41px}}{.an-page *{scroll-behavior:auto!important}}\n.an-clean-shell{border:0;border-radius:0;overflow:visible;margin:30px 0}.an-clean-shell .an-table-scroll{overflow-x:auto}.an-clean{min-width:720px}.an-clean th{background:transparent;color:#7a8a80;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:0 20px 14px 0;border-bottom:1px solid #112c25}.an-clean th:first-child{width:16%}.an-clean td{padding:24px 20px 24px 0;border-bottom:1px solid #dbe5dd;font-size:14px;line-height:1.6;color:var(--muted)}.an-clean tbody tr:nth-child(even){background:transparent}.an-clean tr:last-child td{border-bottom:1px solid #dbe5dd}.an-clean td:first-child a{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.01em}.an-clean td strong{font-size:14px;color:var(--ink);margin-bottom:2px}.an-clean td small{font-size:12px;color:#7a8a80;margin-top:2px}.an-clean-shell .an-table-footer{background:transparent;padding:16px 0 0;font-size:12px;color:#7a8a80} @media print{.an-toc,.an-mobile-toc,.an-top,.an-progress,.an-cta,.an-footer,.an-copy-button{display:none}.an-layout{display:block}.an-wrap{width:100%}.an-hero{padding:15px 0}.an-hero h1{font-size:34px}.an-table{min-width:0}.an-balance,.an-review,.an-verdict{break-inside:avoid}.an-tool{break-before:page}.an-page{font-size:12px}.an-article h2{font-size:27px}}\n`;
