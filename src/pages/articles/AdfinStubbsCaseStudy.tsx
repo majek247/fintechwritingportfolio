@@ -271,10 +271,9 @@ export default function AdfinStubbsParkinCaseStudy({
       <p className="asp-practice-editorial-eyebrow">
         01 / The practice
       </p>
-      <h2>
-        A local accountancy firm
-        <br />
-        <em>that stays close to clients.</em>
+          <h2>
+        A family-run accountancy firm    <br />
+        <em>with a hands-on client approach.</em>
       </h2>
     </div>
 

@@ -53,33 +53,7 @@ export default function App() {
           }
         />
 
-        <Route
-          path="/articles/embedded-finance"
-          element={
-            <>
-              <Seo
-                title="Embedded Finance: A Practical Guide | GrowUp"
-                description="REPLACE THIS with the article's real description, 150–160 characters."
-                path="/articles/embedded-finance"
-              />
-              <EmbeddedFinance />
-            </>
-          }
-        />
-
-        <Route
-          path="/articles/ai-fraud-detection"
-          element={
-            <>
-              <Seo
-                title="AI Fraud Detection in Financial Services | GrowUp"
-                description="REPLACE THIS with the article's real description, 150–160 characters."
-                path="/articles/ai-fraud-detection"
-              />
-              <AiFraudDetection />
-            </>
-          }
-        />
+  
 
         <Route
           path="/articles/best-ai-note-taking"
@@ -100,8 +74,8 @@ export default function App() {
           element={
             <>
               <Seo
-                title="Stubbs Parkin Case Study Rewrite | GrowUp Fintech Copywriting"
-                description="How Stubbs Parkin took on nearly 200 clients without adding payment admin. An independent rewrite of Adfin's case study by GrowUp."
+                title="Fintech Case Study Copywriting Sample | GrowUp"
+                description="A fintech copywriting portfolio sample showing how GrowUp rewrote and redesigned Adfin’s Stubbs Parkin case study for clearer, more persuasive storytelling."
                 path="/articles/adfin-stubbs-parkin-case-study"
                 image="/images/stubbs-parkin-og.png"
               />
