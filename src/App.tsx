@@ -56,13 +56,13 @@ export default function App() {
   
 
         <Route
-          path="/articles/best-ai-note-taking"
+          path="/articles/best-ai-note-taking-tools"
           element={
             <>
               <Seo
                 title="The Best AI Note-Taking Tools | GrowUp"
                 description="REPLACE THIS with the article's real description, 150–160 characters."
-                path="/articles/best-ai-note-taking"
+                path="/articles/best-ai-note-taking-tools"
               />
               <AveniBestAINoteTakingTools />
             </>
