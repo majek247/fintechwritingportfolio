@@ -7,6 +7,8 @@
     <meta name="description" content="Research-backed, SEO-driven fintech content. Explore long-form articles on open banking, embedded finance and fraud prevention." />
  <link rel="icon" type="image/png" href="/images/blackglogo.png" />
     <link rel="apple-touch-icon" href="/images/blackglogo.png" />
+    <link rel="preload" as="image" href="/images/officegarden.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/growupblacklogotransparent.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,5 +16,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Fetch the below-the-fold images once the page has finished loading
+      window.addEventListener("load", function () {
+        var run = window.requestIdleCallback || function (fn) { setTimeout(fn, 400); };
+        run(function () {
+          [
+            "/images/stubbs-thumb-webflow.jpeg",
+            "/images/stubbs-parkin-growth-glass.png",
+            "/images/stubbs-parkin-client-engager.png"
+          ].forEach(function (src) {
+            var img = new Image();
+            img.src = src;
+          });
+        });
+      });
+    </script>
   </body>
 </html>

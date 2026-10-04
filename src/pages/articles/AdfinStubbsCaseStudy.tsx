@@ -1,5 +1,6 @@
  "use client";
 
+import { useLayoutEffect, useRef } from "react";
 import type { CSSProperties } from "react";
 
 export type AdfinStubbsParkinProps = {
@@ -89,11 +90,90 @@ export default function AdfinStubbsParkinCaseStudy({
 }: AdfinStubbsParkinProps) {
   const base = assetBasePath.replace(/\/$/, "");
   const office = `${base}/office-editorial.png`;
+  const rootRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Single elements that fade up
+    const single = [
+      ".asp-practice-editorial-heading > div",
+      ".asp-practice-editorial-intro",
+      ".asp-practice-editorial-photo",
+      ".asp-practice-editorial-details",
+      ".asp-practice-editorial-bottom",
+      ".asp-expansion-heading > div",
+      ".asp-expansion-intro",
+      ".asp-expansion-art",
+      ".asp-expansion-finish",
+      ".asp-connected-story .asp-eyebrow",
+      ".asp-connected-heading h2",
+      ".asp-connected-heading > p",
+      ".asp-connected-before",
+      ".asp-connected-after",
+      ".asp-connected-quote",
+      ".asp-migration-heading > div",
+      ".asp-results-heading > div",
+      ".asp-results-heading > p",
+      ".asp-collections",
+      ".asp-reliability",
+      ".asp-cta",
+      ".asp-footer > div",
+      ".asp-footer > p",
+    ];
+
+    // Groups that stagger one after another
+    const groups = [
+      ".asp-metric",
+      ".asp-expansion-events > li",
+      ".asp-migration-timeline > li",
+      ".asp-connected-tools > li",
+      ".asp-connected-benefits > li",
+    ];
+
+    const targets: HTMLElement[] = [];
+
+    root.querySelectorAll<HTMLElement>(single.join(",")).forEach((el) => {
+      targets.push(el);
+    });
+
+    root.querySelectorAll<HTMLElement>(groups.join(",")).forEach((el) => {
+      const i = el.parentElement
+        ? Array.from(el.parentElement.children).indexOf(el)
+        : 0;
+      el.style.setProperty("--d", `${Math.min(i, 5) * 110}ms`);
+      targets.push(el);
+    });
+
+    // Lets the chart line draw itself
+    root.querySelector(".asp-line-path")?.setAttribute("pathLength", "1");
+
+    targets.forEach((el) => el.setAttribute("data-reveal", ""));
+    root.classList.add("asp-anim");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    targets.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
   
   return (
     <article
       className="asp"
       id="asp-top"
+      ref={rootRef}
       style={{ "--asp-office": `url("${office}")` } as CSSProperties}
     >
       <style>{styles}</style>
@@ -209,7 +289,6 @@ Stubbs Parkin is a family-run practice based in Southport, Merseyside. Around 15
         <img
           src="/images/stubbs-thumb-webflow.jpeg"
           alt="Becky Jama, Practice Manager at Stubbs Parkin."
-          loading="lazy"
           decoding="async"
         />
 
@@ -317,7 +396,6 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
           alt="Nearly 200 new clients in 2026: around 150 joined in April and another 40 in July."
           width="1670"
           height="941"
-          loading="lazy"
           decoding="async"
         />
       </figure>
@@ -468,7 +546,6 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
             alt="Illustrative payments dashboard for Stubbs Parkin, showing payment status, an active Direct Debit mandate and recent payments."
             width="1536"
             height="1024"
-            loading="lazy"
             decoding="async"
           />
         </figure>
@@ -710,19 +787,20 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
       <section className="asp-container asp-container--wide asp-cta-section">
         <div className="asp-cta">
           <div>
-            <p className="asp-eyebrow asp-light-label">YOUR NEXT STAGE OF GROWTH</p>
+            <p className="asp-eyebrow asp-light-label">FOR GROWING ACCOUNTANCY PRACTICES</p>
             <h2>
-              More clients should
-              <br />
-              mean more opportunity.
-              <br />
-              <em>Not more payment admin.</em>
+              Keep payments manageable{" "}
+              <em>as your client base grows.</em>
             </h2>
             <p>
-              See how Adfin connects payment collection with the systems your practice
-              already uses.
+           Adfin brings payment collection into the systems your team already uses, so more clients do not mean more places to check, chase and reconcile.
             </p>
-            <a className="asp-button" href={demoHref}>
+            <a
+              className="asp-button"
+              href={demoHref}
+              target="_blank"
+              rel="noreferrer"
+            >
               Explore Adfin <Arrow />
             </a>
           </div>
@@ -747,18 +825,36 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
       </section>
 
       <footer className="asp-container asp-container--wide asp-footer">
-        <div>
-          <a href={portfolioHref}>
+        <div className="asp-portfolio-note">
+          <span className="asp-portfolio-icon" aria-hidden="true">
+            <DocIcon />
+          </span>
+
+          <div className="asp-portfolio-copy">
+            <p className="asp-portfolio-eyebrow">PORTFOLIO NOTE</p>
+            <h3>An independent rewrite of Adfin's Stubbs Parkin story.</h3>
+            <p>
+              GrowUp writes and redesigns customer stories for fintech
+              companies. This portfolio sample reworks Adfin's existing
+              Stubbs Parkin case study to show how we would approach the
+              copy, storytelling and page design.
+            </p>
+          </div>
+
+          <div className="asp-portfolio-badge">
+            <span className="asp-portfolio-pill">INDEPENDENT CONCEPT</span>
+            <p>Not published by or affiliated with Adfin.</p>
+          </div>
+        </div>
+
+        <div className="asp-footer-links">
+          <a href="/">
             <Arrow back /> Back to writing portfolio
           </a>
           <a href={sourceUrl} target="_blank" rel="noreferrer">
             Read the original Adfin story <Arrow />
           </a>
         </div>
-        <p>
-          Independent portfolio redesign. Office and coastal imagery are AI-generated
-          illustrations; payment UI uses sample data.
-        </p>
       </footer>
     </article>
   );
@@ -5645,16 +5741,18 @@ color: rgba(255, 255, 255, 0.7);
    CLOSING CTA + FOOTER: FLAT, CLEAN, BOLD
    ===================================================== */
 
-/* Full-width dark band, no grey around the card */
+/* Full-width dark band, no grey around the card.
+   The -1px top and bottom overlap each band slightly,
+   so no light hairline shows between them. */
 .asp .asp-cta-section,
 .asp .asp-footer {
   background: #041b1c;
   box-shadow: 0 0 0 100vmax #041b1c;
-  clip-path: inset(0 -100vmax);
+  clip-path: inset(-1px -100vmax);
 }
 
 .asp .asp-cta-section {
-  padding-block: clamp(72px, 8vw, 112px) 0;
+  padding-block: clamp(72px, 8vw, 112px) clamp(44px, 7vw, 44px);
 }
 
 /* Your original flat card: square corners, no glows or rings */
@@ -5690,7 +5788,7 @@ color: rgba(255, 255, 255, 0.7);
 }
 
 .asp .asp-cta p:not(.asp-eyebrow) {
-  max-width: 480px;
+  max-width: 580px;
   margin-top: 26px;
   color: #ffffff;
   font-size: 17px;
@@ -5777,34 +5875,156 @@ color: rgba(255, 255, 255, 0.7);
   padding-bottom: 48px;
 }
 
-.asp .asp-footer > div {
+/* Portfolio note: fine card, three columns */
+.asp .asp-portfolio-note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 3vw, 44px);
+
+  padding: clamp(22px, 2.6vw, 32px) clamp(24px, 3vw, 40px);
+  border: 1px solid rgba(127, 211, 208, 0.35);
+  border-radius: 6px;
+  background: #072426;
+}
+
+.asp .asp-portfolio-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: rgba(22, 114, 115, 0.35);
+  color: #7fd3d0;
+}
+
+.asp .asp-portfolio-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.6;
+}
+
+.asp .asp-portfolio-copy {
+  min-width: 0;
+}
+
+.asp .asp-portfolio-eyebrow {
+  margin: 0 0 8px;
+  color: #7fd3d0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+}
+
+.asp .asp-portfolio-copy h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(19px, 1.7vw, 24px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.asp .asp-portfolio-copy p:last-child {
+  margin: 10px 0 0;
+  color: #a9c9c7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.asp .asp-portfolio-badge {
+  padding-left: clamp(20px, 2.6vw, 36px);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  align-self: center;
+}
+
+.asp .asp-portfolio-pill {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #7fd3d0;
+  border-radius: 999px;
+  color: #7fd3d0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+}
+
+.asp .asp-portfolio-badge p {
+  margin: 14px 0 0;
+  color: #a9c9c7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Footer links sit below the note */
+.asp .asp-footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.asp .asp-footer a {
+.asp .asp-footer-links a {
+  display: flex;
+  align-items: center;
   gap: 10px;
   color: #fff;
 }
 
-.asp .asp-footer a:hover {
+.asp .asp-footer-links a:hover {
   color: #7fd3d0;
 }
 
-.asp .asp-footer svg {
+.asp .asp-footer-links svg {
   width: 16px;
   height: 16px;
   color: #7fd3d0;
 }
 
-.asp .asp-footer > p {
-  margin-top: 26px !important;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: #a9c9c7;
-  font-size: 12px;
-  line-height: 1.7;
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-portfolio-note {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .asp .asp-portfolio-badge {
+    grid-column: 2;
+    margin-top: 20px;
+    padding: 20px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
 }
+
+/* Mobile */
+@media (max-width: 560px) {
+  .asp .asp-portfolio-note {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .asp .asp-portfolio-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .asp .asp-portfolio-badge {
+    grid-column: 1;
+  }
+
+  .asp .asp-footer-links {
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+}
+
+ 
 
 /* Tablet */
 @media (max-width: 1100px) {
@@ -5919,5 +6139,143 @@ color: rgba(255, 255, 255, 0.7);
     min-height: 80px;
   }
 }
-  
+
+/* =====================================================
+   MOTION: HERO LOAD + SCROLL REVEALS
+   ===================================================== */
+
+@keyframes aspRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes aspBackdrop {
+  from {
+    opacity: 0;
+    transform: scale(1.07);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes navIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero: plays once on page load, staggered top to bottom */
+.asp-hero--blended .asp-hero-backdrop {
+  animation: aspBackdrop 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.asp-hero--blended .asp-eyebrow,
+.asp-hero--blended h1,
+.asp-hero--blended .asp-deck,
+.asp-hero--blended .asp-hero-links,
+.asp-hero--blended .asp-hero-meta {
+  animation: aspRise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.asp-hero--blended .asp-eyebrow   { animation-delay: 0.25s; }
+.asp-hero--blended h1             { animation-delay: 0.4s; }
+.asp-hero--blended .asp-deck      { animation-delay: 0.6s; }
+.asp-hero--blended .asp-hero-links{ animation-delay: 0.78s; }
+.asp-hero--blended .asp-hero-meta { animation-delay: 0.95s; }
+
+/* Scroll reveals */
+.asp.asp-anim [data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms);
+  will-change: opacity, transform;
+}
+
+.asp.asp-anim [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Side-by-side partners arrive just after their neighbour */
+.asp-practice-editorial-intro,
+.asp-expansion-intro,
+.asp-connected-heading > p,
+.asp-results-heading > p,
+.asp-migration-heading > div:last-child,
+.asp-connected-after,
+.asp-reliability,
+.asp-practice-editorial-details {
+  --d: 150ms;
+}
+
+/* Chart line draws itself, area fades in after it */
+.asp.asp-anim .asp-line-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.45, 0, 0.2, 1) 0.35s;
+}
+
+.asp.asp-anim .asp-collections.is-in .asp-line-path {
+  stroke-dashoffset: 0;
+}
+
+.asp.asp-anim .asp-line-area,
+.asp.asp-anim .asp-line-point,
+.asp.asp-anim .asp-line-value {
+  opacity: 0;
+  transition: opacity 1s ease 1.4s;
+}
+
+.asp.asp-anim .asp-collections.is-in .asp-line-area,
+.asp.asp-anim .asp-collections.is-in .asp-line-point,
+.asp.asp-anim .asp-collections.is-in .asp-line-value {
+  opacity: 1;
+}
+
+/* Progress bar fills from the left */
+.asp.asp-anim .asp-reliability-track i {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s;
+}
+
+.asp.asp-anim .asp-reliability.is-in .asp-reliability-track i {
+  transform: scaleX(1);
+}
+
+/* Lighter movement on phones */
+@media (max-width: 800px) {
+  .asp.asp-anim [data-reveal] {
+    transform: translateY(20px);
+  }
+}
+
+/* Respect "reduce motion" settings */
+@media (prefers-reduced-motion: reduce) {
+  .asp-hero--blended .asp-hero-backdrop,
+  .asp-hero--blended .asp-eyebrow,
+  .asp-hero--blended h1,
+  .asp-hero--blended .asp-deck,
+  .asp-hero--blended .asp-hero-links,
+  .asp-hero--blended .asp-hero-meta {
+    animation: none !important;
+  }
+}
+
 `;
