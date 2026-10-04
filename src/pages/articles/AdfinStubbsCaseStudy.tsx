@@ -14,34 +14,21 @@ const sourceUrl = "https://adfin.com/customer-stories/stubbs-parkin";
 const milestones = [
   {
     date: "23 FEBRUARY",
-    title: "Payments move first.",
-    body: "Adfin goes live inside Client Engager. The mandate migration begins.",
+    title: "The payment setup starts first.",
+    body: "Adfin goes live inside Client Engager, giving the team a new way to manage collections before the larger client intake arrives.",
   },
   {
     date: "APRIL",
-    title: "Around 150 clients join.",
-    body: "Harrison Latham and Company becomes part of the practice.",
+    title: "Around 150 clients arrive at once.",
+    body: "Harrison Latham and Company becomes part of Stubbs Parkin, bringing a significant new group of clients into the practice.",
   },
   {
     date: "JULY",
-    title: "Another 40 follow.",
-    body: "The client base grows again. The payment process is already in place.",
+    title: "Another 40 clients follow.",
+    body: "The practice grows again, but this time the payment workflow is already in place and being used day to day.",
   },
 ];
-const improvements = [
-  [
-    "A shared view of payments",
-    "The wider team can see payment status from the client record, without asking someone else to check.",
-  ],
-  [
-    "Direct Debit from the start",
-    "Mandate setup sits within the proposal process, instead of becoming another task after the engagement letter.",
-  ],
-  [
-    "A choice for every client",
-    "Direct Debit, card, Apple Pay, Google Pay, bank payment and bank transfer are handled in one place.",
-  ],
-];
+  
 
 function Arrow({ back = false }: { back?: boolean }) {
   return (
@@ -72,6 +59,7 @@ function DocIcon() {
     </svg>
   );
 }
+
 function BankIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -81,6 +69,7 @@ function BankIcon() {
     </svg>
   );
 }
+ 
 function CardIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -89,13 +78,7 @@ function CardIcon() {
     </svg>
   );
 }
-function ChartIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 19v-5M12 19V8M18 19v-8" />
-    </svg>
-  );
-}
+  
 
 
 export default function AdfinStubbsParkinCaseStudy({
@@ -106,7 +89,7 @@ export default function AdfinStubbsParkinCaseStudy({
 }: AdfinStubbsParkinProps) {
   const base = assetBasePath.replace(/\/$/, "");
   const office = `${base}/office-editorial.png`;
-  const portrait = `${base}/stubbs-thumb-webflow.jpeg`;
+  
   return (
     <article
       className="asp"
@@ -121,7 +104,7 @@ export default function AdfinStubbsParkinCaseStudy({
       <header className="asp-hero asp-hero--blended">
         <img
           className="asp-hero-backdrop"
-          src="/images/stubbs-parkin-hero.png"
+          src="/images/officegarden.png"
           alt="Illustrative Stubbs Parkin office exterior"
           width="1672"
           height="941"
@@ -131,36 +114,33 @@ export default function AdfinStubbsParkinCaseStudy({
         <div className="asp-container asp-hero-grid">
           <div className="asp-hero-copy">
             <p className="asp-eyebrow asp-light-label">
-              A growing practice. A better payment process.
+           FINTECH CASE STUDY SAMPLE
             </p>
-            <h1>
-              Nearly 200
-              <br />
-              new clients.
-              <br />
-              <em>
-                No avalanche of
-                <br />
-                payment admin.
-              </em>
+                           <h1>
+              How Stubbs Parkin took on nearly 200 clients{" "}
+              <em>without adding more payment admin.</em>
             </h1>
+
+
             <p className="asp-deck">
-              Stubbs Parkin brought payments into Client Engager, giving the team a
-              clearer view of who had paid as the practice welcomed nearly 200 new
-              clients.
+            Nearly 200 new clients could have meant more invoices to track, more payments to chase and more admin. Instead, the team brought the process into one connected workflow with Adfin.
             </p>
             <div className="asp-hero-links">
               <a className="asp-button" href="#asp-story">
                 Read their story <Arrow />
               </a>
-              <a className="asp-text-link" href={demoHref}>
+              <a
+                className="asp-text-link"
+                href={demoHref}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Explore Adfin <Arrow />
               </a>
             </div>
             <div className="asp-hero-meta">
-              <span>ACCOUNTANCY</span>
-              <span>SOUTHPORT, UK</span>
-              <span>2026</span>
+              <span>By GrowUp | For Adfin</span>
+              <span>Reviewed 2 October 2026</span>
             </div>
           </div>
           <div className="asp-hero-visual">
@@ -178,17 +158,12 @@ export default function AdfinStubbsParkinCaseStudy({
               95<span>%</span>
             </strong>
             <p>of payments arrived on or before the due date.</p>
-            <div className="asp-mini-track" aria-hidden="true">
-              <i />
-            </div>
+       
           </div>
           <div className="asp-metric">
-            <span className="asp-metric-label">A QUIET SWITCH</span>
+            <span className="asp-metric-label">MANDATES MOVED IN THREE DAYS</span>
             <strong>231</strong>
-            <p>Direct Debit mandates moved in three days.</p>
-            <span className="asp-metric-note">
-              <Tick /> No client re-signing
-            </span>
+            <p>Direct Debit mandates transferred without asking clients to sign up again.</p>
           </div>
           <div className="asp-metric">
             <span className="asp-metric-label">MONTHLY COLLECTIONS</span>
@@ -196,15 +171,13 @@ export default function AdfinStubbsParkinCaseStudy({
               113 <span>→</span> 168
             </strong>
             <p>payments collected in March and July respectively.</p>
-            <span className="asp-metric-note">More volume through one process</span>
           </div>
           <div className="asp-metric">
-            <span className="asp-metric-label">A GROWING PRACTICE</span>
+            <span className="asp-metric-label">CLIENT GROWTH</span>
             <strong>
               <span>~</span>200
             </strong>
-            <p>new clients welcomed as the practice expanded.</p>
-            <span className="asp-metric-note">Two intakes. One connected workflow.</span>
+            <p>new clients joined across two major intake periods.</p>
           </div>
         </section>
 
@@ -218,18 +191,15 @@ export default function AdfinStubbsParkinCaseStudy({
       <p className="asp-practice-editorial-eyebrow">
         01 / The practice
       </p>
-
       <h2>
-        A growing firm.
+        A local accountancy firm
         <br />
-        <em>A personal way of doing things.</em>
+        <em>that stays close to clients.</em>
       </h2>
     </div>
 
     <p className="asp-practice-editorial-intro">
-      Stubbs Parkin is a family-run accountancy practice in
-      Southport, Merseyside, with a team of around 15.
-      Client relationships are at the centre of the business.
+Stubbs Parkin is a family-run practice based in Southport, Merseyside. Around 15 people support its client base across accounting, tax and everyday business matters.
     </p>
   </div>
 
@@ -260,7 +230,7 @@ export default function AdfinStubbsParkinCaseStudy({
       aria-label="About Stubbs Parkin"
     >
       <p className="asp-practice-editorial-label">
-        The people behind the practice
+        Local firm. Hands-on service.
       </p>
 
       <div className="asp-practice-editorial-team">
@@ -271,7 +241,7 @@ export default function AdfinStubbsParkinCaseStudy({
           </span>
         </span>
 
-        <p>people. A personal approach.</p>
+        <p>people supporting clients.</p>
       </div>
 
       <dl className="asp-practice-editorial-facts">
@@ -295,10 +265,7 @@ export default function AdfinStubbsParkinCaseStudy({
 
   <div className="asp-practice-editorial-bottom">
     <p>
-      Growth meant more than adding names to a client list.
-      The team wanted to keep making time for questions,
-      advice and the conversations that make a local
-      practice feel local.
+For Stubbs Parkin, good service means being easy to reach, knowing the client and having enough time to deal with the questions that come up throughout the year.
     </p>
 
     <a
@@ -329,17 +296,17 @@ export default function AdfinStubbsParkinCaseStudy({
           02 / The growth moment
         </p>
 
-        <h2>
-          A bigger client base.
-          <br />
-          <em>The same personal touch.</em>
-        </h2>
+    <h2>
+  Nearly 200 new clients joined{" "}
+  <em>the practice in two major waves.</em>
+</h2>
+
+
+
       </div>
 
       <p className="asp-expansion-intro">
-        First, around 150 clients joined through Harrison
-        Latham and Company. Then another 40 arrived in July.
-        Payments needed to work as part of the team’s day.
+       Around 150 clients joined through Harrison Latham and Company, followed by another 40 in July, increasing payment volume just as Stubbs Parkin’s new process was bedding in.
       </p>
     </div>
 
@@ -398,16 +365,15 @@ export default function AdfinStubbsParkinCaseStudy({
 <section className="asp-connected-story" id="asp-change">
   <div className="asp-container asp-container--wide">
     <p className="asp-eyebrow">
-      03–04 / From disconnected to connected
+      03–04 / Payments before and after Adfin
     </p>
 
     <div className="asp-connected-heading">
       <h2>
-        One client record.
+        Payments were split
         <br />
-        <em>Payments in the same place.</em>
+        <em>across three systems.</em>
       </h2>
-
       <p>
         Adfin brought payment visibility into Client Engager,
         with Direct Debit in the proposal flow and six payment
@@ -448,7 +414,7 @@ export default function AdfinStubbsParkinCaseStudy({
 
               <div>
                 <h4>Direct Debit provider</h4>
-                <p>Mandates set up after engagement</p>
+                <p>Mandates managed separately</p>
               </div>
             </li>
 
@@ -493,7 +459,7 @@ export default function AdfinStubbsParkinCaseStudy({
       <div className="asp-connected-after">
         <p className="asp-connected-label">With Adfin</p>
         <h3 className="asp-connected-title">
-          A shared view, inside Client Engager.
+          Payments became visible inside Client Engager.
         </h3>
 
         <figure className="asp-connected-image">
@@ -526,8 +492,7 @@ export default function AdfinStubbsParkinCaseStudy({
 
     <blockquote className="asp-connected-quote">
       <p>
-        “You don’t want eight different tabs open for eight
-        different softwares.”
+  “If we can get the admin down to seamless, that gives us much more time to be helping clients with their queries and questions, and just speaking to them.”
       </p>
 
       <cite>
@@ -550,14 +515,13 @@ export default function AdfinStubbsParkinCaseStudy({
         <p className="asp-eyebrow asp-light-label">05 / The switch</p>
 
         <h2>
-          Three days.
+          Direct Debit mandates
           <br />
-          <em>No re-signing.</em>
+          <em>moved in three days.</em>
         </h2>
 
         <p>
-          The practice moved its existing Direct Debit mandates to Adfin. Clients
-          received an email about the change, without being asked to sign up again.
+        Stubbs Parkin transferred its existing mandates to Adfin between 23 and 26 February. Clients were told about the change by email, but did not need to complete a new sign-up.
         </p>
       </div>
 
@@ -583,15 +547,15 @@ export default function AdfinStubbsParkinCaseStudy({
       <li>
         <span className="asp-migration-node">01</span>
         <small>23 FEBRUARY 2026</small>
-        <h3>The switch begins.</h3>
-        <p>Migration of the existing mandates starts.</p>
+        <h3>Migration begins.</h3>
+        <p>Stubbs Parkin starts moving its existing Direct Debit mandates to Adfin.</p>
       </li>
 
       <li>
         <span className="asp-migration-node">02</span>
         <small>CLIENT COMMUNICATION</small>
-        <h3>A simple email.</h3>
-        <p>The practice explains the change to clients.</p>
+        <h3>Clients are notified.</h3>
+        <p>A simple email explains what is happening and what, if anything, they need to do.</p>
       </li>
 
       <li>
@@ -600,7 +564,7 @@ export default function AdfinStubbsParkinCaseStudy({
         </span>
         <small>26 FEBRUARY 2026</small>
         <h3>231 mandates live.</h3>
-        <p>The move is complete. No client re-signing.</p>
+        <p>The migration is complete three days later, without requiring clients to re-register their Direct Debit</p>
       </li>
     </ol>
   </div>
@@ -610,10 +574,9 @@ export default function AdfinStubbsParkinCaseStudy({
         <div className="asp-results-heading">
           <div>
             <p className="asp-eyebrow">06 / What changed</p>
-            <h2>
-              More payments.
-              <br />
-              <em>Still arriving on time.</em>
+                         <h2>
+              Collections increased without{" "}
+              <em>payment reliability dropping.</em>
             </h2>
           </div>
           <p>
@@ -739,78 +702,10 @@ export default function AdfinStubbsParkinCaseStudy({
   </div>
 </div>
 
-
-
-        <p className="asp-source-note">
-          Source:{" "}
-          <a href={sourceUrl} target="_blank" rel="noreferrer">
-            Adfin’s published customer story
-          </a>
-          , using platform data from February–September 2026. Direct Debit timing is
-          measured by collection date.
-        </p>
       </section>
 
     
-    <section className="asp-people">
-  <div className="asp-container asp-container--wide asp-people-grid">
-    <figure className="asp-people-portrait">
-      <img
-        src={portrait}
-        alt="Becky Jama, Practice Manager at Stubbs Parkin."
-        loading="lazy"
-        decoding="async"
-      />
-
-      <figcaption className="asp-people-caption">
-        <blockquote>
-          “My role is to be there for the clients.”
-        </blockquote>
-
-        <div className="asp-people-attribution">
-          <strong>Becky Jama</strong>
-          <span>Practice Manager, Stubbs Parkin</span>
-        </div>
-      </figcaption>
-    </figure>
-
-    <div className="asp-people-copy">
-      <p className="asp-eyebrow">
-        07 / The everyday difference
-      </p>
-
-      <h2>
-        Less chasing.
-        <br />
-        <em>More time for people.</em>
-      </h2>
-
-      <p className="asp-people-intro">
-        The result shows up in the working day: a clearer
-        picture of payments, fewer manual tasks and more
-        time to answer client questions.
-      </p>
-
-      <ol className="asp-people-benefits">
-        {improvements.map(([title, body], i) => (
-          <li key={title}>
-            <span
-              className="asp-people-number"
-              aria-hidden="true"
-            >
-              {String(i + 1).padStart(2, "0")}
-            </span>
-
-            <div>
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </div>
-  </div>
-</section>
+ 
 
       <section className="asp-container asp-container--wide asp-cta-section">
         <div className="asp-cta">
@@ -878,7 +773,7 @@ const styles = `
   --ink: #153d33;
   --muted: #65746d;
   --green: #0c4635;
-  --deep: #052e24;
+  --deep: #041b1c;
   --mint: #d4efb6;
   --line: #dfe5dd;
   --paper: #fafaf6;
@@ -1033,218 +928,12 @@ const styles = `
 }
 /* Hero */
 .asp-hero {
-  background: var(--deep);
+  background: #041b1c;
   color: #fff;
   overflow: hidden;
 }
-.asp-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 78px;
-  border-bottom: 1px solid #ffffff1f;
-  font-size: 11px;
-}
-.asp-back {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: #c8d7cd !important;
-}
-.asp-back svg {
-  width: 16px;
-}
-.asp-top-label {
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  color: #b9c9be;
-}
-.asp-top-label i {
-  height: 3px;
-  width: 3px;
-  background: #b9c9be;
-  border-radius: 50%;
-}
-.asp-hero-grid {
-  display: grid;
-  grid-template-columns: 1.06fr 1fr;
-  gap: 60px;
-  align-items: center;
-  min-height: 650px;
-  padding-block: 120px 78px;
-}
-.asp-hero-copy {
-  position: relative;
-  z-index: 2;
-}
-.asp-hero .asp-eyebrow {
-  font-size: 9px !important;
-  letter-spacing: 0.15em;
-}
-.asp-hero h1 em {
-  color: #c0d4b8;
-}
-.asp-deck {
-  color: #bfcfc4 !important;
-  max-width: 490px;
-  font-size: 15px;
-  line-height: 1.8;
-  margin-top: 26px !important;
-}
-.asp-hero-links {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  margin-top: 30px;
-}
-.asp-hero-meta {
-  display: flex;
-  gap: 17px;
-  margin-top: 40px;
-  color: #94b09e;
-  font-size: 8px;
-  letter-spacing: 0.12em;
-}
-.asp-hero-meta span + span {
-  border-left: 1px solid #ffffff30;
-  padding-left: 17px;
-}
-.asp-hero-visual {
-  position: relative;
-  align-self: stretch;
-  min-height: 470px;
-  margin-right: -36px;
-}
-.asp-hero-photo {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-  object-position: 38% center;
-  border-radius: 2px;
-}
-.asp-photo-shade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    #03271e38 0%,
-    transparent 35%,
-    #03271ea1 100%
-  );
-}
-.asp-hero-wordmark {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  color: #fff;
-  font-family: Georgia, serif;
-  font-size: 22px;
-  letter-spacing: 0.08em;
-  text-shadow: 0 2px 12px #0006;
-}
-.asp-hero-wordmark small {
-  display: block;
-  font-family: Arial, sans-serif;
-  font-size: 8px;
-  letter-spacing: 0.22em;
-  margin-top: 3px;
-}
-.asp-payment-card {
-  position: absolute;
-  width: 335px;
-  bottom: 30px;
-  left: -36px;
-  background: #ffffffed;
-  backdrop-filter: blur(16px);
-  border: 1px solid #fff9;
-  border-radius: 7px;
-  padding: 22px 24px;
-  color: var(--ink);
-  box-shadow: 0 20px 50px #021b1830;
-}
-.asp-payment-card-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  font-weight: 650;
-}
-.asp-payment-check {
-  width: 29px;
-  height: 29px;
-  border: 1px solid #c6dbbe;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-.asp-payment-check svg {
-  width: 16px;
-}
-.asp-payment-card-top small {
-  display: block;
-  font-size: 9px;
-  font-weight: 400;
-  color: #7a897c;
-  margin-top: 1px;
-}
-.asp-live-dot {
-  width: 5px;
-  height: 5px;
-  background: #478454;
-  border-radius: 50%;
-  margin-left: auto;
-}
-.asp-payment-card-value {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 22px;
-}
-.asp-payment-card-value strong {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: 58px;
-  letter-spacing: -0.07em;
-  line-height: 1;
-}
-.asp-payment-card-value strong span {
-  font-size: 38px;
-}
-.asp-payment-card-value p {
-  font-size: 10px;
-  line-height: 1.55;
-}
-.asp-payment-rail {
-  height: 5px;
-  background: #dce5d6;
-  margin-top: 18px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.asp-payment-rail i {
-  display: block;
-  height: 100%;
-  width: 95%;
-  background: #427958;
-}
-.asp-payment-card-foot {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-  align-items: center;
-  font-size: 8px;
-  color: #617264;
-}
-.asp-payment-card-foot > span:last-child {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--green);
-  letter-spacing: -0.07em;
-}
+   
+   
 
 .asp-metrics {
   display: grid;
@@ -1324,749 +1013,6 @@ const styles = `
   height: 100%;
   background: #678463;
 }
-/* About */
-.asp-about {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 92px;
-  align-items: center;
-}
-.asp-about-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    transparent 45%,
-    rgba(10, 25, 18, 0.15) 68%,
-    rgba(8, 22, 15, 0.72) 100%
-  );
-}
-.asp-about-visual {
-  position: relative;
-  height: 525px;
-}
-    .asp-about-visual > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 23% center;
-}
-.asp-about-caption {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 28px;
-  z-index: 1;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  color: #f4f2e8 !important;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
-  margin: 0 !important;
-}
-  
-.asp-about-copy > p:not(.asp-eyebrow) {
-  font-size: 14px;
-  line-height: 1.8;
-  margin-top: 20px;
-}
-.asp-facts {
-  margin: 26px 0 !important;
-  border-top: 1px solid var(--line);
-}
-.asp-facts > div {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 15px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--line);
-  align-items: center;
-}
-.asp-facts dt {
-  font-size: 8px;
-  letter-spacing: 0.11em;
-  color: #7b8879;
-}
-.asp-facts dd {
-  font-size: 12px;
-  font-weight: 500;
-}
-.asp-ink-link {
-  color: var(--ink) !important;
-}
-
-
-/* Growth */
- .asp-growth {
-  background: #f4f7ef;
-  padding: 88px 0 96px;
-  border: 0;
-  overflow: hidden;
-}
-
-.asp-growth-heading {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 110px;
-  align-items: end;
-}
-
-.asp-growth-heading > p {
-  max-width: 410px;
-  font-size: 14px;
-  line-height: 1.85;
-  color: #52604f;
-}
-
-.asp-growth-story {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 100px;
-  margin-top: 68px;
-  align-items: center;
-}
-
-.asp-growth-visual {
-  display: grid;
-  place-items: center;
-  min-height: 470px;
-}
-
-.asp-growth-orbit {
-  position: relative;
-  width: min(100%, 470px);
-  aspect-ratio: 1;
-  isolation: isolate;
-}
-
-.asp-growth-orbit-layer {
-  position: absolute;
-  display: block;
-  pointer-events: none;
-}
-
-.asp-growth-orbit-layer--main {
-  inset: 9%;
-  z-index: 1;
-  border-radius: 48% 52% 45% 55%;
-  background:
-    radial-gradient(circle at 32% 25%, rgba(154, 183, 135, 0.22), transparent 30%),
-    linear-gradient(145deg, #163d2b 0%, #27553c 58%, #3b6747 100%);
-  transform: rotate(-9deg);
-  box-shadow: 0 24px 55px rgba(25, 57, 39, 0.14);
-}
-
-.asp-growth-orbit-layer--secondary {
-  right: 1%;
-  bottom: 6%;
-  width: 64%;
-  height: 48%;
-  z-index: 0;
-  border-radius: 52% 48% 55% 45%;
-  background: linear-gradient(140deg, #b9cba9, #dce6d4);
-  transform: rotate(-13deg);
-}
-
-.asp-growth-arcs {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.asp-growth-arcs path {
-  fill: none;
-  stroke: rgba(225, 236, 215, 0.72);
-  stroke-width: 1.4;
-}
-
-.asp-growth-arcs circle {
-  fill: #d8e7cf;
-}
-
-.asp-growth-number {
-  position: absolute;
-  z-index: 3;
-  top: 28%;
-  left: 22%;
-  color: #f4f4ec;
-}
-
-.asp-growth-number > span {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: #c5d8bc;
-}
-
-.asp-growth-number > strong {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(104px, 11vw, 158px);
-  font-weight: 400;
-  line-height: 0.82;
-  letter-spacing: -0.1em;
-}
-
-.asp-growth-number > p {
-  margin: 18px 0 0 7px;
-  max-width: 120px;
-  font-size: 12px;
-  line-height: 1.45;
-  color: #dce8d5;
-}
-
-.asp-growth-orbit-label {
-  position: absolute;
-  z-index: 4;
-  display: grid;
-  gap: 2px;
-  color: #234936;
-}
-
-.asp-growth-orbit-label strong {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.asp-growth-orbit-label small {
-  font-size: 8px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #5d735b;
-}
-
-.asp-growth-orbit-label--april {
-  top: 16%;
-  right: 8%;
-}
-
-.asp-growth-orbit-label--july {
-  right: 2%;
-  bottom: 18%;
-}
-
-.asp-growth-orbit-note {
-  position: absolute;
-  z-index: 4;
-  left: 4%;
-  bottom: 2%;
-  margin: 0;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #71856b;
-}
-
-.asp .asp-timeline {
-  --num: 76px;
-  --node: 32px;
-  --axis: calc(var(--num) + var(--node) / 2);
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* One continuous hairline, ending at the centre of the check circle */
-.asp .asp-timeline::before {
-  content: "";
-  position: absolute;
-  top: 14px;
-  bottom: 16px;
-  left: var(--axis);
-  width: 1px;
-  background: #b9c9b3;
-}
-
-.asp .asp-timeline li {
-  position: relative;
-  display: grid;
-  grid-template-columns: var(--num) var(--node) minmax(0, 1fr);
-  padding: 0 0 54px;
-  border: 0;
-}
-
-/* Hollow node: filled with the section colour so the line hides behind it */
-.asp .asp-timeline li:not(.asp-timeline-finish)::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: calc(var(--axis) - 8px);
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid #6f8c6e;
-  border-radius: 50%;
-  background: #f4f7ef;
-}
-
-.asp .asp-timeline-number {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  color: #9db296;
-}
-
-.asp .asp-timeline-content {
-  grid-column: 3;
-  padding-left: 22px;
-}
-
-.asp .asp-timeline-date {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  line-height: 1.6;
-  color: #5f7560;
-}
-
-.asp .asp-timeline h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
-  color: #17382a;
-}
-
-.asp .asp-timeline p {
-  max-width: 400px;
-  margin-top: 10px;
-  font-size: 13px;
-  line-height: 1.7;
-  color: #667563;
-}
-
-/* Final solid check circle */
-.asp .asp-timeline-finish {
-  display: block !important;
-  height: 32px;
-  padding: 0 !important;
-}
-
-.asp .asp-timeline-finish > span {
-  position: absolute;
-  top: 0;
-  left: var(--num);
-  display: grid;
-  place-items: center;
-  width: var(--node);
-  height: var(--node);
-  border-radius: 50%;
-  background: #17382a;
-  color: #fff;
-}
-
-.asp .asp-timeline-finish svg {
-  width: 15px;
-  height: 15px;
-  stroke-width: 2;
-}
-
-@media (max-width: 800px) {
-  .asp .asp-timeline { --num: 52px; --node: 28px; }
-  .asp .asp-timeline-number { font-size: 30px; }
-  .asp .asp-timeline h3 { font-size: 23px; }
-  .asp .asp-timeline-content { padding-left: 16px; }
-}
-
-@media (max-width: 560px) {
-  .asp .asp-timeline { --num: 40px; --node: 24px; }
-  .asp .asp-timeline-number { font-size: 24px; }
-  .asp .asp-timeline h3 { font-size: 21px; }
-  .asp .asp-timeline p { font-size: 12px; }
-  .asp .asp-timeline li { padding-bottom: 40px; }
-}
-
-
-
-
-/* Friction map */
-.asp-problem-heading,
-.asp-results-heading {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 100px;
-  align-items: end;
-}
-.asp-problem-heading > p,
-.asp-results-heading > p {
-  font-size: 14px;
-  line-height: 1.8;
-}
-.asp-friction-map {
-  margin-top: 44px;
-  border: 1px solid #dce2d6;
-  background: #fff;
-}
-.asp-friction-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 17px 25px;
-  border-bottom: 1px solid #e3e7df;
-  background: #f4f5ef;
-  font-size: 9px;
-  color: #7b8677;
-}
-.asp-friction-top > span:first-child {
-  letter-spacing: 0.14em;
-  font-weight: 600;
-  color: #49624b;
-}
-.asp-friction-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.asp-friction-step {
-  padding: 30px 30px 25px;
-  position: relative;
-}
-.asp-friction-step + .asp-friction-step {
-  border-left: 1px dashed #d8dfd1;
-}
-.asp-friction-num {
-  font-family: Georgia, serif;
-  font-size: 30px;
-  color: #91a084;
-}
-.asp-friction-step h3 {
-  font-size: 17px;
-  font-weight: 500;
-  margin-top: 12px;
-}
-.asp-friction-step > p {
-  font-size: 11px;
-  margin-top: 6px;
-  min-height: 36px;
-}
-.asp-friction-pain {
-  display: flex;
-  gap: 9px;
-  margin-top: 23px;
-  padding-top: 17px;
-  border-top: 1px solid #eee2d8;
-  color: #95785f;
-  font-size: 11px;
-  line-height: 1.6;
-}
-.asp-friction-pain > span {
-  width: 5px;
-  height: 5px;
-  background: #b99b7c;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 6px;
-}
-.asp-friction-bottom {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 18px 25px;
-  background: #f7f6f0;
-  border-top: 1px solid #e5e6dc;
-}
-.asp-friction-bottom > span {
-  font-size: 8px;
-  letter-spacing: 0.12em;
-  white-space: nowrap;
-  color: #7a816d;
-}
-.asp-friction-bottom p {
-  font-size: 11px;
-}
-/* Connected workflow */
-.asp-workflow {
-  padding: 80px 0;
-  background: #f0f3ed;
-  border-block: 1px solid #e2e8dc;
-}
-.asp-workflow-grid {
-  display: grid;
-  grid-template-columns: 0.83fr 1.17fr;
-  gap: 75px;
-  align-items: center;
-}
-.asp-workflow-grid > div > p:not(.asp-eyebrow) {
-  font-size: 14px;
-  line-height: 1.8;
-  margin-top: 22px;
-}
-.asp-inline-outcomes {
-  display: grid;
-  gap: 7px;
-  margin-top: 23px;
-}
-.asp-inline-outcomes > span {
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #4b654b;
-}
-.asp-inline-outcomes svg {
-  width: 13px;
-  height: 13px;
-}
-.asp-small-quote {
-  padding: 24px 0 0;
-  margin-top: 26px !important;
-  border-top: 1px solid #cedac7;
-}
-.asp-small-quote p {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  line-height: 1.4;
-  color: #3d6147;
-  letter-spacing: -0.02em;
-}
-.asp-small-quote cite {
-  display: block;
-  font-size: 9px;
-  font-style: normal;
-  color: #788773;
-  margin-top: 15px;
-}
-.asp-small-quote cite strong {
-  display: block;
-  font-size: 10px;
-  color: #294b35;
-  margin-bottom: 2px;
-}
-.asp-record-figure {
-  min-width: 0;
-}
-.asp-record {
-  background: #fff;
-  border: 1px solid #dce4d6;
-  border-radius: 9px;
-  box-shadow: 0 24px 60px -25px #1b3a2026;
-  overflow: hidden;
-}
-.asp-record-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-  background: #f9fbf7;
-  border-bottom: 1px solid #e8ece3;
-  font-size: 10px;
-}
-.asp-record-top > span:first-child {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 650;
-}
-.asp-app-mark {
-  display: grid;
-  place-items: center;
-  width: 23px;
-  height: 23px;
-  border-radius: 5px;
-  background: #1e4436;
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: -0.1em;
-}
-.asp-muted {
-  font-size: 8px;
-  color: #82907b;
-}
-.asp-client-head {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 22px;
-}
-.asp-avatar {
-  display: grid;
-  place-items: center;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  background: #eef1e7;
-  color: #70805e;
-  font-size: 10px;
-  font-weight: 700;
-}
-.asp-client-head > div {
-  display: grid;
-}
-.asp-client-head strong {
-  font-size: 12px;
-}
-.asp-client-head small {
-  font-size: 9px;
-  color: #8d9986;
-  margin-top: 1px;
-}
-.asp-active {
-  margin-left: auto;
-  font-size: 8px;
-  color: #5e7a4e;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.asp-active i,
-.asp-mandate i {
-  width: 4px;
-  height: 4px;
-  background: #639657;
-  border-radius: 50%;
-}
-.asp-tabs {
-  display: flex;
-  gap: 26px;
-  padding: 0 22px;
-  border-bottom: 1px solid #e5eadf;
-  color: #8d9787;
-  font-size: 9px;
-}
-.asp-tabs > * {
-  padding: 0 0 12px;
-}
-.asp-tabs strong {
-  border-bottom: 2px solid #315d39;
-  color: #315d39;
-  font-weight: 600;
-}
-.asp-record-body {
-  padding: 24px;
-}
-.asp-record-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.asp-record-title small {
-  font-size: 7px;
-  letter-spacing: 0.13em;
-  color: #8a9880;
-}
-.asp-record-title h3 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 3px;
-}
-.asp-powered {
-  font-size: 20px;
-  letter-spacing: -0.07em;
-  font-weight: 700;
-  color: #386546;
-}
-.asp-record-panels {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 25px 0;
-}
-.asp-record-panels > div {
-  border: 1px solid #e1e8d9;
-  border-radius: 4px;
-  padding: 18px;
-}
-.asp-record-panels > div > small {
-  font-size: 9px;
-  color: #809074;
-  display: block;
-}
-.asp-payment-value {
-  font-size: 30px;
-  letter-spacing: -0.06em;
-  display: block;
-  font-weight: 500;
-  margin: 7px 0 10px;
-  line-height: 1.2;
-}
-.asp-payment-value > span {
-  font-size: 17px;
-  color: #92a082;
-}
-.asp-positive {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  color: #538249;
-  font-size: 8px;
-}
-.asp-positive svg {
-  width: 12px;
-  height: 12px;
-}
-.asp-dd {
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 13px 0;
-}
-.asp-mandate {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  color: #6e875c;
-}
-.asp-record-table table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 9px;
-}
-.asp-record-table caption {
-  text-align: left;
-  font-weight: 600;
-  font-size: 10px;
-  padding: 0 0 9px;
-}
-.asp-record-table th {
-  font-weight: 400;
-  color: #8a9980;
-  font-size: 8px;
-  padding: 9px 0;
-  border-block: 1px solid #e8ecdf;
-}
-.asp-record-table td {
-  padding: 11px 0;
-  border-bottom: 1px solid #edf0e7;
-  color: #637657;
-}
-.asp-record-table td:nth-child(2) {
-  font-weight: 500;
-  color: #3b5130;
-}
-.asp-record-table td:last-child > span {
-  display: inline-flex;
-  gap: 4px;
-  align-items: center;
-  color: #567c42;
-}
-.asp-record-table svg {
-  width: 11px;
-  height: 11px;
-}
-.asp-record-bottom {
-  padding-top: 16px;
-}
-.asp-record-figure figcaption {
-  font-size: 8px;
-  color: #809175;
-  margin: 12px 0 0;
-  text-align: center;
-}
 
 
 
@@ -2075,7 +1021,7 @@ const styles = `
   position: relative;
   overflow: hidden;
   padding: 82px 0 76px;
-  background: #063f31;
+  background: #041b1c;
   color: #ffffff;
 }
 
@@ -2209,7 +1155,7 @@ const styles = `
   place-items: center;
   border: 1px solid #8aad8a;
   border-radius: 50%;
-  background: #063f31;
+  background: #041b1c;
   color: #bed5bd;
   font-size: 8px;
 }
@@ -2550,100 +1496,9 @@ const styles = `
 
 
 
-/* Human outcome */
-.asp-human {
-  background: #f0f1e9;
-  border-block: 1px solid #e3e6db;
-  padding: 80px 0;
-}
-.asp-human-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-.asp-human-image {
-  position: relative;
-  min-height: 550px;
-  align-self: stretch;
-  overflow: hidden;
-}
-.asp-human-image > img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 32% center;
-}
-.asp-human-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 10%,
-    #112c2266 50%,
-    #0a251dee 100%
-  );
-}
-.asp-human-quote {
-  position: absolute;
-  left: 33px;
-  right: 28px;
-  bottom: 33px;
-  z-index: 1;
-  color: #fff;
-}
-.asp-human-quote > span {
-  font-size: 8px;
-  letter-spacing: 0.16em;
-  color: #d2d9ba;
-}
-.asp-human-quote blockquote {
-  font-family: Georgia, serif;
-  font-size: 33px;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  margin: 20px 0 !important;
-}
-.asp-human-quote cite {
-  font-size: 11px;
-  font-style: normal;
-}
-.asp-human-quote cite span {
-  display: block;
-  color: #b7c2ae;
-  font-size: 9px;
-  margin-top: 2px;
-}
-.asp-human-copy > p:not(.asp-eyebrow) {
-  font-size: 14px;
-  margin-top: 23px;
-  line-height: 1.8;
-}
-.asp-improvements {
-  margin-top: 30px;
-}
-.asp-improvements > div {
-  display: flex;
-  gap: 21px;
-  padding: 20px 0;
-  border-top: 1px solid #d6decd;
-}
-.asp-improvements > div > span {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  color: #89a079;
-}
-.asp-improvements h3 {
-  font-size: 15px;
-  font-weight: 500;
-}
-.asp-improvements p {
-  font-size: 12px;
-  margin-top: 6px;
-  line-height: 1.7;
-}
+
+
+
 /* Closing */
 .asp-cta-section {
   padding-block: 80px 45px;
@@ -3565,7 +2420,7 @@ const styles = `
   overflow: hidden;
   min-height: clamp(700px, 53vw, 900px);
   padding: 80px 0 70px;
-  background: #052e24;
+  background: #041b1c;
   color: #fff;
 }
 
@@ -3591,8 +2446,8 @@ const styles = `
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    rgba(5, 46, 36, .22) 0%,
-    rgba(5, 46, 36, .08) 35%,
+    rgba(4, 27, 28, .22) 0%,
+    rgba(4, 27, 28, .08) 35%,
     transparent 60%
   );
 }
@@ -3645,9 +2500,9 @@ const styles = `
   max-width: 550px;
   margin-top: 29px !important;
   margin-bottom: 0 !important;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.85;
-  color: #c0d1c8 !important;
+  color: #ffffff !important;
 }
 
 .asp-hero--blended .asp-hero-links {
@@ -3661,8 +2516,15 @@ const styles = `
 .asp-hero--blended .asp-button {
   padding: 17px 24px;
   border-radius: 4px;
-  background: #d4efb6;
+  background: #167273;
+   color: #ffffff !important;
 }
+
+
+.asp-hero--blended .asp-button:hover {
+  background: #1a8b8c;
+}
+
 
 .asp-hero--blended .asp-text-link {
   color: #fff;
@@ -3673,7 +2535,7 @@ const styles = `
   flex-wrap: wrap;
   gap: 18px;
   margin-top: 43px;
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: .12em;
   color: #91ad9e;
 }
@@ -3814,7 +2676,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
   }
 
   .asp-hero--blended .asp-deck {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .asp-hero--blended .asp-payment-card {
@@ -3847,10 +2709,10 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
   .asp-hero--blended::after {
     background: linear-gradient(
       180deg,
-      rgba(5, 46, 36, .97) 0%,
-      rgba(5, 46, 36, .92) 46%,
-      rgba(5, 46, 36, .55) 70%,
-      rgba(5, 46, 36, .10) 100%
+      rgba(4, 27, 28, .97) 0%,
+      rgba(4, 27, 28, .92) 46%,
+      rgba(4, 27, 28, .55) 70%,
+      rgba(4, 27, 28, .10) 100%
     );
   }
 
@@ -3891,7 +2753,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
   .asp-hero--blended .asp-deck {
     margin-top: 23px !important;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .asp-hero--blended .asp-hero-links {
@@ -3903,10 +2765,13 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
     padding: 14px 18px;
   }
 
+
+
+
   .asp-hero--blended .asp-hero-meta {
     gap: 12px;
     margin-top: 30px;
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .asp-hero--blended .asp-hero-meta span + span {
@@ -4363,11 +3228,12 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-connected-heading > p {
   margin: 0;
+  max-width: 620px;
   padding-left: 32px;
   border-left: 1px solid #e1e6e5;
-  color: #697580;
-  font-size: 16px;
-  line-height: 1.8;
+  color: #011522;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .asp .asp-connected-comparison {
@@ -5067,7 +3933,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
       rgba(17, 105, 76, 0.2),
       transparent 58%
     ),
-    #03271f;
+    #041b1c;
   color: #f7faf6;
   border-block: 1px solid rgba(184, 226, 199, 0.08);
 }
@@ -5110,9 +3976,9 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-expansion-intro {
   margin: 24px 0 0;
-  max-width: 440px;
-  color: #b9d0c5;
-  font-size: 15px;
+  max-width: 560px;
+  color: #ffffff;
+  font-size: 16px;
   line-height: 1.85;
 }
 
@@ -5267,7 +4133,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
   margin-top: 7px;
   border: 2px solid #ace2c2;
   border-radius: 50%;
-  background: #03271f;
+  background: #041b1c;
 }
 
 .asp .asp-expansion-events > li:nth-child(2)
@@ -5282,7 +4148,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 .asp .asp-expansion-date {
   display: block;
   margin-bottom: 10px;
-  color: #c3e5d0;
+color: rgba(255, 255, 255, 0.7);
   font-size: 9px;
   font-weight: 650;
   line-height: 1.6;
@@ -5292,7 +4158,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-expansion-event h3 {
   margin: 0;
-  color: #f4f8ef;
+  color: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(25px, 2.2vw, 32px);
   font-weight: 400;
@@ -5302,8 +4168,8 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-expansion-event p {
   margin: 10px 0 0;
-  max-width: 380px;
-  color: #b8cec2;
+  max-width: 560px;
+  color: #ffffff;
   font-size: 14px;
   line-height: 1.8;
 }
@@ -5491,8 +4357,9 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-practice-editorial-intro {
   margin: 22px 0 0;
-  color: #6c747d;
-  font-size: 15px;
+  max-width: 720px;
+  color: #011522;
+  font-size: 16px;
   line-height: 1.75;
 }
 
@@ -5581,7 +4448,7 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
   width: 68px;
   height: 5px;
   margin-bottom: 18px;
-  background: #d6c3fb;
+  background: #167273;
 }
 
 .asp .asp-practice-editorial-label {
@@ -5662,7 +4529,8 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 
 .asp .asp-practice-editorial-bottom > p {
   margin: 0;
-  color: #6c747d;
+  max-width: 760px;
+  color: #011522;
   font-size: 15px;
   line-height: 1.75;
 }
@@ -5799,4 +4667,1257 @@ body:has(.site-nav--adfin-hero) .asp-hero--blended {
 }
 
 
+
+/* =====================================================
+   METRICS STRIP: BOLDER, CLEARER
+   ===================================================== */
+
+.asp .asp-metrics {
+  padding: 56px 0 52px;
+  border-bottom: 1px solid #d7dfd9;
+}
+
+.asp .asp-metric {
+  position: relative;
+  padding-inline: 36px;
+  border-left: 1px solid #d7dfd9;
+}
+
+.asp .asp-metric:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+/* Small teal accent above each label */
+.asp .asp-metric::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 18px;
+  background: #167273;
+}
+
+.asp .asp-metric-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  color: #2f4a3f;
+}
+
+.asp .asp-metric > strong {
+  margin: 14px 0 12px;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: #0c3d2f;
+}
+
+.asp .asp-metric > strong > span {
+  font-size: 0.55em;
+  font-weight: 700;
+}
+
+.asp .asp-metric > strong.asp-metric-range {
+  font-size: 46px;
+  line-height: 1.2;
+  padding-block: 8px;
+  white-space: nowrap;
+}
+
+.asp .asp-metric-range span {
+  color: #167273;
+}
+
+.asp .asp-metric p {
+  max-width: 250px;
+  min-height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #3d5248;
+}
+
+.asp .asp-metric-note {
+  margin-top: 16px;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1f6a4a;
+}
+
+.asp .asp-metric-note svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.2;
+}
+
+.asp .asp-mini-track {
+  max-width: 210px;
+  height: 6px;
+  margin-top: 20px;
+  border-radius: 3px;
+  background: #dfe8e0;
+}
+
+.asp .asp-mini-track i {
+  border-radius: 3px;
+  background: #167273;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-metric {
+    padding-inline: 22px;
+  }
+  .asp .asp-metric > strong {
+    font-size: 56px;
+  }
+  .asp .asp-metric > strong.asp-metric-range {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-metric-label {
+    font-size: 11px;
+  }
+  .asp .asp-metric > strong {
+    font-size: 52px;
+  }
+  .asp .asp-metric > strong.asp-metric-range {
+    font-size: 36px;
+  }
+  .asp .asp-metric p {
+    font-size: 13px;
+  }
+  .asp .asp-metric-note {
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 560px) {
+  .asp .asp-metric-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+  .asp .asp-metric > strong {
+    font-size: 44px;
+  }
+  .asp .asp-metric > strong.asp-metric-range {
+    font-size: 28px;
+  }
+  .asp .asp-metric p {
+    font-size: 12px;
+    min-height: 0;
+  }
+}
+
+
+/* =====================================================
+   CONNECTED STORY: CLEAN IMAGE, COLOURED HEADING
+   ===================================================== */
+
+/* Colour on "across three systems." */
+.asp .asp-connected-heading h2 em {
+  color: #527365;
+  font-style: normal;
+}
+
+/* Give the product shot more of the row */
+.asp .asp-connected-comparison {
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
+  gap: 48px;
+}
+
+/* Remove the green panel: just a thin divider and clean space */
+.asp .asp-connected-after {
+  padding: 0 0 0 48px;
+  border: 0;
+  border-left: 1px solid #e3e8e6;
+  border-radius: 0;
+  background: none;
+}
+
+/* Bigger image, no extra glow or doubled shadow */
+.asp .asp-connected-image {
+  margin: 32px 0 0;
+}
+
+.asp .asp-connected-image img {
+  filter: none;
+  transform: scale(1.08);
+  transform-origin: center top;
+}
+
+/* Chips: light tint so they still read on white */
+.asp .asp-connected-benefits {
+  margin-top: 56px;
+}
+
+.asp .asp-connected-benefits li {
+  background: #f3f8f5;
+  border-color: #d3e3da;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-connected-comparison {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .asp .asp-connected-after {
+    padding: 32px 0 0;
+    border-left: 0;
+    border-top: 1px solid #e3e8e6;
+  }
+  .asp .asp-connected-image img {
+    transform: none;
+  }
+  .asp .asp-connected-benefits {
+    margin-top: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-connected-after {
+    padding: 28px 0 0;
+    border: 0;
+    border-top: 1px solid #e3e8e6;
+    border-radius: 0;
+    background: none;
+  }
+}
+
+
+/* =====================================================
+   CONNECTED STORY: FULL-WIDTH, ROOMY, LEAN IMAGE
+   ===================================================== */
+
+/* More room for the left column, image still dominant */
+.asp .asp-connected-comparison {
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left column: wider tool rows, more air */
+.asp .asp-connected-old {
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.asp .asp-connected-tools > li {
+  gap: 22px;
+  min-height: 132px;
+  padding: 28px 0;
+}
+
+.asp .asp-connected-tools h4 {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.asp .asp-connected-tools p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.asp .asp-connected-gap > p {
+  padding: 14px 16px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.asp .asp-connected-consequence {
+  margin-top: 40px;
+  padding-top: 32px;
+}
+
+.asp .asp-connected-consequence > p:last-child {
+  max-width: 460px;
+  font-size: 24px;
+}
+
+/* Right column: no extra padding eating into the width */
+.asp .asp-connected-after {
+  padding: 0 0 0 56px;
+}
+
+/* Crop the PNG's transparent margin so the card fills the column.
+   overflow:hidden also trims the baked-in shadow fringe. */
+.asp .asp-connected-image {
+  margin: 36px 0 0;
+  overflow: hidden;
+}
+
+.asp .asp-connected-image img {
+  width: 138%;
+  max-width: none;
+  margin: -4% 0 -5% -19%;
+  filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.asp .asp-connected-benefits {
+  margin-top: 40px;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-connected-comparison {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .asp .asp-connected-after {
+    padding: 36px 0 0;
+  }
+  .asp .asp-connected-old {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-connected-tools h4 {
+    font-size: 21px;
+    white-space: normal;
+  }
+  .asp .asp-connected-image img {
+    width: 125%;
+    margin: -3% 0 -4% -12.5%;
+  }
+}
+
+
+/* =====================================================
+   MIGRATION: FINER, CLEANER, TEAL #167273
+   ===================================================== */
+
+.asp .asp-migration {
+  padding: clamp(80px, 9vw, 128px) 0;
+  background:
+    radial-gradient(
+      ellipse at 88% 18%,
+      rgba(22, 114, 115, 0.32),
+      transparent 58%
+    ),
+    #041b1c;
+}
+
+/* Remove the busy vertical grid lines */
+.asp .asp-migration::before {
+  display: none;
+}
+
+/* Quieter teal rings */
+.asp .asp-migration::after {
+  top: -200px;
+  right: -200px;
+  width: 640px;
+  height: 640px;
+  border: 1px solid rgba(22, 114, 115, 0.45);
+  box-shadow:
+    0 0 0 60px rgba(22, 114, 115, 0.07),
+    0 0 0 120px rgba(22, 114, 115, 0.04);
+}
+
+.asp .asp-migration-heading {
+  gap: 90px;
+  align-items: center;
+}
+
+/* Eyebrow */
+.asp .asp-migration .asp-eyebrow {
+  color: #6fd0cd !important;
+  font-size: 11px !important;
+  letter-spacing: 0.2em;
+}
+
+/* Heading */
+.asp .asp-migration h2 {
+  color: #fff;
+  font-size: clamp(34px, 3.4vw, 58px);
+  line-height: 1.08;
+}
+
+.asp .asp-migration h2 em {
+  color: #5cc2c0;
+}
+
+.asp .asp-migration-heading p:not(.asp-eyebrow) {
+  max-width: 520px;
+  margin-top: 28px;
+  color: #eee5e5;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Tag */
+.asp .asp-migration-tag {
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid #167273;
+  background: rgba(22, 114, 115, 0.2);
+  color: #c4eeed;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.asp .asp-migration-tag i {
+  background: #5cc2c0;
+  box-shadow: 0 0 0 4px rgba(92, 194, 192, 0.2);
+}
+
+/* Big number */
+.asp .asp-migration-stat {
+  gap: 30px;
+}
+
+.asp .asp-migration-stat > strong {
+  color: #fff;
+  font-size: clamp(120px, 13vw, 190px);
+  letter-spacing: -0.08em;
+  line-height: 0.8;
+}
+
+.asp .asp-migration-stat > span {
+  padding-left: 26px;
+  border-left: 2px solid #167273;
+  color: #9fd2d0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 2;
+}
+
+/* Timeline */
+.asp .asp-migration-timeline {
+  margin-top: 88px !important;
+}
+
+.asp .asp-migration-timeline > li {
+  padding: 46px 40px 0 0;
+  border-top: 2px solid #167273;
+}
+
+.asp .asp-migration-timeline > li:last-child {
+  border-top-color: #3fb5b4;
+}
+
+.asp .asp-migration-node {
+  top: -19px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #167273;
+  background: #082a2b;
+  color: #c4eeed;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.asp .asp-migration-node svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.4;
+}
+
+.asp .asp-migration-complete {
+  border-color: #3fb5b4;
+  background: #167273;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(22, 114, 115, 0.25);
+}
+
+.asp .asp-migration-timeline small {
+  color: #7fc9c7;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.asp .asp-migration-timeline h3 {
+  margin-top: 14px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.asp .asp-migration-timeline p {
+   max-width: 350px;
+  margin-top: 10px;
+  color: #a9c9c7;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-migration-heading {
+    gap: 50px;
+  }
+  .asp .asp-migration-stat > strong {
+    font-size: 130px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-migration-heading {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .asp .asp-migration-stat > strong {
+    font-size: 110px;
+  }
+  .asp .asp-migration-timeline {
+    margin-top: 48px !important;
+    padding-left: 18px !important;
+  }
+  .asp .asp-migration-timeline > li,
+  .asp .asp-migration-timeline > li:last-child {
+    padding: 0 0 36px 36px;
+    border-top: 0;
+    border-left: 2px solid #167273;
+  }
+  .asp .asp-migration-timeline > li:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+  }
+  .asp .asp-migration-node {
+    top: 0;
+    left: -19px;
+  }
+  .asp .asp-migration-timeline h3 {
+    font-size: 24px;
+  }
+  .asp .asp-migration-timeline p {
+    max-width: none;
+  }
+}
+
+/* =====================================================
+   GROWTH MOMENT: TEAL #167273 TO MATCH MIGRATION
+   ===================================================== */
+
+.asp .asp-expansion {
+  padding: clamp(80px, 9vw, 128px) 0;
+  background:
+    radial-gradient(
+      ellipse at 12% 75%,
+      rgba(22, 114, 115, 0.3),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse at 92% 8%,
+      rgba(22, 114, 115, 0.18),
+      transparent 55%
+    ),
+    #041b1c;
+  border-block: 0;
+}
+
+/* Eyebrow */
+.asp .asp-expansion-eyebrow {
+  color: #6fd0cd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* Heading */
+.asp .asp-expansion-heading {
+  margin-bottom: 64px;
+}
+
+.asp .asp-expansion-heading h2 {
+  color: #fff;
+  font-size: clamp(42px, 4.6vw, 70px);
+  line-height: 1.05;
+}
+
+.asp .asp-expansion-heading h2 em {
+  color: #5cc2c0;
+}
+
+.asp .asp-expansion-intro {
+  max-width: 480px;
+  padding-left: 28px;
+  border-left: 2px solid #167273;
+  color: #b9d6d4;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Artwork: teal grid and ring */
+.asp .asp-expansion-art::before {
+  background-image:
+    linear-gradient(rgba(22, 114, 115, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 114, 115, 0.16) 1px, transparent 1px);
+}
+
+.asp .asp-expansion-art::after {
+  border: 1px solid rgba(22, 114, 115, 0.55);
+  box-shadow:
+    0 0 0 40px rgba(22, 114, 115, 0.06),
+    0 0 0 80px rgba(22, 114, 115, 0.035);
+}
+
+.asp .asp-expansion-art figcaption {
+  color: #9fd2d0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+/* Timeline line (the vertical rule) */
+.asp .asp-expansion-track::before {
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    #167273 0%,
+    #2fa5a4 60%,
+    #3fb5b4 100%
+  );
+}
+
+/* Step numbers */
+.asp .asp-expansion-number {
+  color: #5cc2c0;
+  font-size: 42px;
+}
+
+/* Nodes: all teal (no more purple) */
+.asp .asp-expansion-node {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  border: 2px solid #167273;
+  background: #082a2b;
+  box-shadow: 0 0 0 5px rgba(22, 114, 115, 0.22);
+}
+
+.asp .asp-expansion-events > li:nth-child(2) .asp-expansion-node {
+  border-color: #167273;
+}
+
+/* Text */
+.asp .asp-expansion-date {
+  color: #7fc9c7;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.asp .asp-expansion-event h3 {
+  color: #fff;
+   max-width: 650px;
+  font-size: clamp(26px, 2.4vw, 30px);
+}
+
+.asp .asp-expansion-event p {
+  max-width: 450px;
+  color: #a9c9c7;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Final check at the end of the line */
+.asp .asp-expansion-finish {
+  width: 40px;
+  height: 40px;
+  margin-left: calc(var(--axis) - 20px);
+  border: 2px solid #3fb5b4;
+  background: #167273;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(22, 114, 115, 0.25);
+}
+
+.asp .asp-expansion-finish svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.4;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-expansion-intro {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+  .asp .asp-expansion-heading {
+    margin-bottom: 36px;
+  }
+}
+
+
+
+/* =====================================================
+   WHAT CHANGED: FINER, CLEANER, PALE GREEN CARD
+   ===================================================== */
+
+.asp .asp-results {
+  padding-block: clamp(72px, 8vw, 120px);
+}
+
+/* Heading */
+.asp .asp-results-heading {
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+.asp .asp-results-heading h2 {
+  color: #0a2e26;
+  font-size: clamp(42px, 4.6vw, 70px);
+  line-height: 1.05;
+}
+
+.asp .asp-results-heading h2 em {
+  color: #167273;
+}
+
+.asp .asp-results-heading > p {
+  max-width: 470px;
+  padding-left: 28px;
+  border-left: 3px solid #167273;
+  color: #3d4f48;
+  font-size: 17px;
+  font-weight: 450;
+  line-height: 1.75;
+}
+
+/* Layout */
+.asp .asp-results-grid {
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  margin-top: 64px;
+}
+
+/* Chart header */
+.asp .asp-chart-heading .asp-eyebrow {
+  margin-bottom: 12px !important;
+  color: #167273 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+}
+
+.asp .asp-chart-heading h3 {
+  color: #0a2e26;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 2.4vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.asp .asp-chart-delta {
+  color: #167273;
+  font-size: 60px;
+}
+
+.asp .asp-chart-delta small {
+  margin-top: 10px;
+  color: #4f6a63;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Chart */
+.asp .asp-line-chart {
+  height: 340px;
+  margin-top: 48px;
+  padding-left: 48px;
+}
+
+.asp .asp-line-grid {
+  inset: 0 0 0 48px;
+  color: #6c7f78;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.asp .asp-line-grid span::after {
+  border-top: 1px dashed #dde7e2;
+}
+
+.asp .asp-line-chart svg {
+  inset: 0 0 0 48px;
+  width: calc(100% - 48px);
+}
+
+.asp .asp-line-path {
+  stroke: #167273;
+  stroke-width: 4;
+}
+
+.asp .asp-line-point {
+  fill: #167273;
+  stroke: #fff;
+}
+
+.asp .asp-line-guide {
+  stroke: #8dbcbc;
+}
+
+/* Area fill: teal instead of green */
+.asp #aspLineArea stop {
+  stop-color: #167273;
+}
+
+.asp .asp-line-value {
+  color: #0a2e26;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.asp .asp-line-month {
+  bottom: -36px;
+  color: #4f6a63;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.asp .asp-collections figcaption {
+  margin-top: 64px;
+  color: #6c7f78;
+  font-size: 14px;
+}
+
+/* Reliability card: same pale green as the people section */
+.asp .asp-reliability {
+  display: flex;
+  flex-direction: column;
+  padding: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: #f3f8f4;
+}
+
+.asp .asp-reliability-heading .asp-eyebrow {
+  color: #167273 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+}
+
+.asp .asp-status-circle {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: #167273;
+  color: #fff;
+}
+
+.asp .asp-status-circle svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.4;
+}
+
+.asp .asp-reliability > strong {
+  margin-top: 44px;
+  color: #0a2e26;
+  font-size: clamp(110px, 10vw, 150px);
+  line-height: 0.85;
+}
+
+.asp .asp-reliability > strong > span {
+  color: #167273;
+}
+
+.asp .asp-reliability h3 {
+  margin-top: 22px;
+  color: #0a2e26;
+  font-size: 34px;
+}
+
+.asp .asp-reliability-track {
+  height: 8px;
+  margin-top: auto;
+  border-radius: 4px;
+  background: #d9e7df;
+}
+
+.asp .asp-reliability-track i {
+  border-radius: 4px;
+  background: #167273;
+}
+
+.asp .asp-reliability h3 + .asp-reliability-track {
+  margin-top: 40px;
+}
+
+.asp .asp-reliability-foot {
+  align-items: flex-end;
+  padding-top: 24px;
+  margin-top: 28px;
+  border-top: 1px solid #d5e3da;
+}
+
+.asp .asp-reliability-foot > strong {
+  color: #167273;
+  font-size: 40px;
+}
+
+.asp .asp-reliability-foot > p {
+  color: #3d5a52;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: right;
+}
+
+/* Source note: left aligned, readable */
+.asp .asp-source-note {
+  max-width: none;
+  margin-top: 64px !important;
+  padding-top: 22px;
+  border-top: 1px solid #e0e8e3;
+  color: #6c7f78;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.asp .asp-source-note a {
+  color: #167273;
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-results-heading {
+    gap: 40px;
+  }
+  .asp .asp-results-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .asp .asp-reliability {
+    padding: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .asp .asp-results-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .asp .asp-results-heading > p {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .asp .asp-line-chart {
+    height: 280px;
+  }
+  .asp .asp-line-value {
+    font-size: 22px;
+  }
+  .asp .asp-chart-delta {
+    font-size: 44px;
+  }
+  .asp .asp-reliability {
+    padding: 28px;
+  }
+}
+
+
+/* =====================================================
+   CLOSING CTA + FOOTER: FLAT, CLEAN, BOLD
+   ===================================================== */
+
+/* Full-width dark band, no grey around the card */
+.asp .asp-cta-section,
+.asp .asp-footer {
+  background: #041b1c;
+  box-shadow: 0 0 0 100vmax #041b1c;
+  clip-path: inset(0 -100vmax);
+}
+
+.asp .asp-cta-section {
+  padding-block: clamp(72px, 8vw, 112px) 0;
+}
+
+/* Your original flat card: square corners, no glows or rings */
+.asp .asp-cta {
+  padding: clamp(40px, 5vw, 72px);
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(40px, 5vw, 80px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  background: #072426;
+}
+
+/* Eyebrow */
+.asp .asp-cta .asp-eyebrow {
+  margin-bottom: 26px !important;
+  color: #7fd3d0 !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* Heading: bold, white, fits on three lines */
+.asp .asp-cta h2 {
+  color: #fff;
+  font-size: clamp(36px, 3.9vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+  text-wrap: initial;
+}
+
+.asp .asp-cta h2 em {
+  color: #7fd3d0;
+}
+
+.asp .asp-cta p:not(.asp-eyebrow) {
+  max-width: 480px;
+  margin-top: 26px;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Button: same teal as the hero, square like your original */
+.asp .asp-cta .asp-button {
+  margin-top: 34px;
+  padding: 18px 28px;
+  min-height: 56px;
+  border-radius: 4px;
+  background: #167273;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.asp .asp-cta .asp-button:hover {
+  background: #1d8f90;
+  transform: translateY(-2px);
+}
+
+.asp .asp-cta .asp-button svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Right column */
+.asp .asp-cta-side {
+  padding-left: clamp(28px, 4vw, 56px);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.asp .asp-cta-brand {
+  gap: 16px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.asp .asp-cta-brand > span {
+  color: #7fd3d0;
+  font-size: 20px;
+}
+
+.asp .asp-cta-side ul {
+  margin-top: 30px;
+}
+
+.asp .asp-cta-side li {
+  gap: 14px;
+  padding-block: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.asp .asp-cta-side li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.asp .asp-cta-side li svg {
+  width: 16px;
+  height: 16px;
+  color: #7fd3d0;
+  stroke-width: 2.4;
+}
+
+.asp .asp-cta-caption {
+  margin-top: 26px;
+  color: #7fd3d0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* Footer */
+.asp .asp-footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.asp .asp-footer > div {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.asp .asp-footer a {
+  gap: 10px;
+  color: #fff;
+}
+
+.asp .asp-footer a:hover {
+  color: #7fd3d0;
+}
+
+.asp .asp-footer svg {
+  width: 16px;
+  height: 16px;
+  color: #7fd3d0;
+}
+
+.asp .asp-footer > p {
+  margin-top: 26px !important;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a9c9c7;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .asp .asp-cta {
+    grid-template-columns: 1fr;
+  }
+  .asp .asp-cta-side {
+    padding: 32px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .asp .asp-cta {
+    padding: 30px 22px;
+  }
+  .asp .asp-cta p:not(.asp-eyebrow) {
+    font-size: 15px;
+  }
+  .asp .asp-cta-brand {
+    font-size: 22px;
+  }
+  .asp .asp-cta-side li {
+    font-size: 14px;
+  }
+  .asp .asp-footer > div {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   HERO: MOBILE SPACING
+   ===================================================== */
+
+@media (max-width: 800px) {
+  .asp .asp-hero.asp-hero--blended {
+    padding: 20px 0 28px;
+  }
+
+  .asp .asp-hero--blended .asp-hero-grid {
+    gap: 0;
+  }
+
+  /* Just enough to clear the fixed nav (about 64px tall) */
+  .asp .asp-hero--blended .asp-hero-copy {
+    max-width: none;
+    padding-top: 64px;
+  }
+
+  .asp .asp-hero--blended .asp-eyebrow {
+    margin-bottom: 16px !important;
+  }
+
+  .asp .asp-hero--blended h1 {
+    font-size: clamp(32px, 8.4vw, 48px);
+    line-height: 1.08;
+  }
+
+  .asp .asp-hero--blended .asp-deck {
+    margin-top: 18px !important;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .asp .asp-hero--blended .asp-hero-links {
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .asp .asp-hero--blended .asp-hero-meta {
+    gap: 8px 14px;
+    margin-top: 26px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: #c9dcd2;
+  }
+
+  .asp .asp-hero--blended .asp-hero-meta span + span {
+    padding-left: 14px;
+  }
+
+  /* The empty column under the text: just a sliver of building */
+  .asp .asp-hero--blended .asp-hero-visual {
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .asp .asp-hero--blended h1 {
+    font-size: clamp(30px, 8.6vw, 38px);
+  }
+
+  .asp .asp-hero--blended .asp-hero-copy {
+    padding-top: 60px;
+  }
+
+  .asp .asp-hero--blended .asp-hero-links {
+    flex-wrap: nowrap;
+    gap: 18px;
+  }
+
+  .asp .asp-hero--blended .asp-button {
+    padding: 13px 16px;
+    min-height: 46px;
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .asp .asp-hero--blended .asp-hero-visual {
+    min-height: 80px;
+  }
+}
+  
 `;
