@@ -5,8 +5,6 @@ import Footer from "./components/Footer";
 import { Seo } from "./components/Seo";
 import Home from "./pages/Home";
 import OpenBanking from "./pages/articles/OpenBanking";
-import EmbeddedFinance from "./pages/articles/EmbeddedFinance";
-import AiFraudDetection from "./pages/articles/AiFraudDetection";
 import AveniBestAINoteTakingTools from "./pages/articles/AveniBestAINoteTakingTools";
 import AdfinStubbsCaseStudy from "./pages/articles/AdfinStubbsCaseStudy";
 
@@ -30,8 +28,8 @@ export default function App() {
           element={
             <>
               <Seo
-                title="GrowUp | Fintech & Financial Services Copywriting Portfolio"
-                description="Research-backed fintech content. Long-form articles and case studies on open banking, embedded finance, fraud prevention and payments."
+                title="GrowUp | Fintech & Financial Services Writing Portfolio"
+                description="See fintech content built for pipeline growth, from buyer guides and comparison pieces to research-led articles and customer stories."
                 path="/"
                 type="website"
               />
@@ -45,8 +43,8 @@ export default function App() {
           element={
             <>
               <Seo
-                title="Open Banking in 2026: What's Changed | GrowUp"
-                description="REPLACE THIS with the article's real description, 150–160 characters."
+               title="Fintech Article Writing Sample: Open Banking in 2026 | GrowUp"
+                description="A fintech writing sample by GrowUp: a research-led article on open banking in 2026, covering Pay by Bank, VRPs, fraud risk and provider evaluation."
                 path="/articles/open-banking-2026"
               />
               <OpenBanking />
@@ -61,8 +59,8 @@ export default function App() {
           element={
             <>
               <Seo
-                title="The Best AI Note-Taking Tools | GrowUp"
-                description="REPLACE THIS with the article's real description, 150–160 characters."
+                 title="Fintech Comparison Article Sample: AI Note-Taking Tools | GrowUp"
+                description="A fintech writing sample by GrowUp: a comparison of five AI note-taking tools for UK financial advisers, written as an example of content for Aveni."
                 path="/articles/best-ai-note-taking-tools"
               />
               <AveniBestAINoteTakingTools />

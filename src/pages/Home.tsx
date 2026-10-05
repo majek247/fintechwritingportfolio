@@ -2,6 +2,20 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SITE } from "../data/site";
 
+const ANIM_CSS = `
+@keyframes hero-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes hero-img { from { opacity: 0; transform: translateX(40px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
+.hero-anim { animation: hero-rise .9s cubic-bezier(.22,1,.36,1) backwards; }
+.hero-anim-img { animation: hero-img 1.1s cubic-bezier(.22,1,.36,1) .35s backwards; }
+.reveal { opacity: 0; }
+.reveal.is-in { opacity: 1; animation: rise .9s cubic-bezier(.22,1,.36,1) backwards; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim, .hero-anim-img, .reveal.is-in { animation: none; }
+  .reveal { opacity: 1; }
+}
+`;
+
 const ROUTES = {
   caseStudy: "/articles/adfin-stubbs-parkin-case-study",
   noteTaking: "/articles/best-ai-note-taking-tools",
@@ -310,9 +324,28 @@ useEffect(() => {
   return () => clearTimeout(t);
 }, []);
 
+useEffect(() => {
+  const els = document.querySelectorAll<HTMLElement>(".reveal");
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-in");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+  );
+  els.forEach((el) => io.observe(el));
+  return () => io.disconnect();
+}, []);
+
+
 
   return (
     <main className="overflow-hidden bg-[#041b1c] text-white">
+      <style>{ANIM_CSS}</style>
       {/* HERO */}
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_38%,rgba(25,144,132,.16),transparent_28%),linear-gradient(135deg,#06332f_0%,#041b1c_55%,#031516_100%)] pt-28">
         <div
@@ -326,11 +359,11 @@ useEffect(() => {
 
         <div className="mx-auto grid w-[min(1340px,calc(100%-96px))] items-center gap-6 pb-16 lg:grid-cols-[.82fr_1.18fr] lg:pb-20">
           <div className="relative z-10">
-            <p className="mb-6 text-[11px] font-semibold uppercase tracking-[.22em] text-[#1F9FA1]">
+            <p className="hero-anim mb-6 text-[11px] font-semibold uppercase tracking-[.22em] text-[#1F9FA1]">
               Fintech writing portfolio
             </p>
 
-                      <h1 className="max-w-[640px] font-serif text-[50px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[66px]">
+                      <h1 style={{ animationDelay: "120ms" }} className="hero-anim max-w-[640px] font-serif text-[50px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[66px]">
               Fintech content<br className="hidden md:block" /> built to support{" "}
               <span className="text-[#1F9FA1]">pipeline growth.</span>
             </h1>
@@ -642,7 +675,7 @@ reloadDocument
 
         <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2">
           {/* MONTHLY (featured) */}
-          <div className="relative flex flex-col border border-[#167273] bg-white p-7 shadow-[0_18px_45px_rgba(18,114,115,.10)]">
+          <div className="reveal relative flex flex-col border border-[#167273] bg-white p-7 shadow-[0_18px_45px_rgba(18,114,115,.10)]">
             <span className="absolute -top-[11px] left-4 bg-[#167273] px-3 py-1 text-[10px] font-bold uppercase tracking-[.14em] text-white">
               Most popular
             </span>
@@ -697,7 +730,7 @@ reloadDocument
           </div>
 
           {/* ONE-OFF */}
-          <div className="relative flex flex-col border border-[#e3ebe9] bg-white p-7">
+          <div style={{ animationDelay: "150ms" }} className="reveal relative flex flex-col border border-[#e3ebe9] bg-white p-7">
             <h3 className="font-serif text-[32px] font-normal leading-[1.05] tracking-[-.035em] text-[#071b2c]">
               Long-form article
             </h3>
@@ -760,7 +793,7 @@ reloadDocument
         <div className="grid gap-14 lg:grid-cols-[.78fr_1.22fr] lg:gap-20">
 
           {/* LEFT */}
-          <div className="relative">
+          <div className="reveal relative">
             <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#1F9FA1]">
               FAQ
             </p>
@@ -780,7 +813,7 @@ reloadDocument
           </div>
 
           {/* RIGHT */}
-          <div className="space-y-3">
+          <div style={{ animationDelay: "150ms" }} className="reveal space-y-3">
             {faqItems.map((item, i) => (
               <details
                 key={item.q}
