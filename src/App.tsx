@@ -24,6 +24,7 @@ export default function App() {
       <ScrollTop />
       <Nav />
       <Routes>
+
         <Route
           path="/"
           element={

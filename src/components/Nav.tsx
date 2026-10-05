@@ -4,14 +4,36 @@ import { SITE } from "../data/site";
 
 const HERO_HEIGHT = 650; // scroll distance (px) before the nav turns solid
 
+const LINKS = [
+  { id: "work", label: "Portfolio" },
+  { id: "approach", label: "Approach" },
+  { id: "investment", label: "Investment" },
+  { id: "faq", label: "FAQ" },
+];
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > HERO_HEIGHT);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const onScrollSpy = () => {
+      let current: string | null = null;
+      for (const { id } of LINKS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) current = id;
+      }
+      setActive(current);
+    };
+    onScrollSpy();
+    window.addEventListener("scroll", onScrollSpy, { passive: true });
+    return () => window.removeEventListener("scroll", onScrollSpy);
   }, []);
 
   return (
@@ -31,7 +53,7 @@ export default function Nav() {
         }`}
         style={{
           width: scrolled
-            ? "min(1404px, calc(100% - 32px))"
+            ? "min(1340px, calc(100% - 96px))"
             : "min(1340px, calc(100% - 96px))",
         }}
       >
@@ -51,25 +73,23 @@ export default function Nav() {
         </a>
 
         <nav className="hidden items-center gap-9 text-[15px] md:flex">
-          <Link to="/" className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] transition hover:text-mint">
-            Portfolio
-          </Link>
-          <a
-            href="/#articles"
-            className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] transition hover:text-mint"
-          >
-            Articles
-          </a>
-          <a
-            href="/#approach"
-            className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] transition hover:text-mint"
-          >
-            Approach
-          </a>
+          {LINKS.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`/#${id}`}
+              className={`font-semibold drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)] transition ${
+                active === id ? "text-[#1F9FA1]" : "text-white hover:text-[#1F9FA1]"
+              }`}
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
         <a
-          href={SITE.contact}
+          href="https://www.seo-growup.com/get-in-touch"
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full bg-[#167273] px-6 py-3 text-[15px] font-semibold text-white shadow-lg transition hover:bg-[#1d8f90]"
         >
           Let&rsquo;s talk

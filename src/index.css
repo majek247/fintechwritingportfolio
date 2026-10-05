@@ -12,3 +12,16 @@ h1, h2, h3 { @apply font-serif; letter-spacing: -0.02em; }
 .hero-in > *:nth-child(3) { animation-delay: .16s; }
 .hero-in > *:nth-child(4) { animation-delay: .24s; }
 @media (prefers-reduced-motion: reduce) { .hero-in > * { animation: none; } html { scroll-behavior: auto; } }
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: pageEnter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter { animation: none; }
+}

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SITE } from "../data/site";
 
@@ -264,40 +265,52 @@ const mocks = [
 
 const faqItems = [
   {
-    q: "What types of fintech content do you write?",
-    a: "We write customer stories, buyer guides, comparison pages, financial education, product-led articles and search-focused content for fintech and financial services companies.",
+    q: "What fintech subjects do you cover?",
+    a: "We cover payments, open banking, lending, wealthtech, insurtech, regtech, financial infrastructure, accounting software and adjacent B2B finance topics. We do not rely on surface-level familiarity. Before writing, we build enough context around the product, market, regulation and buyer to understand what matters, what needs evidence and where the real complexity sits.",
   },
   {
-    q: "How do you research technical fintech topics?",
-    a: "We start with primary sources, regulator guidance, product documentation, competitor research and customer evidence. For specialist topics, we also work directly with your internal subject-matter experts.",
+    q: "Can you help decide which fintech topics to write about?",
+    a: "Yes. We prioritise topics against commercial relevance, buyer intent, sales friction, product priorities and search demand. That usually means identifying where content can support evaluation, answer recurring objections or strengthen important revenue pages. We would rather build a focused backlog of high-value opportunities than produce a large editorial calendar with no clear role in the buying journey.",
   },
   {
-    q: "Do you only work with fintech companies?",
-    a: "Fintech is one of our core specialist areas. We also work with adjacent financial services, SaaS and technology companies where the product needs careful research and clear explanation.",
+    q: "Is your fintech content optimised for SEO?",
+    a: "Yes, where search is relevant. We research intent, competing pages, keyword language, internal-link opportunities and the depth required to compete. But SEO does not dictate the piece. The article still needs a clear argument, useful evidence and enough originality to be credible with an informed buyer. Search helps shape the structure; it does not replace editorial judgement.",
   },
   {
-    q: "Can you help decide what we should write?",
-    a: "Yes. We can map content opportunities across search demand, buyer questions, product priorities and the sales journey so the writing is tied to commercial intent, not just publishing volume.",
+    q: "Do you write under our brand, or ghostwrite for our executives?",
+    a: "We do both. Brand-led content is written to match your established positioning and tone. For executive ghostwriting, we go further into point of view, experience, language and argument so the piece reflects how that person actually thinks.  ",
   },
   {
-    q: "How long does a piece usually take?",
-    a: "Most long-form pieces take around one to two weeks from research to final draft. More technical articles, interviews and customer stories can take longer depending on review cycles.",
+    q: "Can you work with our in-house fintech experts?",
+    a: "Yes. We regularly work with product, compliance, sales, customer success and leadership teams to strengthen technical accuracy and bring first-hand insight into the content. We use focused interviews to get to the useful detail quickly, then turn that input into clear arguments, examples and evidence.",
   },
   {
-    q: "Is the content written for search too?",
-    a: "Yes, where search matters. We use search intent, competitor gaps, internal linking and on-page optimisation without turning the article into something written for an algorithm instead of a buyer.",
+    q: "How long does a fintech article take?",
+    a: "Most long-form pieces take around one to two weeks from approved brief to final draft. Timing depends on research depth, technical complexity and the number of reviewers involved. A buyer guide may move quickly; a regulated or interview-led piece will need more time. We agree the review path upfront so quality is protected without creating unnecessary delays.",
   },
   {
-    q: "Can you work with our internal experts?",
-    a: "Yes. We can interview founders, product teams, compliance leads, advisers and other specialists, then turn their knowledge into content without flattening the technical detail.",
+    q: "Do you do test pieces?",
+    a: "Yes. A single paid article is often the best way to assess fit before moving into an ongoing programme. We treat it as a proper engagement, with the same research, briefing, writing and revision standards as monthly work. It gives both sides a clear view of quality, working style and review process before committing to a larger content cadence.",
   },
   {
-    q: "How do we get started?",
-    a: "Start with the piece, topic or content problem you want to solve. We will scope the research, format, audience and commercial goal before writing begins.",
+    q: "What do you need from us to get started?",
+    a: "We typically need your core product material, website, positioning documents, existing content and any useful customer or sales insight. If the subject requires specialist input, we may also schedule a short interview with the relevant expert. From there, we define the audience, angle, evidence base, search opportunity and review process before the first draft begins.",
   },
 ];
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+useEffect(() => {
+  const id = window.location.hash.replace("#", "");
+  if (!id) return;
+  const t = setTimeout(() => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+  }, 50);
+  return () => clearTimeout(t);
+}, []);
+
+
   return (
     <main className="overflow-hidden bg-[#041b1c] text-white">
       {/* HERO */}
@@ -313,13 +326,13 @@ export default function Home() {
 
         <div className="mx-auto grid w-[min(1340px,calc(100%-96px))] items-center gap-6 pb-16 lg:grid-cols-[.82fr_1.18fr] lg:pb-20">
           <div className="relative z-10">
-            <p className="mb-6 text-[11px] font-semibold uppercase tracking-[.22em] text-[#6fdbd2]">
+            <p className="mb-6 text-[11px] font-semibold uppercase tracking-[.22em] text-[#1F9FA1]">
               Fintech writing portfolio
             </p>
 
                       <h1 className="max-w-[640px] font-serif text-[50px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[66px]">
               Fintech content<br className="hidden md:block" /> built to support{" "}
-              <span className="text-[#6fd8cf]">pipeline growth.</span>
+              <span className="text-[#1F9FA1]">pipeline growth.</span>
             </h1>
 
             <p className="mt-7 max-w-[450px] text-[17px] leading-7 text-[#c4d3cf]">
@@ -329,7 +342,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#work"
-                className="inline-flex min-h-12 items-center gap-8 rounded-full bg-[#72e2d7] px-7 text-[13px] font-semibold text-[#05211f] transition hover:-translate-y-0.5 hover:bg-[#95eee6]"
+                className="inline-flex min-h-12 items-center gap-8 rounded-full bg-[#167273] px-7 text-[13px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d8f90]"
               >
                 Read the articles <Arrow />
               </a>
@@ -344,25 +357,7 @@ export default function Home() {
               </a>
             </div>
 
-            <dl className="mt-11 grid max-w-[610px] grid-cols-3 border-t border-white/10 pt-7">
-              {[
-                ["3", "Featured pieces"],
-                ["1,600+", "Words in every piece"],
-                ["100%", "Research-backed"],
-              ].map(([n, l], i) => (
-                <div
-                  key={l}
-                  className={i ? "border-l border-white/10 pl-7" : ""}
-                >
-                  <dt className="font-serif text-[30px] leading-none text-[#f4f1e8]">
-                    {n}
-                  </dt>
-                  <dd className="mt-2 text-[10px] leading-4 text-[#8eaaa3]">
-                    {l}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+ 
           </div>
 
           <div className="relative w-full lg:-mr-[7vw]">
@@ -388,7 +383,7 @@ export default function Home() {
                 Content for Different Stages of the Buying Journey
               </h2>
               <p className="mt-8 max-w-[900px] text-[18px] leading-7 text-[#011522]">
-          From customer proof and high-intent comparisons to research-led financial education, each piece is designed to build trust, answer buying questions and move prospects closer to a decision.
+          From customer proof and high-intent comparisons to research-led financial education, each piece is designed to build trust, answer buyer questions and move prospects closer to a decision.
               </p>
             </div>
 
@@ -397,6 +392,8 @@ export default function Home() {
           {/* FEATURED CASE STUDY */}
           <Link
             to={ROUTES.caseStudy}
+reloadDocument
+
             className="group relative mt-10 block overflow-hidden rounded-[24px] border border-[#0a443c]/15 bg-[#06332f] shadow-[0_20px_60px_rgba(4,27,28,.10)]"
           >
             <img
@@ -409,21 +406,21 @@ export default function Home() {
             <div className="relative z-10 grid min-h-[440px] lg:grid-cols-[1.04fr_.96fr]">
               <div className="flex flex-col justify-between p-8 md:p-10 lg:p-12">
                 <div>
-                  <p className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.16em] text-[#7be2d7]">
-                    <span className="text-[#f1efe7]">01</span>
+                  <p className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.16em] text-[#1F9FA1]">
+                    <span className="text-[#1F9FA1]">01</span>
                     Customer story · Case study
                   </p>
 
                   <h3 className="mt-5 max-w-[650px] font-serif text-[38px] font-normal leading-[1.02] tracking-[-.04em] text-[#f5f1e8] md:text-[49px]">
                     How Stubbs Parkin took on nearly 200 clients without{" "}
-                    <span className="text-[#78ddd4]">adding more payment admin.</span>
+                    <span className="text-[#1F9FA1]">adding more payment admin.</span>
                   </h3>
 
                   <p className="mt-5 max-w-[550px] text-[15px] leading-6 text-[#c8d7d2]">
                 A story-led case study showing how Adfin helped a growing accountancy practice move 231 mandates in three days, increase payment volume and keep collections running without creating more admin.
                   </p>
 
-                  <span className="mt-7 inline-flex min-h-11 items-center gap-8 rounded-full bg-[#70ded4] px-6 text-[12px] font-semibold text-[#05211f]">
+                  <span className="mt-7 inline-flex min-h-11 items-center gap-8 rounded-full bg-[#167273] px-6 text-[12px] font-semibold text-white">
                     View the case study <Arrow />
                   </span>
                 </div>
@@ -474,6 +471,7 @@ export default function Home() {
             {/* AVENI BUYER GUIDE */}
             <Link
               to={ROUTES.noteTaking}
+reloadDocument
               className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/10 bg-[#f1ede1] shadow-[0_10px_35px_rgba(4,27,28,.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(4,27,28,.09)]"
             >
               <div className="grid min-h-[350px] lg:grid-cols-[1.04fr_.96fr]">
@@ -493,7 +491,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <span className="mt-7 inline-flex min-h-10 w-fit items-center gap-3 rounded-full bg-[#72e2d7] px-5 text-[12px] font-semibold text-[#05211f] transition-all duration-300 group-hover:gap-5 group-hover:bg-[#95eee6]">
+                  <span className="mt-7 inline-flex min-h-10 w-fit items-center gap-3 rounded-full bg-[#167273] px-5 text-[12px] font-semibold text-white transition-all duration-300 group-hover:gap-5 group-hover:bg-[#1d8f90]">
                     Read the comparison <Arrow />
                   </span>
                 </div>
@@ -512,6 +510,7 @@ export default function Home() {
             {/* OPEN BANKING */}
             <Link
               to={ROUTES.openBanking}
+reloadDocument
               className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/10 bg-[#f1ede1] shadow-[0_10px_35px_rgba(4,27,28,.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(4,27,28,.09)]"
             >
               <div className="grid min-h-[350px] lg:grid-cols-[1.04fr_.96fr]">
@@ -532,7 +531,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <span className="mt-7 inline-flex min-h-10 w-fit items-center gap-3 rounded-full bg-[#72e2d7] px-5 text-[12px] font-semibold text-[#05211f] transition-all duration-300 group-hover:gap-5 group-hover:bg-[#95eee6]">
+                  <span className="mt-7 inline-flex min-h-10 w-fit items-center gap-3 rounded-full bg-[#167273] px-5 text-[12px] font-semibold text-white transition-all duration-300 group-hover:gap-5 group-hover:bg-[#1d8f90]">
                     Read the article <Arrow />
                   </span>
                 </div>
@@ -554,11 +553,11 @@ export default function Home() {
 
 
       {/* APPROACH */}
-      <section id="approach" className="bg-[linear-gradient(135deg,#052b28_0%,#041b1c_100%)]">
+      <section id="approach" className="bg-[#041b1c]">
         <div className="mx-auto w-[min(1340px,calc(100%-96px))] py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[.22em] text-[#6fdad1]">
+              <p className="text-[11px] font-bold uppercase tracking-[.22em] text-[#1F9FA1]">
                 Our approach
               </p>
               <h2 className="mt-5 max-w-[620px] font-serif text-[46px] font-normal leading-[1.02] tracking-[-.03em] text-[#f6f2e8] md:text-[62px]">
@@ -566,7 +565,7 @@ export default function Home() {
                 <br />
                 for content that
                 <br />
-                <span className="text-[#4de3d2]">drives pipeline.</span>
+                <span className="text-[#1F9FA1]">drives pipeline.</span>
               </h2>
             </div>
 
@@ -617,27 +616,162 @@ export default function Home() {
           </div>
 
 
+   </div>
+  </section>
+
+
+  {/* INVESTMENT */}
+  <section id="investment" className="scroll-mt-24 bg-white text-[#082722]">
+    <div className="mx-auto w-[min(1340px,calc(100%-48px))] py-16 md:w-[min(1340px,calc(100%-96px))] lg:py-20">
+      <div className="bg-[#eef4f3] px-6 py-14 md:px-12 lg:px-16">
+        {/* HEADER */}
+        <div className="text-center">
+          <p className="flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[.18em] text-[#167273]">
+            <span className="h-px w-3 bg-[#167273]" />
+            Pricing
+          </p>
+          <h2 className="mt-4 font-serif text-[43px] font-normal leading-[1.03] tracking-[-.045em] text-[#071b2c] md:text-[58px]">
+            Investment Options and Packages
+          </h2>
+          <p className="mx-auto mt-5 max-w-[640px] text-[18px] leading-7 text-[#011522]">
+
+            Choose a single article or an ongoing monthly programme. Both include
+            research, strategic input and content written by fintech specialists.
+          </p>
+        </div>
+
+        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2">
+          {/* MONTHLY (featured) */}
+          <div className="relative flex flex-col border border-[#167273] bg-white p-7 shadow-[0_18px_45px_rgba(18,114,115,.10)]">
+            <span className="absolute -top-[11px] left-4 bg-[#167273] px-3 py-1 text-[10px] font-bold uppercase tracking-[.14em] text-white">
+              Most popular
+            </span>
+
+            <h3 className="font-serif text-[32px] font-normal leading-[1.05] tracking-[-.035em] text-[#071b2c]">
+              Monthly programme
+            </h3>
+            <p className="mt-4 font-serif text-[56px] font-normal leading-none tracking-[-.05em] text-[#071b2c]">
+              £3,400 <span className="font-sans text-[15px] font-normal tracking-normal text-[#607078]">/mo</span>
+            </p>
+            <p className="mt-2 text-[14px] text-[#607078]">4 pieces per month, saving £400</p>
+
+            <div className="mt-4 border border-[#cfe5e0] bg-[#f1f7f6] px-4 py-3 text-[13px] font-semibold text-[#0c5d57]">
+              Expert review and custom visuals on every piece
+            </div>
+
+            <p className="mt-5 text-[14px] leading-6 text-[#53656b]">
+              A consistent stream of research-led content for teams publishing every month.
+            </p>
+
+            <ul className="mt-5 flex-1">
+              {[
+                "4 articles or customer stories each month",
+                "Monthly topic plan and keyword research",
+                "Expert review on every piece",
+                "Custom visuals for every piece",
+                "Monthly report on rankings and traffic",
+                "Priority turnaround",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="flex items-center gap-2.5 border-b border-[#e3ecea] py-3 text-[13px] text-[#53656b] last:border-b-0"
+                >
+                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#0e8a7d] text-white">
+                    <svg viewBox="0 0 24 24" className="h-3 w-3 fill-none stroke-current stroke-[3]" aria-hidden="true">
+                      <path d="m6 12 4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://www.seo-growup.com/get-in-touch"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 block bg-[#06302d] py-4 text-center text-[13px] font-semibold text-white transition hover:bg-[#0b4a43]"
+            >
+              Start a monthly programme
+            </a>
+          </div>
+
+          {/* ONE-OFF */}
+          <div className="relative flex flex-col border border-[#e3ebe9] bg-white p-7">
+            <h3 className="font-serif text-[32px] font-normal leading-[1.05] tracking-[-.035em] text-[#071b2c]">
+              Long-form article
+            </h3>
+            <p className="mt-4 font-serif text-[56px] font-normal leading-none tracking-[-.05em] text-[#071b2c]">
+              £950 <span className="font-sans text-[15px] font-normal tracking-normal text-[#607078]">/article</span>
+            </p>
+            <p className="mt-2 text-[14px] text-[#607078]">One-off, no commitment</p>
+
+            <div className="mt-4 border border-[#e3ebe9] bg-[#f7f9f9] px-4 py-3 text-[13px] font-semibold text-[#1f3a36]">
+              Research, SEO and custom visuals included
+            </div>
+
+            <p className="mt-5 text-[14px] leading-6 text-[#53656b]">
+              In-depth, research-led articles, buyer guides and specialist fintech content.
+            </p>
+
+            <ul className="mt-5 flex-1">
+              {[
+                "1,600 to 2,000 words",
+                "Primary-source research and fact-checking",
+                "Keyword and search-intent research",
+                "SEO title, meta description and internal links",
+                "Custom graphics and visuals",
+                "Two rounds of revisions",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="flex items-center gap-2.5 border-b border-[#e3ecea] py-3 text-[13px] text-[#53656b] last:border-b-0"
+                >
+                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#0e8a7d] text-white">
+                    <svg viewBox="0 0 24 24" className="h-3 w-3 fill-none stroke-current stroke-[3]" aria-hidden="true">
+                      <path d="m6 12 4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://www.seo-growup.com/get-in-touch"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 block border border-[#167273] py-4 text-center text-[13px] font-semibold text-[#167273] transition hover:bg-[#167273] hover:text-white"
+            >
+              Commission an article
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+
 
     {/* FAQ */}
-    <section className="relative overflow-hidden bg-white text-[#082722]">
+    <section id="faq" className="scroll-mt-24 relative overflow-hidden bg-[#041b1c] text-white">
+
+
       <div className="mx-auto w-[min(1340px,calc(100%-48px))] py-20 md:w-[min(1340px,calc(100%-96px))] lg:py-24">
         <div className="grid gap-14 lg:grid-cols-[.78fr_1.22fr] lg:gap-20">
 
           {/* LEFT */}
           <div className="relative">
-            <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#17796e]">
+            <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#1F9FA1]">
               FAQ
             </p>
 
-            <h2 className="mt-5 max-w-[520px] font-serif text-[46px] font-normal leading-[.98] tracking-[-.045em] text-[#071b2c] md:text-[61px]">
+            <h2 className="mt-5 max-w-[520px] font-serif text-[46px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[61px]">
               Questions about our{" "}
-              <span className="text-[#138e80]">fintech writing</span>{" "}
+              <span className="text-[#1F9FA1]">fintech writing</span>{" "}
               services.
             </h2>
 
-            <p className="mt-7 max-w-[470px] text-[17px] leading-7 text-[#53656b]">
+            <p className="mt-7 max-w-[470px] text-[17px] leading-7 text-[#c4d3cf]">
               Everything you need to know about how we research, write and
               produce specialist fintech content.
             </p>
@@ -650,19 +784,26 @@ export default function Home() {
             {faqItems.map((item, i) => (
               <details
                 key={item.q}
-                open={i === 0}
-                className="group overflow-hidden rounded-[18px] border border-[#dce7e4] bg-white transition duration-300 open:border-[#b8ddd6] open:bg-[#fbfefd]"
+                open={openFaq === i}
+                onToggle={(e) => {
+                  if (e.currentTarget.open) {
+                    setOpenFaq(i);
+                  } else if (openFaq === i) {
+                    setOpenFaq(null);
+                  }
+                }}
+                className="group overflow-hidden rounded-[18px] border border-[#3fcfc0]/20 bg-[#05201f] transition duration-300 open:border-[#3fcfc0]/45 open:bg-[#062b28]"
               >
                 <summary className="flex cursor-pointer list-none items-center gap-5 px-5 py-5 marker:hidden md:px-7 md:py-6">
-                  <span className="w-9 shrink-0 font-serif text-[22px] leading-none text-[#0f8377] md:text-[24px]">
+                  <span className="w-9 shrink-0 font-serif text-[22px] leading-none text-[#1F9FA1] md:text-[24px]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="flex-1 font-serif text-[22px] font-normal leading-[1.15] tracking-[-.025em] text-[#071b2c] md:text-[27px]">
+                  <h3 className="flex-1 font-serif text-[22px] font-normal leading-[1.15] tracking-[-.025em] text-[#f4f0e7] md:text-[27px]">
                     {item.q}
                   </h3>
 
-                  <span className="relative grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#ecf8f5] text-[#08786c]">
+                  <span className="relative grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#0b4a43] text-[#1F9FA1]">
                     <span className="absolute h-px w-4 bg-current" />
                     <span className="absolute h-4 w-px bg-current transition-transform duration-300 group-open:rotate-90 group-open:opacity-0" />
                   </span>
@@ -671,7 +812,7 @@ export default function Home() {
                 <div className="grid grid-cols-[36px_1fr_auto] gap-5 px-5 pb-6 md:grid-cols-[36px_1fr_44px] md:px-7 md:pb-7">
                   <span />
 
-                  <p className="max-w-[690px] text-[14px] leading-7 text-[#53656b] md:text-[15px]">
+                  <p className="max-w-[690px] text-[14px] leading-7 text-[#b9cbc6] md:text-[15px]">
                     {item.a}
                   </p>
 
@@ -684,35 +825,7 @@ export default function Home() {
       </div>
     </section>
 
-    {/* CTA */}
-    <section className="bg-[linear-gradient(135deg,#052b28_0%,#041b1c_100%)]">
-      <div className="mx-auto w-[min(1340px,calc(100%-48px))] py-7 md:w-[min(1340px,calc(100%-96px))] md:py-8">
-        <div className="rounded-[20px] border border-[#3fcfc0]/25 bg-[#05201f] px-7 py-6 md:px-10 lg:grid lg:grid-cols-[1.3fr_auto_.9fr] lg:items-center lg:gap-10">
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-[.18em] text-[#6fdad1]">
-              Ready to plan what’s next?
-            </p>
-
-            <h2 className="mt-3 font-serif text-[28px] font-normal leading-[1.05] tracking-[-.03em] text-[#f5f1e8] md:text-[34px]">
-              Let’s create fintech content that moves the right buyers.
-            </h2>
-          </div>
-
-          <a
-            href="https://www.seo-growup.com/get-in-touch"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex min-h-12 w-fit items-center gap-8 rounded-full bg-[#73e1d6] px-8 text-[14px] font-semibold text-[#05211f] transition hover:-translate-y-0.5 hover:bg-[#93ece4] lg:mt-0"
-          >
-            Let’s talk <Arrow />
-          </a>
-
-          <p className="mt-6 text-[13px] leading-6 text-[#98ada8] lg:mt-0 lg:border-l lg:border-white/10 lg:pl-8">
-            Research-led content for fintech and financial services companies.
-          </p>
-        </div>
-      </div>
-    </section>
+ 
 
 
     </main>
