@@ -633,7 +633,7 @@ export default function BestAINoteTaking({portfolioHref='/#work',contactHref='ht
 </div></section>
  <section id="sources"><h2>Sources & research</h2><p style={{fontSize:14,color:'#55645e'}}>Product facts and feedback below come from vendor sources. They establish what is published, not independently measured performance. Public information was reviewed on 2 October 2026; pricing, integrations and product scope may change.</p><ol className="an-source-list">{sources.map(([title,url],i)=><li key={url} id={`source-${i+1}`}><a href={url} target="_blank" rel="noreferrer">{title} ↗</a></li>)}</ol></section>
  </article></div>
- <section className="an-cta"><div><div className="an-eyebrow">GrowUp · Fintech content writing services</div><h2>Content for complex fintech products.</h2><p>Articles, comparison pages and customer stories that explain the product properly, answer buyer questions and support search, sales and pipeline.</p></div><div><a href={contactHref}>Commission an article like this <span>↗</span></a>
+ <section className="an-cta"><div><div className="an-eyebrow">GrowUp · Fintech content writing services</div><h2>High-intent content for acquisition, sales enablement and pipeline growth.</h2><p>From search-led articles to comparison pages and customer stories, we create content that brings buyers in, helps sales move deals forward and supports pipeline growth.</p></div><div><a href={contactHref}>Commission an article like this <span>↗</span></a>
 
  
  </div></section>
