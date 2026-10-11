@@ -279,40 +279,44 @@ const mocks = [
   <MockResults key="m4" />,
 ];
 
+
+
+
 const faqItems = [
   {
     q: "What fintech subjects do you cover?",
-    a: "We cover payments, open banking, lending, wealthtech, insurtech, regtech, financial infrastructure, accounting software and adjacent B2B finance topics. We do not rely on surface-level familiarity. Before writing, we build enough context around the product, market, regulation and buyer to understand what matters, what needs evidence and where the real complexity sits.",
+    a: "We write across payments, open banking, lending, wealthtech, insurtech, regtech, financial infrastructure and accounting software. Some subjects are more technical than others, but I don't think a writer needs to arrive knowing everything about your particular product. They do need to know how to research it properly. We spend time understanding the market, checking primary sources and working out which details matter to the people you're trying to reach.",
   },
   {
     q: "Can you help decide which fintech topics to write about?",
-    a: "Yes. We prioritise topics against commercial relevance, buyer intent, sales friction, product priorities and search demand. That usually means identifying where content can support evaluation, answer recurring objections or strengthen important revenue pages. We would rather build a focused backlog of high-value opportunities than produce a large editorial calendar with no clear role in the buying journey.",
+    a: "Absolutely. In fact, we'd rather help you decide what deserves writing before we start producing anything. We look at what your buyers are searching for, the questions your sales team keeps answering and where prospects tend to get stuck. Sometimes that's a software comparison. Other times it's an implementation guide or a customer story. The point is to choose topics that have a reason to exist, rather than fill a calendar with another twelve articles.",
   },
   {
     q: "Is your fintech content optimised for SEO?",
-    a: "Yes, where search is relevant. We research intent, competing pages, keyword language, internal-link opportunities and the depth required to compete. But SEO does not dictate the piece. The article still needs a clear argument, useful evidence and enough originality to be credible with an informed buyer. Search helps shape the structure; it does not replace editorial judgement.",
+    a: "Yes. we usually start by looking at what people are searching for and what the articles already ranking have missed. If every open banking guide explains the definition but barely touches on how payments actually work, that’s where we’d focus our research. We still handle the keywords, structure and internal links, but we want the reader to leave knowing something useful.",
   },
   {
     q: "Do you write under our brand, or ghostwrite for our executives?",
-    a: "We do both. Brand-led content is written to match your established positioning and tone. For executive ghostwriting, we go further into point of view, experience, language and argument so the piece reflects how that person actually thinks.  ",
+    a: "Both. If we're writing for your company, we'll work with your existing positioning, terminology and tone so the content feels like it belongs on your website. Executive ghostwriting needs a bit more care. We'd want to understand how that person thinks, what they actually believe about the industry and how they explain things in conversation.",
   },
   {
     q: "Can you work with our in-house fintech experts?",
-    a: "Yes. We regularly work with product, compliance, sales, customer success and leadership teams to strengthen technical accuracy and bring first-hand insight into the content. We use focused interviews to get to the useful detail quickly, then turn that input into clear arguments, examples and evidence.",
+    a: "Yes. Sometimes a short conversation with someone in product or customer success tells us more than hours of reading documentation. They know the questions customers ask and where things get complicated. We take those insights, do the writing and only involve them again when we need to verify something.",
   },
   {
     q: "How long does a fintech article take?",
-    a: "Most long-form pieces take around one to two weeks from approved brief to final draft. Timing depends on research depth, technical complexity and the number of reviewers involved. A buyer guide may move quickly; a regulated or interview-led piece will need more time. We agree the review path upfront so quality is protected without creating unnecessary delays.",
+    a: "Most long-form articles take around one to two weeks from an approved brief to the final draft. This includes research, writing, editing and revisions, with timelines agreed before we begin.",
   },
   {
     q: "Do you do test pieces?",
-    a: "Yes. A single paid article is often the best way to assess fit before moving into an ongoing programme. We treat it as a proper engagement, with the same research, briefing, writing and revision standards as monthly work. It gives both sides a clear view of quality, working style and review process before committing to a larger content cadence.",
+    a: "Yes. If you haven't worked with us before, I think commissioning one paid article is a sensible place to start. You get to see how we research the subject, ask questions, handle feedback and write about your product. We give that first piece the same attention as our ongoing work, including research, editing and revisions. If the process works well for both sides, we can talk about a monthly programme afterwards.",
   },
   {
     q: "What do you need from us to get started?",
-    a: "We typically need your core product material, website, positioning documents, existing content and any useful customer or sales insight. If the subject requires specialist input, we may also schedule a short interview with the relevant expert. From there, we define the audience, angle, evidence base, search opportunity and review process before the first draft begins.",
+    a: "Usually, your website, product documentation, existing content and anything that helps us understand who buys from you and why. Sales decks, customer stories and recorded product demos can be particularly useful. We might also ask for a short conversation with someone on your product or commercial team.  ",
   },
 ];
+
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -379,8 +383,8 @@ useEffect(() => {
               style={{ animationDelay: "240ms" }}
               className="hero-anim flex flex-col justify-center lg:border-l lg:border-[#cdeee8]/[.14] lg:pl-11"
             >
-              <p className="mb-[30px] max-w-[480px] text-[18px] font-normal leading-[1.7] text-[#a9d9d1]">
-                A collection of articles, buyer guides and customer stories we’ve researched and written for fintech and financial services companies.
+              <p className="mb-[30px] max-w-[550px] text-[18px] font-normal leading-[1.7] text-[#a9d9d1]">
+                A collection of research-backed fintech content designed to attract high-intent prospects, support sales conversations and contribute to measurable pipeline growth.
               </p>
 
               <div className="flex flex-wrap gap-[14px]">
@@ -416,8 +420,8 @@ useEffect(() => {
               <h2 className="mt-4 max-w-[1300px] font-serif text-[40px] font-semibold leading-[1.05] tracking-[-.045em] md:text-[54px]">
             Explore our FinTech writing samples.
               </h2>
-              <p className="mt-8 max-w-[1100px] text-[18px] leading-7 text-[#011522]">
-          From customer proof and high-intent comparisons to research-led financial education, each piece is designed to build trust, answer buyer questions and move prospects closer to a decision.
+              <p className="mt-8 max-w-[1000px] text-[18px] leading-7 text-[#011522]">
+          From B2B payments and financial advice technology to open banking, these articles show how we turn complex fintech topics into clear, credible and commercially valuable content.
               </p>
             </div>
 
@@ -451,7 +455,7 @@ reloadDocument
                   </h3>
 
                   <p className="mt-5 max-w-[550px] text-[15px] leading-[1.75] text-[#c8d7d2]">
-                A story-led case study showing how Adfin helped a growing accountancy practice move 231 mandates in three days, increase payment volume and keep collections running without creating more admin.
+                We took Adfin’s existing Stubbs Parkin case study and gave it a more engaging, story-led treatment. Instead of leading with product features and statistics, we built the narrative around the practice taking on nearly 200 clients, the payment challenges involved and how Adfin helped the team manage that growth.
                   </p>
 
                   <span className="mt-7 inline-flex min-h-11 items-center gap-3 rounded-full bg-[#167273] px-6 text-[12px] font-semibold text-white transition-all duration-300 group-hover:gap-5 group-hover:bg-[#1d8f90]">
@@ -459,26 +463,7 @@ reloadDocument
                   </span>
                 </div>
 
-                <div className="mt-10 grid max-w-[640px] grid-cols-3 gap-4 border-t border-white/12 pt-6">
-                  {caseStats.map((s, i) => (
-                    <div
-                      key={s.n}
-                      className={`flex items-start gap-3 ${i ? "border-l border-white/10 pl-4" : ""}`}
-                    >
-                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[10px] border border-[#6bd8ce]/25 bg-[#0b4a43]/80 text-[#79ded5]">
-                        <ApproachIcon kind={s.icon} small />
-                      </span>
-                      <div>
-                        <strong className="block font-serif text-[22px] font-semibold leading-none text-white">
-                          {s.n}
-                        </strong>
-                        <span className="mt-1 block text-[9px] leading-4 text-[#fafafa]">
-                          {s.l}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+ 
               </div>
 
               <div className="relative hidden min-h-[440px] lg:block">
@@ -556,7 +541,7 @@ reloadDocument
                     </p>
 
                     <h3 className="mt-4 max-w-[380px] font-serif text-[26px] font-semibold leading-[1.1] tracking-[-.035em] text-[#082722] md:text-[28px]">
-                      How Open Banking Is Changing Finance and Payments in 2026
+                      How Open Banking Is Changing Finance and Payments
                     </h3>
 
                     <p className="mt-4 max-w-[345px] text-[14px] leading-[1.7] text-[#011522]">
@@ -691,7 +676,7 @@ reloadDocument
                 ["1 report", "Monthly rankings"],
               ],
               intro:
-                "A consistent stream of research-led content for teams publishing every month.",
+                "A consistent stream of research-led content for fintech teams publishing new articles every month.",
               groups: [
                 {
                   label: "Strategy",
@@ -728,7 +713,7 @@ reloadDocument
                 ["1 piece", "Research to publish"],
               ],
               intro:
-                "In-depth, research-led articles, buyer guides and specialist fintech content.",
+                "In-depth, research-led articles, buyer guides and specialist fintech content with custom explanatory visuals.",
               groups: [
                 {
                   label: "Research",
