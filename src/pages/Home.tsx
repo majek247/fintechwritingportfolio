@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { SITE } from "../data/site";
 
 const ANIM_CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @keyframes hero-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes hero-img { from { opacity: 0; transform: translateX(40px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes rise { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
 .hero-anim { animation: hero-rise .9s cubic-bezier(.22,1,.36,1) backwards; }
 .hero-anim-img { animation: hero-img 1.1s cubic-bezier(.22,1,.36,1) .35s backwards; }
+.montserrat-page, .montserrat-page .font-serif, .montserrat-page .font-sans { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; }
 .reveal { opacity: 0; }
 .reveal.is-in { opacity: 1; animation: rise .9s cubic-bezier(.22,1,.36,1) backwards; }
 @media (prefers-reduced-motion: reduce) {
@@ -344,78 +346,77 @@ useEffect(() => {
 
 
   return (
-    <main className="overflow-hidden bg-[#041b1c] text-white">
+    <main className="montserrat-page overflow-hidden bg-[#041b1c] text-white">
       <style>{ANIM_CSS}</style>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_38%,rgba(25,144,132,.16),transparent_28%),linear-gradient(135deg,#06332f_0%,#041b1c_55%,#031516_100%)] pt-28">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-[-220px] top-[-140px] h-[700px] w-[700px] rounded-full border border-[#6ddbd0]/10"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-[-95px] top-[-25px] h-[470px] w-[470px] rounded-full border border-dashed border-[#6ddbd0]/15"
-        />
 
-        <div className="mx-auto grid w-[min(1340px,calc(100%-96px))] items-center gap-6 pb-16 lg:grid-cols-[.82fr_1.18fr] lg:pb-20">
-          <div className="relative z-10">
-            <p className="hero-anim mb-6 text-[11px] font-semibold uppercase tracking-[.22em] text-[#1F9FA1]">
+      {/* HERO */}
+      <section
+        className="relative overflow-hidden bg-[linear-gradient(180deg,#05393a_0%,#031f20_60%,#021516_100%)] pb-[90px] pt-[150px]"
+        style={{ fontFamily: "'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif" }}
+      >
+        <div className="mx-auto w-[min(1340px,calc(100%_-_32px))] md:w-[min(1340px,calc(100%_-_96px))]">
+          {/* EYEBROW */}
+          <div className="hero-anim mb-[34px] flex items-center">
+            <span className="mr-[10px] inline-block h-px w-[22px] shrink-0 bg-[#3d8f8a]" />
+            <p className="text-[13px] font-medium uppercase leading-none tracking-[.02em] text-[#8fd9cf]">
               Fintech writing portfolio
             </p>
-
-                      <h1 style={{ animationDelay: "120ms" }} className="hero-anim max-w-[640px] font-serif text-[50px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[66px]">
-              Fintech content<br className="hidden md:block" /> built to support{" "}
-              <span className="text-[#1F9FA1]">pipeline growth.</span>
-            </h1>
-
-            <p className="mt-7 max-w-[450px] text-[17px] leading-7 text-[#c4d3cf]">
-       A collection of articles, buyer guides and customer stories we’ve researched and written for fintech and financial services companies.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#work"
-                className="inline-flex min-h-12 items-center gap-8 rounded-full bg-[#167273] px-7 text-[13px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d8f90]"
-              >
-                Read the articles <Arrow />
-              </a>
-
-              <a
-                href="https://www.seo-growup.com/get-in-touch"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-12 items-center gap-7 rounded-full border border-[#75cfc7]/55 px-7 text-[13px] font-semibold text-[#edf8f5] transition hover:-translate-y-0.5 hover:border-[#75e4da]"
-              >
-                Work with us
-              </a>
-            </div>
-
- 
           </div>
 
-          <div className="relative w-full lg:-mr-[7vw]">
-            <img
-              src="/images/fintech-writing-dashboard.png"
-              alt="Search performance dashboard showing organic traffic growth and ranking positions for fintech topics."
-              className="block h-auto w-full lg:w-[122%] lg:max-w-none lg:-ml-[12%] [filter:saturate(1.12)_contrast(1.05)] drop-shadow-[0_38px_70px_rgba(0,0,0,.28)]"
-            />
+          <div className="grid gap-x-10 gap-y-14 lg:grid-cols-[1.08fr_.92fr]">
+            {/* LEFT: HEADLINE */}
+            <div>
+              <h1
+                style={{ animationDelay: "120ms" }}
+                className="hero-anim text-[clamp(34px,4.2vw,54px)] font-bold leading-[1.18] tracking-[-0.01em] text-[#f2fbf9]"
+              >
+                Fintech content built to<br className="hidden lg:block" /> support pipeline growth.
+              </h1>
+            </div>
 
+            {/* RIGHT: COPY + CTAs */}
+            <div
+              style={{ animationDelay: "240ms" }}
+              className="hero-anim flex flex-col justify-center lg:border-l lg:border-[#cdeee8]/[.14] lg:pl-11"
+            >
+              <p className="mb-[30px] max-w-[480px] text-[18px] font-normal leading-[1.7] text-[#a9d9d1]">
+                A collection of articles, buyer guides and customer stories we’ve researched and written for fintech and financial services companies.
+              </p>
+
+              <div className="flex flex-wrap gap-[14px]">
+                <a
+                  href="#work"
+                  className="inline-flex items-center whitespace-nowrap rounded-[3px] border border-[#167273] bg-[#167273] px-[26px] py-[15px] text-[15px] font-semibold tracking-[.01em] text-white transition-colors duration-200 hover:border-[#1f8f8f] hover:bg-[#1f8f8f]"
+                >
+                  Read the articles
+                </a>
+
+                <a
+                  href="https://www.seo-growup.com/get-in-touch"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center whitespace-nowrap rounded-[3px] border border-[#cdeee8]/[.28] bg-transparent px-[26px] py-[15px] text-[15px] font-semibold tracking-[.01em] text-[#cdeee8] transition-colors duration-200 hover:border-[#167273] hover:bg-[#167273] hover:text-white"
+                >
+                  Work with us
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* SELECTED WORK */}
-      <section id="work" className="bg-[#f6f2e9] text-[#082722]">
-        <div className="mx-auto w-[min(1340px,calc(100%-96px))] py-20 lg:py-24">
-          <div className="grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+      <section id="work" className="bg-white text-[#082722]">
+        <div className="mx-auto w-[min(1340px,calc(100%_-_32px))] py-20 md:w-[min(1340px,calc(100%_-_96px))] lg:py-24">
+          <div className="grid gap-8 lg:grid-cols-1">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[.19em] text-[#17796e]">
-           Our fintech work    
+       Featured articles 
               </p>
-                        <h2 className="mt-4 max-w-[650px] font-serif text-[43px] font-normal leading-[1.03] tracking-[-.045em] md:text-[58px]">
-                Content for Different Stages of the Buying Journey
+              <h2 className="mt-4 max-w-[1300px] font-serif text-[40px] font-semibold leading-[1.05] tracking-[-.045em] md:text-[54px]">
+            Explore our FinTech writing samples.
               </h2>
-              <p className="mt-8 max-w-[900px] text-[18px] leading-7 text-[#011522]">
+              <p className="mt-8 max-w-[1100px] text-[18px] leading-7 text-[#011522]">
           From customer proof and high-intent comparisons to research-led financial education, each piece is designed to build trust, answer buyer questions and move prospects closer to a decision.
               </p>
             </div>
@@ -444,16 +445,16 @@ reloadDocument
                     Customer story · Case study
                   </p>
 
-                  <h3 className="mt-5 max-w-[650px] font-serif text-[38px] font-normal leading-[1.02] tracking-[-.04em] text-[#f5f1e8] md:text-[49px]">
+                  <h3 className="mt-5 max-w-[650px] font-serif text-[34px] font-semibold leading-[1.1] tracking-[-.04em] text-[#f5f1e8] md:text-[40px]">
                     How Stubbs Parkin took on nearly 200 clients without{" "}
                     <span className="text-[#1F9FA1]">adding more payment admin.</span>
                   </h3>
 
-                  <p className="mt-5 max-w-[550px] text-[15px] leading-6 text-[#c8d7d2]">
+                  <p className="mt-5 max-w-[550px] text-[15px] leading-[1.75] text-[#c8d7d2]">
                 A story-led case study showing how Adfin helped a growing accountancy practice move 231 mandates in three days, increase payment volume and keep collections running without creating more admin.
                   </p>
 
-                  <span className="mt-7 inline-flex min-h-11 items-center gap-8 rounded-full bg-[#167273] px-6 text-[12px] font-semibold text-white">
+                  <span className="mt-7 inline-flex min-h-11 items-center gap-3 rounded-full bg-[#167273] px-6 text-[12px] font-semibold text-white transition-all duration-300 group-hover:gap-5 group-hover:bg-[#1d8f90]">
                     View the case study <Arrow />
                   </span>
                 </div>
@@ -468,7 +469,7 @@ reloadDocument
                         <ApproachIcon kind={s.icon} small />
                       </span>
                       <div>
-                        <strong className="block font-serif text-[24px] font-normal leading-none text-white">
+                        <strong className="block font-serif text-[22px] font-semibold leading-none text-white">
                           {s.n}
                         </strong>
                         <span className="mt-1 block text-[9px] leading-4 text-[#fafafa]">
@@ -505,7 +506,7 @@ reloadDocument
             <Link
               to={ROUTES.noteTaking}
 reloadDocument
-              className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/10 bg-[#f1ede1] shadow-[0_10px_35px_rgba(4,27,28,.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(4,27,28,.09)]"
+              className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/15 bg-transparent transition duration-300 hover:-translate-y-1 hover:border-[#167273]/30"
             >
               <div className="grid min-h-[350px] lg:grid-cols-[1.04fr_.96fr]">
                 {/* COPY */}
@@ -515,11 +516,11 @@ reloadDocument
                       02 · Buyer guide · Financial advice
                     </p>
 
-                    <h3 className="mt-4 max-w-[360px] font-serif text-[29px] font-normal leading-[1.04] tracking-[-.035em] text-[#082722] md:text-[32px]">
+                    <h3 className="mt-4 max-w-[380px] font-serif text-[26px] font-semibold leading-[1.1] tracking-[-.035em] text-[#082722] md:text-[28px]">
                       5 Best AI Note-Taking Tools for UK Financial Advisers in 2026
                     </h3>
 
-                    <p className="mt-4 max-w-[340px] text-[12px] leading-[1.7] text-[#011522]">
+                    <p className="mt-4 max-w-[340px] text-[14px] leading-[1.7] text-[#011522]">
              We compared five AI note-taking tools for UK financial advisers across workflows, pricing, strengths, limitations and best-fit use cases.
                     </p>
                   </div>
@@ -544,7 +545,7 @@ reloadDocument
             <Link
               to={ROUTES.openBanking}
 reloadDocument
-              className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/10 bg-[#f1ede1] shadow-[0_10px_35px_rgba(4,27,28,.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(4,27,28,.09)]"
+              className="group relative overflow-hidden rounded-[20px] border border-[#123f38]/15 bg-transparent transition duration-300 hover:-translate-y-1 hover:border-[#167273]/30"
             >
               <div className="grid min-h-[350px] lg:grid-cols-[1.04fr_.96fr]">
                 {/* COPY */}
@@ -554,11 +555,11 @@ reloadDocument
                       03 · Finance guide · Industry insight
                     </p>
 
-                    <h3 className="mt-4 max-w-[365px] font-serif text-[29px] font-normal leading-[1.04] tracking-[-.035em] text-[#082722] md:text-[32px]">
+                    <h3 className="mt-4 max-w-[380px] font-serif text-[26px] font-semibold leading-[1.1] tracking-[-.035em] text-[#082722] md:text-[28px]">
                       How Open Banking Is Changing Finance and Payments in 2026
                     </h3>
 
-                    <p className="mt-4 max-w-[345px] text-[12px] leading-[1.7] text-[#011522]">
+                    <p className="mt-4 max-w-[345px] text-[14px] leading-[1.7] text-[#011522]">
                       A research-led guide to how open banking is reshaping payments,
                       lending and financial services, and what businesses should prepare for next.
                     </p>
@@ -587,13 +588,13 @@ reloadDocument
 
       {/* APPROACH */}
       <section id="approach" className="bg-[#041b1c]">
-        <div className="mx-auto w-[min(1340px,calc(100%-96px))] py-20 lg:py-24">
+        <div className="mx-auto w-[min(1340px,calc(100%_-_32px))] py-20 md:w-[min(1340px,calc(100%_-_96px))] lg:py-24">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[.22em] text-[#1F9FA1]">
                 Our approach
               </p>
-              <h2 className="mt-5 max-w-[620px] font-serif text-[46px] font-normal leading-[1.02] tracking-[-.03em] text-[#f6f2e8] md:text-[62px]">
+              <h2 className="mt-5 max-w-[650px] font-serif text-[46px] font-semibold leading-[1.05] tracking-[-.03em] text-[#f6f2e8] md:text-[62px]">
                 A clear process
                 <br />
                 for content that
@@ -602,7 +603,7 @@ reloadDocument
               </h2>
             </div>
 
-            <p className="max-w-[580px] text-[18px] leading-8 text-[#c4d3cf] lg:border-l lg:border-white/10 lg:pl-10">
+            <p className="max-w-[780px] text-[18px] leading-8 text-[#c4d3cf] lg:border-l lg:border-white/10 lg:pl-10">
               We combine fintech expertise, rigorous research and search-led
               strategy to create content that reaches the right buyers,
               supports your sales cycle and shows clear commercial impact.
@@ -625,7 +626,7 @@ reloadDocument
                   </span>
                 </div>
 
-                <h3 className="mt-6 min-h-[64px] font-serif text-[26px] font-normal leading-[1.1] tracking-[-.02em] text-[#f4f0e7]">
+                <h3 className="mt-6 min-h-[64px] font-serif text-[26px] font-semibold leading-[1.15] tracking-[-.02em] text-[#f4f0e7]">
                   {s.t}
                 </h3>
                 <p className="mt-4 text-[14px] leading-6 text-[#b9cbc6]">{s.d}</p>
@@ -654,131 +655,234 @@ reloadDocument
 
 
   {/* INVESTMENT */}
-  <section id="investment" className="scroll-mt-24 bg-white text-[#082722]">
-    <div className="mx-auto w-[min(1340px,calc(100%-48px))] py-16 md:w-[min(1340px,calc(100%-96px))] lg:py-20">
-      <div className="bg-[#eef4f3] px-6 py-14 md:px-12 lg:px-16">
+  <section id="investment" className="scroll-mt-24 bg-white text-[#011522]">
+    <div className="mx-auto w-[min(1340px,calc(100%_-_32px))] py-16 md:w-[min(1340px,calc(100%_-_96px))] lg:py-20">
+      <div className="bg-[#eef4f3] px-6 py-[70px] md:px-10">
         {/* HEADER */}
-        <div className="text-center">
-          <p className="flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[.18em] text-[#167273]">
-            <span className="h-px w-3 bg-[#167273]" />
-            Pricing
-          </p>
-          <h2 className="mt-4 font-serif text-[43px] font-normal leading-[1.03] tracking-[-.045em] text-[#071b2c] md:text-[58px]">
+        <div className="mx-auto mb-16 text-center">
+          <div className="mb-[22px] flex items-center justify-center gap-[10px]">
+            <span className="h-[2px] w-[22px] bg-[#167273]" />
+            <span className="text-[13px] font-semibold uppercase tracking-[.02em] text-[#0f5859]">
+              Pricing
+            </span>
+          </div>
+          <h2 className="mb-[18px] text-[clamp(30px,3.8vw,44px)] font-extrabold leading-[1.2] tracking-[-.01em] text-[#0a2e2e]">
             Investment Options and Packages
           </h2>
-          <p className="mx-auto mt-5 max-w-[640px] text-[18px] leading-7 text-[#011522]">
-
+          <p className="mx-auto max-w-[840px] text-[19px] leading-[1.7] text-[#011522]">
             Choose a single article or an ongoing monthly programme. Both include
             research, strategic input and content written by fintech specialists.
           </p>
         </div>
 
-        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2">
-          {/* MONTHLY (featured) */}
-          <div className="reveal relative flex flex-col border border-[#167273] bg-white p-7 shadow-[0_18px_45px_rgba(18,114,115,.10)]">
-            <span className="absolute -top-[11px] left-4 bg-[#167273] px-3 py-1 text-[10px] font-bold uppercase tracking-[.14em] text-white">
-              Most popular
-            </span>
-
-            <h3 className="font-serif text-[32px] font-normal leading-[1.05] tracking-[-.035em] text-[#071b2c]">
-              Monthly programme
-            </h3>
-            <p className="mt-4 font-serif text-[56px] font-normal leading-none tracking-[-.05em] text-[#071b2c]">
-              £3,400 <span className="font-sans text-[15px] font-normal tracking-normal text-[#607078]">/mo</span>
-            </p>
-            <p className="mt-2 text-[14px] text-[#607078]">4 pieces per month, saving £400</p>
-
-            <div className="mt-4 border border-[#cfe5e0] bg-[#f1f7f6] px-4 py-3 text-[13px] font-semibold text-[#0c5d57]">
-              Expert review and custom visuals on every piece
-            </div>
-
-            <p className="mt-5 text-[14px] leading-6 text-[#53656b]">
-              A consistent stream of research-led content for teams publishing every month.
-            </p>
-
-            <ul className="mt-5 flex-1">
-              {[
-                "4 articles or customer stories each month",
-                "Monthly topic plan and keyword research",
-                "Expert review on every piece",
-                "Custom visuals for every piece",
-                "Monthly report on rankings and traffic",
-                "Priority turnaround",
-              ].map((f) => (
-                <li
-                  key={f}
-                  className="flex items-center gap-2.5 border-b border-[#e3ecea] py-3 text-[13px] text-[#53656b] last:border-b-0"
-                >
-                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#0e8a7d] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3 fill-none stroke-current stroke-[3]" aria-hidden="true">
-                      <path d="m6 12 4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="https://www.seo-growup.com/get-in-touch"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 block bg-[#06302d] py-4 text-center text-[13px] font-semibold text-white transition hover:bg-[#0b4a43]"
+        {/* CARDS */}
+        <div className="flex flex-wrap items-stretch justify-center gap-8">
+          {[
+            {
+              featured: true,
+              badge: "Most popular",
+              name: "Monthly programme",
+              price: "£3,400",
+              unit: "/mo",
+              note: "4 pieces per month, saving £400",
+              stats: [
+                ["4 pieces", "Every month"],
+                ["£400", "Saved vs one-off"],
+                ["1 report", "Monthly rankings"],
+              ],
+              intro:
+                "A consistent stream of research-led content for teams publishing every month.",
+              groups: [
+                {
+                  label: "Strategy",
+                  items: [["Monthly topic plan and keyword research", false]],
+                },
+                {
+                  label: "Content",
+                  items: [
+                    ["4 articles or customer stories each month", true],
+                    ["Expert review on every piece", true],
+                    ["Custom visuals for every piece", true],
+                  ],
+                },
+                {
+                  label: "Reporting & delivery",
+                  items: [
+                    ["Monthly report on rankings and traffic", false],
+                    ["Priority turnaround", false],
+                  ],
+                },
+              ],
+              bestFor: "teams publishing every month who want a steady stream of content.",
+              cta: "Start a monthly programme",
+            },
+            {
+              featured: false,
+              name: "Long-form article",
+              price: "£950",
+              unit: "/article",
+              note: "One-off, no commitment",
+              stats: [
+                ["1,600+", "Words, up to 2,000"],
+                ["2 rounds", "Of revisions"],
+                ["1 piece", "Research to publish"],
+              ],
+              intro:
+                "In-depth, research-led articles, buyer guides and specialist fintech content.",
+              groups: [
+                {
+                  label: "Research",
+                  items: [
+                    ["Primary-source research and fact-checking", false],
+                    ["Keyword and search-intent research", false],
+                  ],
+                },
+                {
+                  label: "Writing & SEO",
+                  items: [
+                    ["1,600 to 2,000 words", true],
+                    ["SEO title, meta description and internal links", false],
+                  ],
+                },
+                {
+                  label: "Delivery",
+                  items: [
+                    ["Custom graphics and visuals", true],
+                    ["Two rounds of revisions", false],
+                  ],
+                },
+              ],
+              bestFor: "a single high-value guide, comparison or article with no commitment.",
+              cta: "Commission an article",
+            },
+          ].map((p, pi) => (
+            <div
+              key={p.name}
+              style={{ animationDelay: `${pi * 150}ms` }}
+              className={`reveal relative box-border flex flex-[1_1_400px] flex-col px-6 pb-8 pt-9 md:px-10 md:pb-10 md:pt-11 ${
+                p.featured
+                  ? "border-2 border-[#167273] bg-[#fbfefd] shadow-[0_20px_40px_rgba(10,46,46,.08)]"
+                  : "border border-[#0a2e2e]/10 bg-white"
+              }`}
             >
-              Start a monthly programme
-            </a>
-          </div>
+              {p.featured && (
+                <span className="absolute -top-4 left-7 z-10 bg-[#167273] px-4 py-1.5 text-[11.5px] font-bold uppercase tracking-[.04em] text-white">
+                  {p.badge}
+                </span>
+              )}
 
-          {/* ONE-OFF */}
-          <div style={{ animationDelay: "150ms" }} className="reveal relative flex flex-col border border-[#e3ebe9] bg-white p-7">
-            <h3 className="font-serif text-[32px] font-normal leading-[1.05] tracking-[-.035em] text-[#071b2c]">
-              Long-form article
-            </h3>
-            <p className="mt-4 font-serif text-[56px] font-normal leading-none tracking-[-.05em] text-[#071b2c]">
-              £950 <span className="font-sans text-[15px] font-normal tracking-normal text-[#607078]">/article</span>
-            </p>
-            <p className="mt-2 text-[14px] text-[#607078]">One-off, no commitment</p>
+              <h3 className="mb-[18px] text-[24px] font-extrabold tracking-[-.005em] text-[#0a2e2e]">
+                {p.name}
+              </h3>
 
-            <div className="mt-4 border border-[#e3ebe9] bg-[#f7f9f9] px-4 py-3 text-[13px] font-semibold text-[#1f3a36]">
-              Research, SEO and custom visuals included
+              <div className="mb-1 flex items-baseline gap-1.5">
+                <span className="text-[42px] font-extrabold leading-none text-[#0a2e2e]">
+                  {p.price}
+                </span>
+                <span className="text-[16px] font-medium text-[#7c928c]">{p.unit}</span>
+              </div>
+              <p className="mb-6 text-[13.5px] text-[#7c928c]">{p.note}</p>
+
+              {/* STATS STRIP */}
+              <div
+                className={`mb-[22px] flex border ${
+                  p.featured
+                    ? "border-[#167273]/20 bg-[#f4faf9]"
+                    : "border-[#0a2e2e]/10 bg-[#fafbfa]"
+                }`}
+              >
+                {p.stats.map(([v, l], i) => (
+                  <div
+                    key={v}
+                    className={`flex-1 px-2.5 py-3.5 text-center ${
+                      i > 0
+                        ? p.featured
+                          ? "border-l border-[#167273]/20"
+                          : "border-l border-[#0a2e2e]/10"
+                        : ""
+                    }`}
+                  >
+                    <div className="text-[18px] font-extrabold leading-[1.1] text-[#0a2e2e] md:text-[20px]">
+                      {v}
+                    </div>
+                    <div className="mt-1 text-[11.5px] text-[#4b625d]">{l}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mb-3 text-[15.5px] leading-[1.7] text-[#011522]">{p.intro}</p>
+
+              {/* GROUPED FEATURES */}
+              <div className="mb-[26px] flex-1">
+                {p.groups.map((g, gi) => (
+                  <div key={g.label}>
+                    <div
+                      className={`pb-1 text-[12px] font-bold uppercase tracking-[.06em] text-[#167273] ${
+                        gi === 0 ? "pt-3.5" : "pt-4"
+                      }`}
+                    >
+                      {g.label}
+                    </div>
+                    {g.items.map(([text, bold], ii) => {
+                      const isLast = gi === p.groups.length - 1 && ii === g.items.length - 1;
+                      return (
+                        <div
+                          key={text as string}
+                          className={`flex items-start gap-3 py-3 ${
+                            isLast ? "" : "border-b border-[#0a2e2e]/[.08]"
+                          }`}
+                        >
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            className="mt-[3px] shrink-0"
+                            aria-hidden="true"
+                          >
+                            <circle cx="8" cy="8" r="8" fill="#167273" />
+                            <path
+                              d="M4.5 8.2L6.7 10.5L11.5 5.5"
+                              stroke="#fff"
+                              strokeWidth="1.4"
+                              fill="none"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          <span
+                            className={`text-[15px] leading-[1.55] ${
+                              bold ? "font-semibold text-[#0a2e2e]" : "text-[#26433f]"
+                            }`}
+                          >
+                            {text}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+
+              {/* BEST FOR */}
+              <div className="mb-[26px] border-t border-[#0a2e2e]/10 pt-5">
+                <span className="text-[13.5px] font-semibold text-[#0f5859]">Best for </span>
+                <span className="text-[13.5px] text-[#4b625d]">{p.bestFor}</span>
+              </div>
+
+              <a
+                href="https://www.seo-growup.com/get-in-touch"
+                target="_blank"
+                rel="noreferrer"
+                className={`mt-auto block w-full px-6 py-4 text-center text-[15px] font-bold tracking-[.01em] transition-colors duration-200 ${
+                  p.featured
+                    ? "bg-[#0a2e2e] text-white hover:bg-[#167273]"
+                    : "border-[1.5px] border-[#167273] bg-transparent text-[#167273] hover:bg-[#167273] hover:text-white"
+                }`}
+              >
+                {p.cta}
+              </a>
             </div>
-
-            <p className="mt-5 text-[14px] leading-6 text-[#53656b]">
-              In-depth, research-led articles, buyer guides and specialist fintech content.
-            </p>
-
-            <ul className="mt-5 flex-1">
-              {[
-                "1,600 to 2,000 words",
-                "Primary-source research and fact-checking",
-                "Keyword and search-intent research",
-                "SEO title, meta description and internal links",
-                "Custom graphics and visuals",
-                "Two rounds of revisions",
-              ].map((f) => (
-                <li
-                  key={f}
-                  className="flex items-center gap-2.5 border-b border-[#e3ecea] py-3 text-[13px] text-[#53656b] last:border-b-0"
-                >
-                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#0e8a7d] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3 fill-none stroke-current stroke-[3]" aria-hidden="true">
-                      <path d="m6 12 4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="https://www.seo-growup.com/get-in-touch"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 block border border-[#167273] py-4 text-center text-[13px] font-semibold text-[#167273] transition hover:bg-[#167273] hover:text-white"
-            >
-              Commission an article
-            </a>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -786,80 +890,58 @@ reloadDocument
 
 
     {/* FAQ */}
-    <section id="faq" className="scroll-mt-24 relative overflow-hidden bg-[#041b1c] text-white">
-
-
-      <div className="mx-auto w-[min(1340px,calc(100%-48px))] py-20 md:w-[min(1340px,calc(100%-96px))] lg:py-24">
-        <div className="grid gap-14 lg:grid-cols-[.78fr_1.22fr] lg:gap-20">
-
-          {/* LEFT */}
-          <div className="reveal relative">
-            <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#1F9FA1]">
+    <section id="faq" className="scroll-mt-24 relative overflow-hidden bg-[linear-gradient(180deg,#031f20_0%,#021516_100%)] text-white">
+      <div className="mx-auto w-[min(1340px,calc(100%_-_32px))] py-[100px] md:w-[min(1340px,calc(100%_-_96px))]">
+        {/* HEADER */}
+        <div className="reveal mx-auto mb-[68px] text-center">
+          <div className="mb-[34px] flex items-center justify-center gap-[10px]">
+            <span className="h-px w-[22px] bg-[#3d8f8a]" />
+            <p className="text-[13px] font-medium uppercase leading-none tracking-[.02em] text-[#8fd9cf]">
               FAQ
             </p>
-
-            <h2 className="mt-5 max-w-[520px] font-serif text-[46px] font-normal leading-[.98] tracking-[-.045em] text-[#f6f2e8] md:text-[61px]">
-              Questions about our{" "}
-              <span className="text-[#1F9FA1]">fintech writing</span>{" "}
-              services.
-            </h2>
-
-            <p className="mt-7 max-w-[470px] text-[17px] leading-7 text-[#c4d3cf]">
-              Everything you need to know about how we research, write and
-              produce specialist fintech content.
-            </p>
-
-      
+            <span className="h-px w-[22px] bg-[#3d8f8a]" />
           </div>
 
-          {/* RIGHT */}
-          <div style={{ animationDelay: "150ms" }} className="reveal space-y-3">
-            {faqItems.map((item, i) => (
-              <details
-                key={item.q}
-                open={openFaq === i}
-                onToggle={(e) => {
-                  if (e.currentTarget.open) {
-                    setOpenFaq(i);
-                  } else if (openFaq === i) {
-                    setOpenFaq(null);
-                  }
-                }}
-                className="group overflow-hidden rounded-[18px] border border-[#3fcfc0]/20 bg-[#05201f] transition duration-300 open:border-[#3fcfc0]/45 open:bg-[#062b28]"
-              >
-                <summary className="flex cursor-pointer list-none items-center gap-5 px-5 py-5 marker:hidden md:px-7 md:py-6">
-                  <span className="w-9 shrink-0 font-serif text-[22px] leading-none text-[#1F9FA1] md:text-[24px]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+          <h2 className="mx-auto mb-5 max-w-[1100px] font-sans text-[clamp(30px,3.8vw,44px)] font-bold leading-[1.22] tracking-[-0.01em] text-[#f2fbf9]">
+            Questions about our fintech writing services.
+          </h2>
 
-                  <h3 className="flex-1 font-serif text-[22px] font-normal leading-[1.15] tracking-[-.025em] text-[#f4f0e7] md:text-[27px]">
-                    {item.q}
-                  </h3>
+          <p className="mx-auto max-w-[1020px] text-[18px] leading-[1.7] text-[#a9d9d1]">
+            Everything you need to know about how we research, write and
+            produce specialist fintech content.
+          </p>
+        </div>
 
-                  <span className="relative grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#0b4a43] text-[#1F9FA1]">
-                    <span className="absolute h-px w-4 bg-current" />
-                    <span className="absolute h-4 w-px bg-current transition-transform duration-300 group-open:rotate-90 group-open:opacity-0" />
-                  </span>
-                </summary>
+        {/* LIST */}
+        <div style={{ animationDelay: "150ms" }} className="reveal mx-auto">
+          {faqItems.map((item, i) => (
+            <details
+              key={item.q}
+              open={openFaq === i}
+              onToggle={(e) => {
+                if (e.currentTarget.open) {
+                  setOpenFaq(i);
+                } else if (openFaq === i) {
+                  setOpenFaq(null);
+                }
+              }}
+              className={`group py-[30px] ${i > 0 ? "border-t border-[#cdeee8]/[.14]" : ""}`}
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-[17px] font-semibold leading-[1.4] text-[#f2fbf9] marker:hidden md:text-[19px] [&::-webkit-details-marker]:hidden">
+                <span>{item.q}</span>
+                <span className="inline-block shrink-0 text-[24px] font-light leading-none text-[#8fd9cf] transition-transform duration-200 group-open:rotate-45">
+                  +
+                </span>
+              </summary>
 
-                <div className="grid grid-cols-[36px_1fr_auto] gap-5 px-5 pb-6 md:grid-cols-[36px_1fr_44px] md:px-7 md:pb-7">
-                  <span />
-
-                  <p className="max-w-[690px] text-[14px] leading-7 text-[#b9cbc6] md:text-[15px]">
-                    {item.a}
-                  </p>
-
-                  <span />
-                </div>
-              </details>
-            ))}
-          </div>
+              <p className="mt-5 max-w-[1300px] text-[16px] leading-[1.8] text-[#a9d9d1] md:text-[18px]">
+                {item.a}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
-
- 
-
 
     </main>
   );
