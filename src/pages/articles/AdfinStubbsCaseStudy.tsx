@@ -193,9 +193,6 @@ export default function AdfinStubbsParkinCaseStudy({
 
         <div className="asp-container asp-hero-grid">
           <div className="asp-hero-copy">
-            <p className="asp-eyebrow asp-light-label">
-           FINTECH CASE STUDY SAMPLE
-            </p>
                            <h1>
               How Stubbs Parkin took on nearly 200 clients{" "}
               <em>without adding more payment admin.</em>
@@ -218,10 +215,7 @@ export default function AdfinStubbsParkinCaseStudy({
                 Explore Adfin <Arrow />
               </a>
             </div>
-            <div className="asp-hero-meta">
-              <span>By GrowUp | For Adfin</span>
-              <span>Reviewed 2 October 2026</span>
-            </div>
+
           </div>
           <div className="asp-hero-visual">
  
@@ -363,77 +357,62 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
 
 
 
-
-
-
- <section className="asp-expansion">
+<section className="asp-growth" aria-labelledby="asp-growth-title">
   <div className="asp-container asp-container--wide">
-    <div className="asp-expansion-heading">
-      <div>
-        <p className="asp-expansion-eyebrow">
-          02 / The growth moment
-        </p>
+    <header className="asp-growth-heading">
+      <p className="asp-growth-eyebrow">
+        02 / The growth moment
+      </p>
 
-    <h2>
-  Nearly 200 new clients joined{" "}
-  <em>the practice in two major waves.</em>
+  <h2 id="asp-growth-title">
+  The practice grew in{" "}<br/>
+  <em>two major waves.</em>
 </h2>
 
-
-
-      </div>
-
-      <p className="asp-expansion-intro">
-       Around 150 clients joined through Harrison Latham and Company, followed by another 40 in July, increasing payment volume just as Stubbs Parkin’s new process was bedding in.
+      <p className="asp-growth-intro">
+        Around 150 clients joined through Harrison Latham and Company,
+        followed by another 40 in July, increasing payment volume just
+        as Stubbs Parkin’s new process was bedding in.
       </p>
-    </div>
+    </header>
 
-    <div className="asp-expansion-layout">
-      <figure className="asp-expansion-art">
-        <img
-          src="/images/stubbs-parkin-growth-glass.png"
-          alt="Nearly 200 new clients in 2026: around 150 joined in April and another 40 in July."
-          width="1670"
-          height="941"
-          decoding="async"
-        />
-      </figure>
+    <div className="asp-growth-layout">
+      <div
+        className="asp-growth-summary"
+        role="img"
+        aria-label="Nearly 200 new clients in 2026: around 150 joined in April and another 40 in July."
+      >
+        <div aria-hidden="true">
+          <span className="asp-growth-nearly">Nearly</span>
+          <strong className="asp-growth-total">200</strong>
+          <p className="asp-growth-caption">new clients in 2026</p>
 
-      <div className="asp-expansion-track">
-        <ol className="asp-expansion-events">
-          {milestones.map((m, i) => (
-            <li key={m.date}>
-              <span
-                className="asp-expansion-number"
-                aria-hidden="true"
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
+          <div className="asp-growth-breakdown">
+            <div>
+              <strong>~150</strong>
+              <span>April 2026</span>
+            </div>
 
-              <span
-                className="asp-expansion-node"
-                aria-hidden="true"
-              />
-
-              <div className="asp-expansion-event">
-                <span className="asp-expansion-date">
-                  {m.date} 2026
-                </span>
-
-                <h3>{m.title}</h3>
-                <p>{m.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-
-        <div
-          className="asp-expansion-finish"
-          aria-hidden="true"
-        >
-          <Tick />
+            <div>
+              <strong>+40</strong>
+              <span>July 2026</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <ol className="asp-growth-timeline">
+        {milestones.map((milestone) => (
+          <li key={milestone.date}>
+            <span className="asp-growth-date">
+              {milestone.date} 2026
+            </span>
+
+            <h3>{milestone.title}</h3>
+            <p>{milestone.body}</p>
+          </li>
+        ))}
+      </ol>
     </div>
   </div>
 </section>
@@ -824,27 +803,11 @@ For Stubbs Parkin, good service means being easy to reach, knowing the client an
       </section>
 
       <footer className="asp-container asp-container--wide asp-footer">
-        <div className="asp-portfolio-note">
-          <span className="asp-portfolio-icon" aria-hidden="true">
-            <DocIcon />
-          </span>
+   
+   
 
-          <div className="asp-portfolio-copy">
-            <p className="asp-portfolio-eyebrow">PORTFOLIO NOTE</p>
-            <h3>An independent rewrite of Adfin's Stubbs Parkin story.</h3>
-            <p>
-              GrowUp writes and redesigns customer stories for fintech
-              companies. This portfolio sample reworks Adfin's existing
-              Stubbs Parkin case study to show how we would approach the
-              copy, storytelling and page design.
-            </p>
-          </div>
 
-          <div className="asp-portfolio-badge">
-            <span className="asp-portfolio-pill">INDEPENDENT CONCEPT</span>
-            <p>Not published by or affiliated with Adfin.</p>
-          </div>
-        </div>
+   
 
         <div className="asp-footer-links">
           <a href="/">
@@ -6277,4 +6240,248 @@ color: rgba(255, 255, 255, 0.7);
   }
 }
 
+
+/* GROWTH MOMENT — OPTION 01 */
+
+.asp .asp-growth {
+  padding: clamp(64px, 7vw, 112px) 0;
+  background: #041b1c;
+  color: #f6f3e9;
+}
+
+.asp .asp-growth-heading {
+  max-width: 1000px;
+  margin: 0 0 clamp(44px, 5vw, 72px);
+}
+
+.asp .asp-growth-eyebrow {
+  margin: 0 0 20px;
+  color: #a4d5d2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.asp .asp-growth-heading h2 {
+  margin: 0;
+  color: #f6f3e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4.2vw, 64px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.asp .asp-growth-heading h2 em {
+  color: #82c8c5;
+  font-style: normal;
+}
+
+.asp .asp-growth-intro {
+  max-width: 780px;
+  margin: 24px 0 0;
+  color: #c4d6d4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.asp .asp-growth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(48px, 7vw, 112px);
+}
+
+/* Left: oversized editorial number */
+
+.asp .asp-growth-summary {
+  min-width: 0;
+  width: 100%;
+  max-width: 480px;
+  padding-top: 4px;
+}
+
+.asp .asp-growth-nearly {
+  display: block;
+  margin: 0 0 10px;
+  color: #b9dedb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.asp .asp-growth-total {
+  display: block;
+  margin: 0;
+  color: #f6f3e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(130px, 17vw, 250px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+}
+
+.asp .asp-growth-caption {
+  margin: 22px 0 0;
+  color: #f6f3e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(19px, 2vw, 27px);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+}
+
+.asp .asp-growth-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(185, 222, 219, 0.55);
+}
+
+.asp .asp-growth-breakdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.asp .asp-growth-breakdown > div + div {
+  border-left: 1px solid rgba(185, 222, 219, 0.45);
+}
+
+.asp .asp-growth-breakdown strong {
+  color: #f6f3e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.3vw, 60px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.asp .asp-growth-breakdown span {
+  color: #c4d6d4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Right: fine vertical timeline */
+
+.asp .asp-growth-timeline {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.asp .asp-growth-timeline > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 38px 34px;
+}
+
+.asp .asp-growth-timeline > li:last-child {
+  padding-bottom: 0;
+}
+
+/* Line runs from one node to the next. */
+
+.asp .asp-growth-timeline > li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: -8px;
+  left: 4px;
+  width: 1px;
+  background: rgba(164, 213, 210, 0.6);
+}
+
+.asp .asp-growth-timeline > li::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  box-sizing: border-box;
+  border: 2px solid #d4e9e6;
+  border-radius: 50%;
+  background: #041b1c;
+}
+
+.asp .asp-growth-date {
+  display: block;
+  margin: 0 0 10px;
+  color: #a4d5d2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.16em;
+}
+
+.asp .asp-growth-timeline h3 {
+  margin: 0;
+  color: #f6f3e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(23px, 2.2vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.asp .asp-growth-timeline p {
+  max-width: 520px;
+  margin: 12px 0 0;
+  color: #bfd2d0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Mobile: numbers first, timeline underneath */
+
+@media (max-width: 800px) {
+  .asp .asp-growth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .asp .asp-growth-heading {
+    margin-bottom: 40px;
+  }
+
+  .asp .asp-growth-intro {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .asp .asp-growth-summary {
+    max-width: 420px;
+  }
+
+  .asp .asp-growth-total {
+    font-size: clamp(130px, 38vw, 220px);
+  }
+
+  .asp .asp-growth-breakdown strong {
+    font-size: clamp(40px, 10vw, 56px);
+  }
+
+  .asp .asp-growth-timeline > li {
+    padding-left: 28px;
+  }
+}
 `;
